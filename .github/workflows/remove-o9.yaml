@@ -1,8 +1,5 @@
 name: Remove o9.ps1 if included in a Push
 
-permissions:
-  contents: write
-
 on:
   push:
     branches:
@@ -32,7 +29,6 @@ jobs:
         git config --global user.name "o9-action"
         git rm o9.ps1
         git commit -m "Delete o9.ps1 as it is not allowed"
-        git push origin HEAD
+        git push origin HEAD:${{ github.ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-

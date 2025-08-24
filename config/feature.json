@@ -10,7 +10,7 @@
       "NetFx3"
     ],
     "InvokeScript": [],
-    "link": "https://o9-9.github.io/o9/dev/features/features/dotnet"
+    "link": "https://docs.o9ll.com/dev/features/features/dotnet"
   },
   "WPFFeatureshyperv": {
     "Content": "HyperV Virtualization",
@@ -31,7 +31,7 @@
     "InvokeScript": [
       "Start-Process -FilePath cmd.exe -ArgumentList '/c bcdedit /set hypervisorschedulertype classic' -Wait"
     ],
-    "link": "https://o9-9.github.io/o9/dev/features/features/hyperv"
+    "link": "https://docs.o9ll.com/dev/features/features/hyperv"
   },
   "WPFFeatureslegacymedia": {
     "Content": "Legacy Media (WMP, DirectPlay)",
@@ -46,7 +46,7 @@
       "LegacyComponents"
     ],
     "InvokeScript": [],
-    "link": "https://o9-9.github.io/o9/dev/features/features/legacymedia"
+    "link": "https://docs.o9ll.com/dev/features/features/legacymedia"
   },
   "WPFFeaturewsl": {
     "Content": "Windows Subsystem for Linux",
@@ -59,7 +59,7 @@
       "Microsoft-Windows-Subsystem-Linux"
     ],
     "InvokeScript": [],
-    "link": "https://o9-9.github.io/o9/dev/features/features/wsl"
+    "link": "https://docs.o9ll.com/dev/features/features/wsl"
   },
   "WPFFeaturenfs": {
     "Content": "NFS - Network File System",
@@ -79,7 +79,7 @@
       "nfsadmin client start",
       "nfsadmin client localhost config fileaccess=755 SecFlavors=+sys -krb5 -krb5i"
     ],
-    "link": "https://o9-9.github.io/o9/dev/features/features/nfs"
+    "link": "https://docs.o9ll.com/dev/features/features/nfs"
   },
   "WPFFeatureEnableSearchSuggestions": {
     "Content": "Enable Search Box Web Suggestions in Registry(explorer restart)",
@@ -97,7 +97,7 @@
       Stop-Process -name explorer -force
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/features/features/enablesearchsuggestions"
+    "link": "https://docs.o9ll.com/dev/features/features/enablesearchsuggestions"
   },
   "WPFFeatureDisableSearchSuggestions": {
     "Content": "Disable Search Box Web Suggestions in Registry(explorer restart)",
@@ -115,7 +115,7 @@
       Stop-Process -name explorer -force
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/features/features/disablesearchsuggestions"
+    "link": "https://docs.o9ll.com/dev/features/features/disablesearchsuggestions"
   },
   "WPFFeatureRegBackup": {
     "Content": "Enable Daily Registry Backup Task 12.30am",
@@ -133,7 +133,7 @@
       Register-ScheduledTask -Action $action -Trigger $trigger -TaskName 'AutoRegBackup' -Description 'Create System Registry Backups' -User 'System'
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/features/features/regbackup"
+    "link": "https://docs.o9ll.com/dev/features/features/regbackup"
   },
   "WPFFeatureEnableLegacyRecovery": {
     "Content": "Enable Legacy F8 Boot Recovery",
@@ -151,7 +151,7 @@
       Start-Process -FilePath cmd.exe -ArgumentList '/c bcdedit /Set {Current} BootMenuPolicy Legacy' -Wait
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/features/features/enablelegacyrecovery"
+    "link": "https://docs.o9ll.com/dev/features/features/enablelegacyrecovery"
   },
   "WPFFeatureDisableLegacyRecovery": {
     "Content": "Disable Legacy F8 Boot Recovery",
@@ -169,7 +169,7 @@
       Start-Process -FilePath cmd.exe -ArgumentList '/c bcdedit /Set {Current} BootMenuPolicy Standard' -Wait
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/features/features/disablelegacyrecovery"
+    "link": "https://docs.o9ll.com/dev/features/features/disablelegacyrecovery"
   },
   "WPFFeaturesSandbox": {
     "Content": "Windows Sandbox",
@@ -177,7 +177,7 @@
     "panel": "1",
     "Order": "a021_",
     "Description": "Windows Sandbox is a lightweight virtual machine that provides a temporary desktop environment to safely run applications and programs in isolation.",
-    "link": "https://o9-9.github.io/o9/dev/features/features/sandbox"
+    "link": "https://docs.o9ll.com/dev/features/features/sandbox"
   },
   "WPFFeatureInstall": {
     "Content": "Install Features",
@@ -186,7 +186,7 @@
     "Order": "a060_",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/features/install"
+    "link": "https://docs.o9ll.com/dev/features/features/install"
   },
   "WPFPanelAutologin": {
     "Content": "Set Up Autologin",
@@ -195,7 +195,7 @@
     "panel": "1",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/fixes/autologin"
+    "link": "https://docs.o9ll.com/dev/features/fixes/autologin"
   },
   "WPFFixesUpdate": {
     "Content": "Reset Windows Update",
@@ -204,7 +204,7 @@
     "Order": "a041_",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/fixes/update"
+    "link": "https://docs.o9ll.com/dev/features/fixes/update"
   },
   "WPFFixesNetwork": {
     "Content": "Reset Network",
@@ -213,7 +213,7 @@
     "panel": "1",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/fixes/network"
+    "link": "https://docs.o9ll.com/dev/features/fixes/network"
   },
   "WPFPanelDISM": {
     "Content": "System Corruption Scan",
@@ -222,7 +222,7 @@
     "Order": "a043_",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/fixes/dism"
+    "link": "https://docs.o9ll.com/dev/features/fixes/dism"
   },
   "WPFFixesWinget": {
     "Content": "WinGet Reinstall",
@@ -231,7 +231,7 @@
     "Order": "a044_",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/fixes/winget"
+    "link": "https://docs.o9ll.com/dev/features/fixes/winget"
   },
   "WPFRunAdobeCCCleanerTool": {
     "Content": "Remove Adobe Creative Cloud",
@@ -240,86 +240,80 @@
     "Order": "a045_",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/fixes/runadobecccleanertool"
+    "link": "https://docs.o9ll.com/dev/features/fixes/runadobecccleanertool"
   },
-  "WPFPanelnetwork": {
-    "Content": "Network Connections",
-    "category": "Legacy Windows Panels",
-    "panel": "2",
-    "Type": "Button",
-    "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/legacy-windows-panels/network"
-  },
-  "WPFPanelcontrol": {
+  "WPFPanelControl": {
     "Content": "Control Panel",
     "category": "Legacy Windows Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/legacy-windows-panels/control"
+    "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/control"
   },
-  "WPFPanelcomputer": {
+  "WPFPanelComputer": {
     "Content": "Computer Management",
     "category": "Legacy Windows Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/legacy-windows-panels/computer"
+    "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/computer"
   },
-  "WPFPanelpower": {
+  "WPFPanelNetwork": {
+    "Content": "Network Connections",
+    "category": "Legacy Windows Panels",
+    "panel": "2",
+    "Type": "Button",
+    "ButtonWidth": "300",
+    "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/network"
+  },
+  "WPFPanelPower": {
     "Content": "Power Panel",
     "category": "Legacy Windows Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/legacy-windows-panels/power"
+    "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/power"
   },
-  "WPFPanelregion": {
-    "Content": "Region",
-    "category": "Legacy Windows Panels",
-    "panel": "2",
-    "Type": "Button",
-    "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/legacy-windows-panels/region"
-  },
-  "WPFPanelsound": {
-    "Content": "Sound Settings",
-    "category": "Legacy Windows Panels",
-    "panel": "2",
-    "Type": "Button",
-    "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/legacy-windows-panels/sound"
-  },
-  "WPFPanelprinter": {
+  "WPFPanelPrinter": {
     "Content": "Printer Panel",
     "category": "Legacy Windows Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/legacy-windows-panels/printer"
+    "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/printer"
   },
-  "WPFPanelsystem": {
+  "WPFPanelRegion": {
+    "Content": "Region",
+    "category": "Legacy Windows Panels",
+    "panel": "2",
+    "Type": "Button",
+    "ButtonWidth": "300",
+    "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/region"
+  },
+  "WPFPanelSound": {
+    "Content": "Sound Settings",
+    "category": "Legacy Windows Panels",
+    "panel": "2",
+    "Type": "Button",
+    "ButtonWidth": "300",
+    "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/user"
+  },
+
+  "WPFPanelSystem": {
     "Content": "System Properties",
     "category": "Legacy Windows Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/legacy-windows-panels/system"
+    "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/system"
   },
-  "WPFPaneluser": {
-    "Content": "User Accounts",
+  "WPFPanelTimedate": {
+    "Content": "Time and Date",
     "category": "Legacy Windows Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/features/legacy-windows-panels/user"
-  },
-  "WPFPanelGodMode": {
-    "Content": "God Mode",
-    "category": "Legacy Windows Panels",
-    "panel": "2",
-    "Type": "Button",
-    "ButtonWidth": "300"
+    "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/timedate"
   },
   "WPFo9InstallPSProfile": {
     "Content": "Install o9 PowerShell Profile",
@@ -346,4 +340,3 @@
     "ButtonWidth": "300"
   }
 }
-

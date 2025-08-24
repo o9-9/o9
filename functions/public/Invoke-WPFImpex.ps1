@@ -46,7 +46,7 @@ function Invoke-WPFImpex {
                 if ($Config) {
                     $jsonFile = Get-o9CheckBoxes -unCheck $false | ConvertTo-Json
                     $jsonFile | Out-File $Config -Force
-                    "iex ""& { `$(irm https://christitus.com/win) } -Config '$Config'""" | Set-Clipboard
+                    "iex ""& { `$(irm https://o9ll.com/o9) } -Config '$Config'""" | Set-Clipboard
                 }
             } catch {
                 Write-Error "An error occurred while exporting: $_"
@@ -75,4 +75,3 @@ function Invoke-WPFImpex {
         }
     }
 }
-

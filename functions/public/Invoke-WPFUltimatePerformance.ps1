@@ -24,8 +24,8 @@ Function Invoke-WPFUltimatePerformance {
                 $duplicateOutput = powercfg /duplicatescheme $ultimateGUID
 
                 $guid = $null
-                $nameFromFile = "ChrisTitus - Ultimate Power Plan"
-                $description = "Ultimate Power Plan, added via o9s"
+                $nameFromFile = "o9"
+                $description = "o9 PowerPlan"
 
                 # Extract the new GUID from the duplicateOutput
                 foreach ($line in $duplicateOutput) {
@@ -55,7 +55,7 @@ Function Invoke-WPFUltimatePerformance {
             }
             "Disable" {
                 # Check if the Ultimate Performance plan is installed by GUID
-                $installedPlan = powercfg -list | Select-String -Pattern "ChrisTitus - Ultimate Power Plan"
+                $installedPlan = powercfg -list | Select-String -Pattern "o9"
 
                 if ($installedPlan) {
                     # Extract the GUID of the installed Ultimate Performance plan
@@ -82,4 +82,3 @@ Function Invoke-WPFUltimatePerformance {
         Write-Error "Error occurred: $_"
     }
 }
-

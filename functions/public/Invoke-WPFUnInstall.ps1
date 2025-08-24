@@ -65,4 +65,3 @@ function Invoke-WPFUnInstall {
 
     }
 }
-

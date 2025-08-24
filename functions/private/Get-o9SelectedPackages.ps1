@@ -57,4 +57,3 @@ function Get-o9SelectedPackages
 
     return $packages
 }
-

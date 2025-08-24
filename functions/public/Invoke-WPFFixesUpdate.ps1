@@ -224,4 +224,3 @@ function Invoke-WPFFixesUpdate {
     Write-Progress -Id 9 -Activity "Starting Windows Update Services" -Completed
     Write-Progress -Id 10 -Activity "Forcing discovery" -Completed
 }
-

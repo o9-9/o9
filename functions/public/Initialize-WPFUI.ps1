@@ -117,4 +117,3 @@ function Initialize-WPFUI {
         }
     }
 }
-

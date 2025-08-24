@@ -34,4 +34,3 @@ function Invoke-WPFFeatureInstall {
         Write-Host "==================================="
     }
 }
-

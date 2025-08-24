@@ -15,11 +15,22 @@ function Invoke-o99GetIso {
     # Provide immediate feedback to user
     Invoke-o99BusyInfo -action "wip" -message "Initializing o99 process..." -interactive $false
 
-    Write-Host "         _                     __    __  _         "
-    Write-Host "  /\/\  (_)  ___  _ __   ___  / / /\ \ \(_) _ __   "
-    Write-Host " /    \ | | / __|| '__| / _ \ \ \/  \/ /| || '_ \  "
-    Write-Host "/ /\/\ \| || (__ | |   | (_) | \  /\  / | || | | | "
-    Write-Host "\/    \/|_| \___||_|    \___/   \/  \/  |_||_| |_| "
+    Write-Host "                         999999999               999999999      "
+    Write-Host "                       99:::::::::99           99:::::::::99    "
+    Write-Host "                     99:::::::::::::99       99:::::::::::::99  "
+    Write-Host "                    9::::::99999::::::9     9::::::99999::::::9 "
+    Write-Host "   ooooooooooo      9:::::9     9:::::9     9:::::9     9:::::9 "
+    Write-Host " oo:::::::::::oo    9:::::9     9:::::9     9:::::9     9:::::9 "
+    Write-Host "o:::::::::::::::o    9:::::99999::::::9     9::::::99999::::::9 "
+    Write-Host "o:::::ooooo:::::o     99::::::::::::::9      99::::::::::::::9  "
+    Write-Host "o::::o     o::::o       99999::::::::9         99999::::::::9   "
+    Write-Host "o::::o     o::::o            9::::::9              9::::::9     "
+    Write-Host "o::::o     o::::o           9::::::9              9::::::9      "
+    Write-Host "o::::o     o::::o          9::::::9              9::::::9       "
+    Write-Host "o:::::ooooo:::::o         9::::::9              9::::::9        "
+    Write-Host "o:::::::::::::::o        9::::::9              9::::::9         "
+    Write-Host " oo:::::::::::oo        9::::::9              9::::::9          "
+    Write-Host "   ooooooooooo         99999999              99999999           "
 
     if ($sync["ISOmanual"].IsChecked) {
         # Open file dialog to let user choose the ISO file
@@ -93,7 +104,7 @@ function Invoke-o99GetIso {
         {
             try
             {
-                # "Let it download to $env:TEMP and then we **move** it to the file path." - CodingWonders
+                # "Let it download to $env:TEMP and then we **move** it to the file path." -
                 $destinationFilePath = "$targetFolder\$fileName"
                 Write-Host "Moving ISO file. Please wait..."
                 Move-Item -Path "$filePath" -Destination "$destinationFilePath" -Force
@@ -337,4 +348,3 @@ function Invoke-o99GetIso {
     $sync.ProcessRunning = $false
     Set-o9Taskbaritem -state "None" -overlay "checkmark"
 }
-

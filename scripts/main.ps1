@@ -261,7 +261,7 @@ $commonKeyEvents = {
 $sync["Form"].Add_PreViewKeyDown($commonKeyEvents)
 
 $sync["Form"].Add_MouseLeftButtonDown({
-    Invoke-WPFPopup -Action "Hide" -Popups @("Settings", "Theme")
+    Invoke-WPFPopup -Action "Hide" -Popups @("Settings", "Theme", "FontScaling")
     $sync["Form"].DragMove()
 })
 
@@ -279,7 +279,7 @@ $sync["Form"].Add_MouseDoubleClick({
 
 $sync["Form"].Add_Deactivated({
     Write-Debug "o9 lost focus"
-    Invoke-WPFPopup -Action "Hide" -Popups @("Settings", "Theme")
+    Invoke-WPFPopup -Action "Hide" -Popups @("Settings", "Theme", "FontScaling")
 })
 
 $sync["Form"].Add_ContentRendered({
@@ -315,33 +315,40 @@ $sync["Form"].Add_ContentRendered({
 
     # maybe this is not the best place to load and execute config file?
     # maybe community can help?
-    if ($PARAM_CONFIG) {
+    if ($PARAM_CONFIG -and -not [string]::IsNullOrWhiteSpace($PARAM_CONFIG)) {
         Invoke-WPFImpex -type "import" -Config $PARAM_CONFIG
         if ($PARAM_RUN) {
+            # Wait for any existing process to complete before starting
             while ($sync.ProcessRunning) {
                 Start-Sleep -Seconds 5
             }
             Start-Sleep -Seconds 5
 
             Write-Host "Applying tweaks..."
-            Invoke-WPFtweaksbutton
-            while ($sync.ProcessRunning) {
-                Start-Sleep -Seconds 5
+            if (-not $sync.ProcessRunning) {
+                Invoke-WPFtweaksbutton
+                while ($sync.ProcessRunning) {
+                    Start-Sleep -Seconds 5
+                }
             }
             Start-Sleep -Seconds 5
 
             Write-Host "Installing features..."
-            Invoke-WPFFeatureInstall
-            while ($sync.ProcessRunning) {
-                Start-Sleep -Seconds 5
+            if (-not $sync.ProcessRunning) {
+                Invoke-WPFFeatureInstall
+                while ($sync.ProcessRunning) {
+                    Start-Sleep -Seconds 5
+                }
             }
-
             Start-Sleep -Seconds 5
+
             Write-Host "Installing applications..."
-            while ($sync.ProcessRunning) {
-                Start-Sleep -Seconds 1
+            if (-not $sync.ProcessRunning) {
+                Invoke-WPFInstall
+                while ($sync.ProcessRunning) {
+                    Start-Sleep -Seconds 1
+                }
             }
-            Invoke-WPFInstall
             Start-Sleep -Seconds 5
 
             Write-Host "Done."
@@ -441,7 +448,7 @@ $sync["Form"].Add_Activated({
 
 $sync["ThemeButton"].Add_Click({
     Write-Debug "ThemeButton clicked"
-    Invoke-WPFPopup -PopupActionTable @{ "Settings" = "Hide"; "Theme" = "Toggle" }
+    Invoke-WPFPopup -PopupActionTable @{ "Settings" = "Hide"; "Theme" = "Toggle"; "FontScaling" = "Hide" }
 })
 $sync["AutoThemeMenuItem"].Add_Click({
     Write-Debug "About clicked"
@@ -461,7 +468,7 @@ $sync["LightThemeMenuItem"].Add_Click({
 
 $sync["SettingsButton"].Add_Click({
     Write-Debug "SettingsButton clicked"
-    Invoke-WPFPopup -PopupActionTable @{ "Settings" = "Toggle"; "Theme" = "Hide" }
+    Invoke-WPFPopup -PopupActionTable @{ "Settings" = "Toggle"; "Theme" = "Hide"; "FontScaling" = "Hide" }
 })
 $sync["ImportMenuItem"].Add_Click({
     Write-Debug "Import clicked"
@@ -478,10 +485,7 @@ $sync["AboutMenuItem"].Add_Click({
     Invoke-WPFPopup -Action "Hide" -Popups @("Settings")
 
     $authorInfo = @"
-Author   : <a href="https://github.com/o9-9">@o9-9</a>
-UI       : <a href="https://github.com/o9-9">@o9-9</a>, <a href="https://github.com/o9-9">@o9-9</a>
-Runspace : <a href="https://github.com/o9-9">@o9-9</a>, <a href="https://github.com/o9-9">@o9-9</a>
-o99      : <a href="https://github.com/o9-9">@o9-9</a>, <a href="https://github.com/o9-9">@o9-9</a>
+Author   : <a href="https://github.com/o9-9">@o9</a>
 GitHub   : <a href="https://github.com/o9-9/o9">o9-9/o9</a>
 Version  : <a href="https://github.com/o9-9/o9/releases/tag/$($sync.version)">$($sync.version)</a>
 "@
@@ -506,6 +510,30 @@ $sync["SponsorMenuItem"].Add_Click({
     Show-CustomDialog -Title "Sponsors" -Message $authorInfo -EnableScroll $true
 })
 
+# Font Scaling Event Handlers
+$sync["FontScalingButton"].Add_Click({
+    Write-Debug "FontScalingButton clicked"
+    Invoke-WPFPopup -PopupActionTable @{ "Settings" = "Hide"; "Theme" = "Hide"; "FontScaling" = "Toggle" }
+})
+
+$sync["FontScalingSlider"].Add_ValueChanged({
+    param($slider)
+    $percentage = [math]::Round($slider.Value * 100)
+    $sync.FontScalingValue.Text = "$percentage%"
+})
+
+$sync["FontScalingResetButton"].Add_Click({
+    Write-Debug "FontScalingResetButton clicked"
+    $sync.FontScalingSlider.Value = 1.0
+    $sync.FontScalingValue.Text = "100%"
+})
+
+$sync["FontScalingApplyButton"].Add_Click({
+    Write-Debug "FontScalingApplyButton clicked"
+    $scaleFactor = $sync.FontScalingSlider.Value
+    Invoke-o9FontScaling -ScaleFactor $scaleFactor
+    Invoke-WPFPopup -Action "Hide" -Popups @("FontScaling")
+})
+
 $sync["Form"].ShowDialog() | out-null
 Stop-Transcript
-

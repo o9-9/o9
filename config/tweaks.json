@@ -28,7 +28,7 @@
         "OriginalValue": "<RemoveEntry>"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/ah"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/ah"
   },
   "WPFTweaksHiber": {
     "Content": "Disable Hibernation",
@@ -58,7 +58,7 @@
     "UndoScript": [
       "powercfg.exe /hibernate on"
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/hiber"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/hiber"
   },
   "WPFTweaksLaptopHibernation": {
     "Content": "Set Hibernation as default (good for laptops)",
@@ -106,7 +106,7 @@
       Start-Process -FilePath powercfg -ArgumentList \"/change monitor-timeout-dc 15\" -NoNewWindow -Wait
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/laptophibernation"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/laptophibernation"
   },
   "WPFTweaksHome": {
     "Content": "Disable Homegroup",
@@ -126,7 +126,7 @@
         "OriginalType": "Automatic"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/home"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/home"
   },
   "WPFTweaksLoc": {
     "Content": "Disable Location Tracking",
@@ -164,7 +164,7 @@
         "OriginalValue": "1"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/loc"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/loc"
   },
   "WPFTweaksServices": {
     "Content": "Set Services to Manual",
@@ -1549,7 +1549,7 @@
         "OriginalType": "Manual"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/services"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/services"
   },
   "WPFTweaksBraveDebloat": {
     "Content": "Debloat Brave",
@@ -1584,13 +1584,6 @@
         "Name": "BraveAIChatEnabled",
         "Type": "DWord",
         "Value": "0",
-        "OriginalValue": "<RemoveEntry>"
-      },
-            {
-        "Path": "HKLM:\\SOFTWARE\\Policies\\BraveSoftware\\Brave",
-        "Name": "SyncDisabled",
-        "Type": "DWord",
-        "Value": "1",
         "OriginalValue": "<RemoveEntry>"
       }
     ]
@@ -1729,7 +1722,7 @@
         "OriginalValue": "<RemoveEntry>"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/edgedebloat"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/edgedebloat"
   },
   "WPFTweaksConsumerFeatures": {
     "Content": "Disable ConsumerFeatures",
@@ -1746,7 +1739,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/consumerfeatures"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/consumerfeatures"
   },
   "WPFTweaksTele": {
     "Content": "Disable Telemetry",
@@ -1824,10 +1817,10 @@
     "registry": [
       {
         "Path": "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\DataCollection",
-        "Type": "DWord",
-        "Value": "0",
+        "OriginalValue": "<RemoveEntry>",
         "Name": "AllowTelemetry",
-        "OriginalValue": "<RemoveEntry>"
+        "Value": "0",
+        "Type": "DWord"
       },
       {
         "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection",
@@ -1914,6 +1907,13 @@
         "Type": "DWord"
       },
       {
+        "Path": "HKCU:\\SOFTWARE\\Microsoft\\Siuf\\Rules",
+        "OriginalValue": "<RemoveEntry>",
+        "Name": "PeriodInNanoSeconds",
+        "Value": "<RemoveEntry>",
+        "Type": "QWord"
+      },
+      {
         "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection",
         "OriginalValue": "<RemoveEntry>",
         "Name": "DoNotShowFeedbackNotifications",
@@ -1945,7 +1945,14 @@
         "Path": "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeliveryOptimization\\Config",
         "OriginalValue": "1",
         "Name": "DODownloadMode",
-        "Value": "1",
+        "Value": "0",
+        "Type": "DWord"
+      },
+      {
+        "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\DeliveryOptimization",
+        "OriginalValue": "<RemoveEntry>",
+        "Name": "DODownloadMode",
+        "Value": "0",
         "Type": "DWord"
       },
       {
@@ -1987,14 +1994,6 @@
         "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\FileSystem",
         "OriginalValue": "0",
         "Name": "LongPathsEnabled",
-        "Value": "1",
-        "Type": "DWord"
-      },
-      {
-        "_Comment": "Driver searching is a function that should be left in",
-        "Path": "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DriverSearching",
-        "OriginalValue": "1",
-        "Name": "SearchOrderConfig",
         "Value": "1",
         "Type": "DWord"
       },
@@ -2104,11 +2103,11 @@
         Set-MpPreference -SubmitSamplesConsent 2 -ErrorAction SilentlyContinue | Out-Null
         "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/tele"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/tele"
   },
   "WPFTweaksWifi": {
-    "Content": "Disable Wifi-Sense",
-    "Description": "Wifi Sense is a spying service that phones home all nearby scanned wifi networks and your current geo location.",
+    "Content": "Disable Wi-Fi Sense",
+    "Description": "Wi-Fi Sense is a spying service that phones home all nearby scanned Wi-Fi networks and your current geographic location.",
     "category": "Essential Tweaks",
     "panel": "1",
     "Order": "a005_",
@@ -2128,7 +2127,7 @@
         "OriginalValue": "1"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/wifi"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/wifi"
   },
   "WPFTweaksUTC": {
     "Content": "Set Time to UTC (Dual Boot)",
@@ -2145,11 +2144,11 @@
         "OriginalValue": "0"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/utc"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/utc"
   },
   "WPFTweaksRemoveHome": {
-    "Content": "Remove Home from explorer",
-    "Description": "Removes the Home from explorer and sets This PC as default",
+    "Content": "Remove Home from Explorer",
+    "Description": "Removes the Home from Explorer and sets This PC as default",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
     "Order": "a029_",
@@ -2165,11 +2164,11 @@
       REG DELETE \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /f /v \"LaunchTo\"
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/removehomegallery"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/removehomegallery"
   },
   "WPFTweaksRemoveGallery": {
     "Content": "Remove Gallery from explorer",
-    "Description": "Removes the Gallery from explorer and sets This PC as default",
+    "Description": "Removes the Gallery from Explorer and sets This PC as default",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
     "Order": "a030_",
@@ -2185,7 +2184,7 @@
       REG DELETE \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /f /v \"LaunchTo\"
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/removehomegallery"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/removehomegallery"
   },
   "WPFTweaksDisplay": {
     "Content": "Set Display for Performance",
@@ -2292,7 +2291,7 @@
     "UndoScript": [
       "Remove-ItemProperty -Path \"HKCU:\\Control Panel\\Desktop\" -Name \"UserPreferencesMask\""
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/display"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/display"
   },
   "WPFTweaksDeBloat": {
     "Content": "Remove ALL MS Store Apps - NOT RECOMMENDED",
@@ -2404,7 +2403,7 @@
         }
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/debloat"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/debloat"
   },
   "WPFTweaksRestorePoint": {
     "Content": "Create Restore Point",
@@ -2455,7 +2454,7 @@
         }
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/restorepoint"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/restorepoint"
   },
   "WPFTweaksEndTaskOnTaskbar": {
     "Content": "Enable End Task With Right Click",
@@ -2489,7 +2488,7 @@
       # Set the property, creating it if it doesn't exist
       New-ItemProperty -Path $path -Name $name -PropertyType DWord -Value $value -Force | Out-Null"
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/endtaskontaskbar"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/endtaskontaskbar"
   },
   "WPFTweaksPowershell7": {
     "Content": "Change Windows Terminal default: PowerShell 5 -> PowerShell 7",
@@ -2503,7 +2502,7 @@
     "UndoScript": [
       "Invoke-WPFTweakPS7 -action \"PS5\""
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/powershell7"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/powershell7"
   },
   "WPFTweaksPowershell7Tele": {
     "Content": "Disable Powershell 7 Telemetry",
@@ -2517,7 +2516,7 @@
     "UndoScript": [
       "[Environment]::SetEnvironmentVariable('POWERSHELL_TELEMETRY_OPTOUT', '', 'Machine')"
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/powershell7tele"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/powershell7tele"
   },
   "WPFTweaksStorage": {
     "Content": "Disable Storage Sense",
@@ -2531,7 +2530,7 @@
     "UndoScript": [
       "Set-ItemProperty -Path \"HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\StorageSense\\Parameters\\StoragePolicy\" -Name \"01\" -Value 1 -Type Dword -Force"
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/storage"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/storage"
   },
   "WPFTweaksRemoveCopilot": {
     "Content": "Disable Microsoft Copilot",
@@ -2612,7 +2611,7 @@
       winget install --name \"Microsoft Copilot\" --source msstore --accept-package-agreements --accept-source-agreements --silent
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/removecopilot"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/removecopilot"
   },
   "WPFTweaksRecallOff": {
     "Content": "Disable Recall",
@@ -2657,7 +2656,7 @@
       Write-Host \"Please restart your computer in order for the changes to be fully applied.\"
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/disablerecall"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/disablerecall"
   },
   "WPFTweaksDisableLMS1": {
     "Content": "Disable Intel MM (vPro LMS)",
@@ -2715,7 +2714,7 @@
 
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/disablelms1"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/disablelms1"
   },
   "WPFTweaksDisableWpbtExecution": {
     "Content": "Disable Windows Platform Binary Table (WPBT)",
@@ -2777,7 +2776,7 @@
             Remove-Item -Recurse -Force -ErrorAction SilentlyContinue \"$OneDrivePath\"
         }
 
-        Write-Host \"Remove Onedrive from explorer sidebar\"
+        Write-Host \"Remove Onedrive from Explorer sidebar\"
         Set-ItemProperty -Path \"HKCR:\\CLSID\\{018D5C66-4533-4307-9B53-224DE2ED1FE6}\" -Name \"System.IsPinnedToNameSpaceTree\" -Value 0
         Set-ItemProperty -Path \"HKCR:\\Wow6432Node\\CLSID\\{018D5C66-4533-4307-9B53-224DE2ED1FE6}\" -Name \"System.IsPinnedToNameSpaceTree\" -Value 0
 
@@ -2823,7 +2822,7 @@
         taskkill.exe /F /IM \"explorer.exe\"
         Start-Process \"explorer.exe\"
 
-        Write-Host \"Waiting for explorer to complete loading\"
+        Write-Host \"Waiting for Explorer to complete loading\"
         Write-Host \"Please Note - The OneDrive folder at $OneDrivePath may still have items in it. You must manually delete it, but all the files should already be copied to the base user folder.\"
         Write-Host \"If there are Files missing afterwards, please Login to Onedrive.com and Download them manually\" -ForegroundColor Yellow
         Start-Sleep 5
@@ -2838,11 +2837,11 @@
       Start-Process -FilePath winget -ArgumentList \"install -e --accept-source-agreements --accept-package-agreements --silent Microsoft.OneDrive \" -NoNewWindow -Wait
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/removeonedrive"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/removeonedrive"
   },
   "WPFTweaksRazerBlock": {
     "Content": "Block Razer Software Installs",
-    "Description": "Blocks ALL Razer Software installations. The hardware works fine without any software.",
+    "Description": "Blocks ALL Razer Software installations. The hardware works fine without any software. WARNING: this will also block all Windows third-party driver installations.",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
     "Order": "a032_",
@@ -2880,7 +2879,7 @@
           New-Item -Path \"C:\\Windows\\Installer\\\" -Name \"Razer\" -ItemType \"directory\"
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/razerblock"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/razerblock"
   },
   "WPFTweaksDisableNotifications": {
     "Content": "Disable Notification Tray/Calendar",
@@ -2904,7 +2903,7 @@
         "OriginalValue": "1"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/disablenotifications"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/disablenotifications"
   },
   "WPFTweaksDebloatAdobe": {
     "Content": "Adobe Debloat",
@@ -3053,7 +3052,7 @@
         "OriginalType": "Automatic"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/debloatadobe"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/debloatadobe"
   },
   "WPFTweaksBlockAdobeNet": {
     "Content": "Adobe Network Block",
@@ -3161,7 +3160,7 @@
       }
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/blockadobenet"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/blockadobenet"
   },
   "WPFTweaksRightClickMenu": {
     "Content": "Set Classic Right-Click Menu ",
@@ -3184,7 +3183,7 @@
       Stop-Process -Name \"explorer\" -Force
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/rightclickmenu"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/rightclickmenu"
   },
   "WPFTweaksDiskCleanup": {
     "Content": "Run Disk Cleanup",
@@ -3198,7 +3197,7 @@
       Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/diskcleanup"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/diskcleanup"
   },
   "WPFTweaksDeleteTempFiles": {
     "Content": "Delete Temporary Files",
@@ -3210,7 +3209,7 @@
       "Get-ChildItem -Path \"C:\\Windows\\Temp\" *.* -Recurse | Remove-Item -Force -Recurse
     Get-ChildItem -Path $env:TEMP *.* -Recurse | Remove-Item -Force -Recurse"
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/deletetempfiles"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/deletetempfiles"
   },
   "WPFTweaksDVR": {
     "Content": "Disable GameDVR",
@@ -3255,7 +3254,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/dvr"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/dvr"
   },
   "WPFTweaksIPv46": {
     "Content": "Prefer IPv4 over IPv6",
@@ -3272,7 +3271,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/essential-tweaks/ipv46"
+    "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/ipv46"
   },
   "WPFTweaksTeredo": {
     "Content": "Disable Teredo",
@@ -3295,7 +3294,7 @@
     "UndoScript": [
       "netsh interface teredo set state default"
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/teredo"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/teredo"
   },
   "WPFTweaksDisableipsix": {
     "Content": "Disable IPv6",
@@ -3318,7 +3317,7 @@
     "UndoScript": [
       "Enable-NetAdapterBinding -Name \"*\" -ComponentID ms_tcpip6"
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/disableipsix"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/disableipsix"
   },
   "WPFTweaksDisableBGapps": {
     "Content": "Disable Background Apps",
@@ -3335,7 +3334,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/disablebgapps"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/disablebgapps"
   },
   "WPFTweaksDisableFSO": {
     "Content": "Disable Fullscreen Optimizations",
@@ -3352,7 +3351,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/disablefso"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/disablefso"
   },
   "WPFToggleDarkMode": {
     "Content": "Dark Theme for Windows",
@@ -3395,7 +3394,7 @@
       }
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/darkmode"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/darkmode"
   },
   "WPFToggleBingSearch": {
     "Content": "Bing Search in Start Menu",
@@ -3414,7 +3413,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/bingsearch"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/bingsearch"
   },
   "WPFToggleNumLock": {
     "Content": "NumLock on Startup",
@@ -3441,7 +3440,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/numlock"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/numlock"
   },
   "WPFToggleVerboseLogon": {
     "Content": "Verbose Messages During Logon",
@@ -3460,7 +3459,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/verboselogon"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/verboselogon"
   },
   "WPFToggleStartMenuRecommendations": {
     "Content": "Recommendations in Start Menu",
@@ -3495,7 +3494,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/wpftogglestartmenurecommendations"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/wpftogglestartmenurecommendations"
   },
   "WPFToggleHideSettingsHome": {
     "Content": "Remove Settings Home Page",
@@ -3532,7 +3531,7 @@
         "Type": "String"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/snapwindow"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/snapwindow"
   },
   "WPFToggleSnapFlyout": {
     "Content": "Snap Assist Flyout",
@@ -3561,7 +3560,7 @@
       Invoke-o9ExplorerUpdate -action \"restart\"
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/snapflyout"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/snapflyout"
   },
   "WPFToggleSnapSuggestion": {
     "Content": "Snap Assist Suggestion",
@@ -3590,7 +3589,7 @@
       Invoke-o9ExplorerUpdate -action \"restart\"
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/snapsuggestion"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/snapsuggestion"
   },
   "WPFToggleMouseAcceleration": {
     "Content": "Mouse Acceleration",
@@ -3625,7 +3624,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/mouseacceleration"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/mouseacceleration"
   },
   "WPFToggleStickyKeys": {
     "Content": "Sticky Keys",
@@ -3644,7 +3643,70 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/stickykeys"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/stickykeys"
+  },
+  "WPFToggleNewOutlook": {
+    "Content": "New Outlook",
+    "Description": "If disabled it removes the toggle for new Outlook, disables the new Outlook migration and makes sure the Outlook Application actually uses the old Outlook.",
+    "category": "Customize Preferences",
+    "panel": "2",
+    "Order": "a112_",
+    "Type": "Toggle",
+    "registry": [
+      {
+        "Path": "HKCU:\\SOFTWARE\\Microsoft\\Office\\16.0\\Outlook\\Preferences",
+        "Name": "UseNewOutlook",
+        "Value": "1",
+        "OriginalValue": "0",
+        "DefaultState": "true",
+        "Type": "DWord"
+      },
+      {
+        "Path": "HKCU:\\Software\\Microsoft\\Office\\16.0\\Outlook\\Options\\General",
+        "Name": "HideNewOutlookToggle",
+        "Value": "0",
+        "OriginalValue": "1",
+        "DefaultState": "true",
+        "Type": "DWord"
+      },
+      {
+        "Path": "HKCU:\\Software\\Policies\\Microsoft\\Office\\16.0\\Outlook\\Options\\General",
+        "Name": "DoNewOutlookAutoMigration",
+        "Value": "0",
+        "OriginalValue": "0",
+        "DefaultState": "false",
+        "Type": "DWord"
+      },
+      {
+        "Path": "HKCU:\\Software\\Policies\\Microsoft\\Office\\16.0\\Outlook\\Preferences",
+        "Name": "NewOutlookMigrationUserSetting",
+        "Value": "0",
+        "OriginalValue": "<RemoveEntry>",
+        "DefaultState": "true",
+        "Type": "DWord"
+      }
+    ],
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/newoutlook"
+  },
+
+  "WPFToggleMultiplaneOverlay": {
+    "Content": "Multiplane Overlay",
+    "Description": "Disable the Multiplane Overlay which can sometimes cause issues with Graphics Cards.",
+    "category": "Customize Preferences",
+    "panel": "2",
+    "Order": "a111_",
+    "Type": "Toggle",
+    "registry": [
+      {
+        "Path": "HKLM:\\SOFTWARE\\Microsoft\\Windows\\Dwm",
+        "Name": "OverlayTestMode",
+        "Value": "5",
+        "OriginalValue": "<RemoveEntry>",
+        "DefaultState": "true",
+        "Type": "DWord"
+      }
+    ],
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/multplaneoverlay"
   },
   "WPFToggleHiddenFiles": {
     "Content": "Show Hidden Files",
@@ -3673,7 +3735,7 @@
       Invoke-o9ExplorerUpdate -action \"restart\"
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/hiddenfiles"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/hiddenfiles"
   },
   "WPFToggleShowExt": {
     "Content": "Show File Extensions",
@@ -3702,7 +3764,7 @@
       Invoke-o9ExplorerUpdate -action \"restart\"
       "
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/showext"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/showext"
   },
   "WPFToggleTaskbarSearch": {
     "Content": "Search Button in Taskbar",
@@ -3721,7 +3783,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/taskbarsearch"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/taskbarsearch"
   },
   "WPFToggleTaskView": {
     "Content": "Task View Button in Taskbar",
@@ -3740,7 +3802,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/taskview"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/taskview"
   },
   "WPFToggleTaskbarWidgets": {
     "Content": "Widgets Button in Taskbar",
@@ -3759,7 +3821,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/taskbarwidgets"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/taskbarwidgets"
   },
   "WPFToggleTaskbarAlignment": {
     "Content": "Center Taskbar Items",
@@ -3778,7 +3840,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/taskbaralignment"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/taskbaralignment"
   },
   "WPFToggleDetailedBSoD": {
     "Content": "Detailed BSoD",
@@ -3805,7 +3867,7 @@
         "Type": "DWord"
       }
     ],
-    "link": "https://o9-9.github.io/o9/dev/tweaks/customize-preferences/detailedbsod"
+    "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/detailedbsod"
   },
   "WPFToggleS3Sleep": {
     "Content": "S3 Sleep",
@@ -3831,7 +3893,7 @@
     "panel": "1",
     "Order": "a039_",
     "Type": "Button",
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/oosubutton"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/oosubutton"
   },
   "WPFchangedns": {
     "Content": "DNS",
@@ -3840,7 +3902,7 @@
     "Order": "a040_",
     "Type": "Combobox",
     "ComboItems": "Default DHCP Google Cloudflare Cloudflare_Malware Cloudflare_Malware_Adult Open_DNS Quad9 AdGuard_Ads_Trackers AdGuard_Ads_Trackers_Malware_Adult dns0.eu_Open dns0.eu_ZERO dns0.eu_KIDS",
-    "link": "https://o9-9.github.io/o9/dev/tweaks/z--advanced-tweaks---caution/changedns"
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/changedns"
   },
   "WPFAddUltPerf": {
     "Content": "Add and Activate Ultimate Performance Profile",
@@ -3849,7 +3911,7 @@
     "Order": "a080_",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/tweaks/performance-plans/addultperf"
+    "link": "https://docs.o9ll.com/dev/tweaks/performance-plans/addultperf"
   },
   "WPFRemoveUltPerf": {
     "Content": "Remove Ultimate Performance Profile",
@@ -3858,7 +3920,7 @@
     "Order": "a081_",
     "Type": "Button",
     "ButtonWidth": "300",
-    "link": "https://o9-9.github.io/o9/dev/tweaks/performance-plans/removeultperf"
+    "link": "https://docs.o9ll.com/dev/tweaks/performance-plans/removeultperf"
   },
   "WPFTweaksDisableExplorerAutoDiscovery": {
     "Content": "Disable Explorer Automatic Folder Discovery",
@@ -3874,7 +3936,7 @@
       # Folder types lookup table
       $bagMRU = \"HKCU:\\Software\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\BagMRU\"
 
-      # Flush explorer view database
+      # Flush Explorer view database
       Remove-Item -Path $bags -Recurse -Force
       Write-Host \"Removed $bags\"
 
@@ -3904,7 +3966,7 @@
       # Folder types lookup table
       $bagMRU = \"HKCU:\\Software\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\BagMRU\"
 
-      # Flush explorer view database
+      # Flush Explorer view database
       Remove-Item -Path $bags -Recurse -Force
       Write-Host \"Removed $bags\"
 
@@ -3914,6 +3976,23 @@
       Write-Host Please sign out and back in, or restart your computer to apply the changes!
       "
     ]
+  },
+  "WPFTweaksDisableCrossDeviceResume": {
+    "Content": "Cross-Device Resume",
+    "Description": "This tweak controls the Resume function in Windows 11 24H2 and later, which allows you to resume an activity from a mobile device and vice-versa.",
+    "category": "Customize Preferences",
+    "panel": "2",
+    "Order": "a207_",
+    "Type": "Toggle",
+    "registry": [
+      {
+        "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\CrossDeviceResume\\Configuration",
+        "Name": "IsResumeAllowed",
+        "Value": "1",
+        "OriginalValue": "0",
+        "DefaultState": "true",
+        "Type": "DWord"
+      }
+    ]
   }
 }
-

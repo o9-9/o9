@@ -22,4 +22,3 @@ function Set-o9Progressbar{
     $sync.form.Dispatcher.Invoke([action]{ $sync.ProgressBar.Value = $percent})
 
 }
-

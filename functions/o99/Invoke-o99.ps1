@@ -58,6 +58,9 @@ public class PowerManagement {
     $injectDrivers = $sync.o99InjectDrivers.IsChecked
     $importDrivers = $sync.o99ImportDrivers.IsChecked
 
+    $WPBT = $sync.o99WPBT.IsChecked
+    $unsupported = $sync.o99Unsupported.IsChecked
+
     $importVirtIO = $sync.o99CopyVirtIO.IsChecked
 
     $mountDir = $sync.o99MountDir.Text
@@ -66,7 +69,12 @@ public class PowerManagement {
     # Detect if the Windows image is an ESD file and convert it to WIM
     if (-not (Test-Path -Path "$mountDir\sources\install.wim" -PathType Leaf) -and (Test-Path -Path "$mountDir\sources\install.esd" -PathType Leaf)) {
         Write-Host "Exporting Windows image to a WIM file, keeping the index we want to work on. This can take several minutes, depending on the performance of your computer..."
-        Export-WindowsImage -SourceImagePath $mountDir\sources\install.esd -SourceIndex $index -DestinationImagePath $mountDir\sources\install.wim -CompressionType "Max"
+        try {
+            Export-WindowsImage -SourceImagePath "$mountDir\sources\install.esd" -SourceIndex $index -DestinationImagePath "$mountDir\sources\install.wim" -CompressionType "Max"
+        } catch {
+            # Usually the case if it can't find unattend.dll on the host system. Guys, fix your corrupt messes that are your installations!
+            dism /english /export-image /sourceimagefile="$mountDir\sources\install.esd" /sourceindex=$index /destinationimagefile="$mountDir\sources\install.wim" /compress:max
+        }
         if ($?) {
             Remove-Item -Path "$mountDir\sources\install.esd" -Force
             # Since we've already exported the image index we wanted, switch to the first one
@@ -166,6 +174,25 @@ public class PowerManagement {
             }
         }
 
+        if ($WPBT) {
+            Write-Host "Disabling WPBT Execution"
+            reg load HKLM\zSYSTEM "$($scratchDir)\Windows\System32\config\SYSTEM"
+            reg add "HKLM\zSYSTEM\ControlSet001\Control\Session Manager" /v DisableWpbtExecution /t REG_DWORD /d 1 /f
+            reg unload HKLM\zSYSTEM
+        }
+
+        if ($unsupported) {
+            Write-Host "Bypassing system requirements (locally)"
+            reg add "HKCU\Control Panel\UnsupportedHardwareNotificationCache" /v "SV1" /t REG_DWORD /d 0 /f
+            reg add "HKCU\Control Panel\UnsupportedHardwareNotificationCache" /v "SV2" /t REG_DWORD /d 0 /f
+            reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassCPUCheck" /t REG_DWORD /d 1 /f
+            reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassRAMCheck" /t REG_DWORD /d 1 /f
+            reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassSecureBootCheck" /t REG_DWORD /d 1 /f
+            reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassStorageCheck" /t REG_DWORD /d 1 /f
+            reg add "HKLM\SYSTEM\Setup\LabConfig" /v "BypassTPMCheck" /t REG_DWORD /d 1 /f
+            reg add "HKLM\SYSTEM\Setup\MoSetup" /v "AllowUpgradesWithUnsupportedTPMOrCPU" /t REG_DWORD /d 1 /f
+        }
+
         if ($importVirtIO) {
             Write-Host "Copying VirtIO drivers..."
             o99-CopyVirtIO
@@ -221,6 +248,20 @@ public class PowerManagement {
 
         Write-Host "Create unattend.xml"
 
+        if (($sync.o99AutoConfigBox.Text -ne "") -and (Test-Path "$($sync.o99AutoConfigBox.Text)"))
+        {
+            try
+            {
+                Write-Host "A configuration file has been specified. Copying to WIM file..."
+                Copy-Item "$($sync.o99AutoConfigBox.Text)" "$($scratchDir)\o9-config.json"
+            }
+            catch
+            {
+                Write-Host "The config file could not be copied. Continuing without it..."
+            }
+        }
+
+        # Create unattended answer file with user information - Check condition to learn more about this functionality
         if ($sync.o99UserName.Text -eq "")
         {
             o99-NewUnattend -userName "User"
@@ -242,7 +283,6 @@ public class PowerManagement {
         Copy-Item "$env:temp\unattend.xml" "$($scratchDir)\Windows\Panther\unattend.xml" -force
         New-Item -ItemType Directory -Force -Path "$($scratchDir)\Windows\System32\Sysprep"
         Copy-Item "$env:temp\unattend.xml" "$($scratchDir)\Windows\System32\Sysprep\unattend.xml" -force
-        Copy-Item "$env:temp\unattend.xml" "$($scratchDir)\unattend.xml" -force
         Write-Host "Done Copy unattend.xml"
 
         Write-Host "Create FirstRun"
@@ -277,7 +317,6 @@ public class PowerManagement {
         reg add "HKLM\zSOFTWARE\Policies\Microsoft\Windows\Windows Chat" /v ChatIcon /t REG_DWORD /d 2 /f                             >$null 2>&1
         reg add "HKLM\zNTUSER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarMn" /t REG_DWORD /d 0 /f        >$null 2>&1
         reg query "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Communications" /v "ConfigureChatAutoInstall"                      >$null 2>&1
-        # Write-Host Error code $LASTEXITCODE
         Write-Host "Done disabling Teams"
 
         Write-Host "Fix Windows Volume Mixer Issue"
@@ -304,11 +343,6 @@ public class PowerManagement {
                 'CrossDeviceUpdate'
             ) | ForEach-Object {
                 Write-Host "Removing Windows Expedited App: $_"
-
-                # Copied here After Installation (Online)
-                # reg delete "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Orchestrator\UScheduler\$_" /f | Out-Null
-
-                # When in Offline Image
                 reg delete "HKLM\zSOFTWARE\Microsoft\WindowsUpdate\Orchestrator\UScheduler_Oobe\$_" /f | Out-Null
             }
         }
@@ -316,7 +350,6 @@ public class PowerManagement {
         reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d 0 /f
         Write-Host "Setting all services to start manually"
         reg add "HKLM\zSOFTWARE\CurrentControlSet\Services" /v Start /t REG_DWORD /d 3 /f
-        # Write-Host $LASTEXITCODE
 
         Write-Host "Enabling Local Accounts on OOBE"
         reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" /v "BypassNRO" /t REG_DWORD /d "1" /f
@@ -371,7 +404,12 @@ public class PowerManagement {
     try {
 
         Write-Host "Exporting image into $mountDir\sources\install2.wim"
-        Export-WindowsImage -SourceImagePath "$mountDir\sources\install.wim" -SourceIndex $index -DestinationImagePath "$mountDir\sources\install2.wim" -CompressionType "Max"
+        try {
+            Export-WindowsImage -SourceImagePath "$mountDir\sources\install.wim" -SourceIndex $index -DestinationImagePath "$mountDir\sources\install2.wim" -CompressionType "Max"
+        } catch {
+            # Usually the case if it can't find unattend.dll on the host system. Guys, fix your corrupt messes that are your installations!
+            dism /english /export-image /sourceimagefile="$mountDir\sources\install.wim" /sourceindex=$index /destinationimagefile="$mountDir\sources\install2.wim" /compress:max
+        }
         Write-Host "Remove old '$mountDir\sources\install.wim' and rename $mountDir\sources\install2.wim"
         Remove-Item "$mountDir\sources\install.wim"
         Rename-Item "$mountDir\sources\install2.wim" "$mountDir\sources\install.wim"
@@ -384,6 +422,20 @@ public class PowerManagement {
             return
         }
         Write-Host "Windows image completed. Continuing with boot.wim."
+
+        $esd = $sync.o99ESD.IsChecked
+        if ($esd) {
+            Write-Host "Converting install image to ESD."
+            try {
+                Export-WindowsImage -SourceImagePath "$mountDir\sources\install.wim" -SourceIndex $index -DestinationImagePath "$mountDir\sources\install.esd" -CompressionType "Recovery"
+                Remove-Item "$mountDir\sources\install.wim"
+                Write-Host "Converted install image to ESD."
+            } catch {
+                Start-Process -FilePath "$env:SystemRoot\System32\dism.exe" -ArgumentList "/export-image /sourceimagefile:`"$mountDir\sources\install.wim`" /sourceindex:1 /destinationimagefile:`"$mountDir\sources\install.esd`" /compress:recovery" -Wait -NoNewWindow
+                Remove-Item "$mountDir\sources\install.wim"
+                Write-Host "Converted install image to ESD."
+            }
+        }
 
         # Next step boot image
         Write-Host "Mounting boot image $mountDir\sources\boot.wim into $scratchDir"
@@ -455,12 +507,13 @@ public class PowerManagement {
             if ($?) { Write-Host "Done Copying target ISO to USB drive!" } else { Write-Host "ISO copy failed." }
         }
 
-        Write-Host " _____                       "
-        Write-Host "(____ \                      "
-        Write-Host " _   \ \ ___  ____   ____    "
-        Write-Host "| |   | / _ \|  _ \ / _  )   "
-        Write-Host "| |__/ / |_| | | | ( (/ /    "
-        Write-Host "|_____/ \___/|_| |_|\____)   "
+        Write-Host "888888888b.                                       "
+        Write-Host "888    'Y88b                                      "
+        Write-Host "888      888   .d888b.    888888b.     .d888b.    "
+        Write-Host "888      888  d88' '88b   8888 '88b   d8b   d8b   "
+        Write-Host "888      888  888   888   888   888   888888888   "
+        Write-Host "888    .d88P  888. .888   888   888   Y8b.        "
+        Write-Host "888888888P'   'Y8bod8P'   888   888    'Y88888    "
 
         # Check if the ISO was successfully created - o9 edit
         if ($LASTEXITCODE -eq 0) {
@@ -481,6 +534,7 @@ public class PowerManagement {
                 Write-Host "Reason: $($exitCode.Message)"
                 Invoke-o99BusyInfo -action "warning" -message $exitCode.Message
                 Set-o9Taskbaritem -state "Error" -value 1 -overlay "warning"
+                [System.Windows.MessageBox]::Show("o99 failed to make the ISO.", "o9", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Error)
             } catch {
                 # Could not get error description from Windows APIs
             }
@@ -488,11 +542,9 @@ public class PowerManagement {
 
         Toggle-o99Panel 1
 
-        #$sync.o99FinalIsoLocation.Text = "$env:temp\o99.iso"
         $sync.o99FinalIsoLocation.Text = "$($SaveDialog.FileName)"
         # Allow the machine to sleep again (optional)
         [PowerManagement]::SetThreadExecutionState(0)
         $sync.ProcessRunning = $false
     }
 }
-

@@ -34,4 +34,3 @@ function Invoke-WPFFixesNetwork {
     Write-Host "-- Network Configuration has been Reset --"
     Write-Host "=========================================="
 }
-

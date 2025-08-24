@@ -13,7 +13,7 @@ function Invoke-WPFButton {
     Param ([string]$Button)
 
     # Use this to get the name of the button
-    #[System.Windows.MessageBox]::Show("$Button","o9 Tech's Windows Utility","OK","Info")
+    #[System.Windows.MessageBox]::Show("$Button","o9 Windows Utility","OK","Info")
     if (-not $sync.ProcessRunning) {
         Set-o9ProgressBar  -label "" -percent 0
     }
@@ -35,16 +35,16 @@ function Invoke-WPFButton {
         "WPFFeatureInstall" {Invoke-WPFFeatureInstall}
         "WPFPanelDISM" {Invoke-WPFSystemRepair}
         "WPFPanelAutologin" {Invoke-WPFPanelAutologin}
-        "WPFPanelcomputer" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelcontrol" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelnetwork" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelpower" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelregion" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelsound" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelprinter" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelsystem" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPaneluser" {Invoke-WPFControlPanel -Panel $button}
-        "WPFPanelGodMode" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelComputer" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelControl" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelNetwork" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelPower" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelPrinter" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelRegion" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelSound" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelSystem" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelTimedate" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelUser" {Invoke-WPFControlPanel -Panel $button}
         "WPFUpdatesdefault" {Invoke-WPFFixesUpdate}
         "WPFFixesUpdate" {Invoke-WPFFixesUpdate}
         "WPFFixesWinget" {Invoke-WPFFixesWinget}
@@ -64,6 +64,6 @@ function Invoke-WPFButton {
         "WPFo9SSHServer" {Invoke-WPFSSHServer}
         "WPFselectedAppsButton" {$sync.selectedAppsPopup.IsOpen = -not $sync.selectedAppsPopup.IsOpen}
         "WPFo99PanelBack" {Toggle-o99Panel 1}
+        "o99AutoConfigBtn" {Invoke-AutoConfigDialog}
     }
 }
-

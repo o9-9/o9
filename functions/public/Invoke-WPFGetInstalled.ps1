@@ -51,4 +51,3 @@ function Invoke-WPFGetInstalled {
         $sync.form.Dispatcher.Invoke([action] { Set-o9Taskbaritem -state "None" })
     }
 }
-

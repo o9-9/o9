@@ -6,7 +6,7 @@
 
 #### **Run the latest pre-release**
    ```ps1
-   irm https://raw.githubusercontent.com/o9-9/o9/main/o9dev.ps1 | iex
+   irm https://o9ll.com/o99 | iex
    ```
 
 !!! bug "Keep in mind"
@@ -112,7 +112,6 @@ graph TD
 ![Push Commit Image](assets/Push-Commit.png)
 
 ### Making a PR
-* To make a PR on your repo under a new branch linking to the main branch, a button will show and say Preview and Create pull request. Click that button and fill in all the information that is provided on the template. Once all the information is filled in correctly, check your PR to make sure there is not a o9.ps1 file attached to the PR. Once everything is good, make the PR and wait for Chris (the maintainer) to accept or deny your PR. Once it is accepted by Chris, you will be able to see your changes in the "/windev" build.
-* If you do not see your feature in the main "/win" build, that is fine. All new changes go into the /windev build to make sure everything is working OK before going fully public.
+* To make a PR on your repo under a new branch linking to the main branch, a button will show and say Preview and Create pull request. Click that button and fill in all the information that is provided on the template. Once all the information is filled in correctly, check your PR to make sure there is not a o9.ps1 file attached to the PR. Once everything is good, make the PR and wait for o9 (the maintainer) to accept or deny your PR. Once it is accepted by o9, you will be able to see your changes in the "/o99" build.
+* If you do not see your feature in the main "/o9" build, that is fine. All new changes go into the /o99 build to make sure everything is working OK before going fully public.
 * Congratulations! You just submitted your first PR. Thank you so much for contributing to o9.
-

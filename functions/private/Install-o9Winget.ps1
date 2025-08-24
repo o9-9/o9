@@ -52,6 +52,7 @@ function Install-o9Winget {
 
             # Check if Windows version supports Repair-WinGetPackageManager (24H2 and above)
             if ([System.Environment]::OSVersion.Version.Build -ge 26100) {
+        Install-Module -Name Microsoft.WinGet.Client -Force -ErrorAction Continue
                 Repair-WinGetPackageManager -Force -Latest -Verbose
                 # Verify if repair was successful
                 $wingetCmd = Get-Command winget -ErrorAction Stop
@@ -74,4 +75,3 @@ function Install-o9Winget {
         throw
     }
 }
-

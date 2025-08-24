@@ -37,21 +37,21 @@ Get started with o9 in seconds! Choose your preferred installation method:
 ### Method 1: Direct Installation (Recommended)
 
 ```powershell
-# Install o9
 irm "https://o9ll.com/o9" | iex
+```
 
-# Install o99 (alternative version)
+```powershell
 irm "https://o9ll.com/o99" | iex
 ```
 
 ### Method 2: Manual Installation
 
 ```powershell
-# Clone the repository
 git clone --depth 1 "https://github.com/o9-9/o9.git"
 cd o9
+```
 
-# Run the installation script
+```powershell
 .\Compile.ps1
 ```
 
@@ -72,28 +72,17 @@ cd o9
 | RAM | 2GB | 4GB+ |
 | Storage | 100MB | 500MB+ |
 
-## 🔧 Usage
-
-### Basic Commands
+## 🔧
 
 ```powershell
-# Launch o9
-o9
-
-# Launch o99 (alternative version)
-o99
+o9 --version
 ```
 
-### Advanced Usage
+```powershell
+o9 --help
+```
 
 ```powershell
-# Check version
-o9 --version
-
-# Get help
-o9 --help
-
-# Run with specific options
 o9 --config custom-config.json
 ```
 
@@ -101,7 +90,7 @@ o9 --config custom-config.json
 
 ### 📖 Official Documentation
 
-Visit our comprehensive documentation at **[docs.o9ll.com](https://docs.o9ll.com/)** for:
+Visit our comprehensive documentation at [Docs](https://docs.o9ll.com/) for
 
 - 📋 **Getting Started Guide**
 - 🔧 **Configuration Options**
@@ -112,27 +101,19 @@ Visit our comprehensive documentation at **[docs.o9ll.com](https://docs.o9ll.com
 
 ### 📚 Additional Resources
 
-- [GitHub Wiki](https://github.com/o9-9/o9/wiki)
-- [Release Notes](https://github.com/o9-9/o9/releases)
-- [Issues & Bug Reports](https://github.com/o9-9/o9/issues)
+- [Wiki](https://github.com/o9-9/o9/wiki)
+- [Release](https://github.com/o9-9/o9/releases)
+- [Issues](https://github.com/o9-9/o9/issues)
 
 ## 🛠️ Development
 
-### Building from Source
-
 ```powershell
-# Clone the repository
 git clone --depth 1 "https://github.com/o9-9/o9.git"
 cd o9
+```
 
-# Install dependencies (if any)
-# .\Install-Dependencies.ps1
-
-# Build the project
+```powershell
 .\Compile.ps1
-
-# Run tests (if available)
-# .\Run-Tests.ps1
 ```
 
 ### Development Environment Setup

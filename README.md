@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/github/v/release/o9-9/o9?color=%230567ff&label=Latest%20Release&style=for-the-badge)](https://github.com/o9-9/o9/releases/latest)
 ![GitHub Downloads](https://img.shields.io/github/downloads/o9-9/o9/o9.ps1?label=Total%20Downloads&style=for-the-badge)
-[![Discord](https://dcbadge.limes.pink/api/server/https://discord.com/users/1146203933811953713?theme=default-inverted&style=for-the-badge)](https://discord.com/users/1146203933811953713)
+[![](https://dcbadge.limes.pink/api/server/https://discord.com/users/1146203933811953713?theme=default-inverted&style=for-the-badge)](https://discord.com/users/1146203933811953713)
 [![Documentation](https://img.shields.io/badge/Documentation-_?style=for-the-badge&logo=bookstack&color=grey)](https://docs.o9ll.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue.svg?style=for-the-badge&logo=powershell)](https://github.com/PowerShell/PowerShell)

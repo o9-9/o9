@@ -96,7 +96,7 @@ Visit our comprehensive documentation at [Docs](https://docs.o9ll.com/) for
 - 🔧 **Configuration Options**
 - 📖 **API Reference**
 - 💡 **Examples & Tutorials**
-- 🐛 **Troubleshooting Guide**
+- 💥 **Troubleshooting Guide**
 - ❓ **FAQ**
 
 ### 📚 Additional Resources
@@ -128,7 +128,7 @@ cd o9
 ### Project Structure
 
 ```
-o9/
+o9
 ├── 📁 config
 ├── 📁 functions
 ├── 📁 lint
@@ -183,7 +183,7 @@ We welcome contributions from the community! Here's how you can help:
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=o9-9&show_icons=true&theme=radical)
 
-### 👥 Contributors
+### 🔷 o9
 
 [![Contributors](https://contrib.rocks/image?repo=o9-9/o9)](https://github.com/o9-9/o9/graphs/contributors)
 

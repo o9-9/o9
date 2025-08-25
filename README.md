@@ -161,7 +161,7 @@ We welcome contributions from the community! Here's how you can help:
 - Describe the use case and benefits
 - Consider implementation complexity
 
-### 🔷 Code Contributions
+### ♾️ Code Contributions
 
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
@@ -183,7 +183,7 @@ We welcome contributions from the community! Here's how you can help:
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=o9-9&show_icons=true&theme=radical)
 
-### 🔷 o9
+### **🍂 o9**
 
 [![Contributors](https://contrib.rocks/image?repo=o9-9/o9)](https://github.com/o9-9/o9/graphs/contributors)
 

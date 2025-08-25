@@ -65,12 +65,12 @@ cd o9
 
 ### System Requirements
 
-| Component | Minimum | Recommended |
-|-----------|---------|-------------|
-| PowerShell | 5.1 | 7.0+ |
-| Windows | 10 | 11 |
-| RAM | 2GB | 4GB+ |
-| Storage | 100MB | 500MB+ |
+| Component  | Minimum | Recommended |
+|------------|---------|-------------|
+| PowerShell | 5.1     | 7.0+        |
+| Windows    | 10      | 11          |
+| RAM        | 2GB     | 4GB+        |
+| Storage    | 100MB   | 500MB+      |
 
 ## 🔧
 
@@ -129,20 +129,27 @@ cd o9
 
 ```
 o9/
-├── 📁 src/           # Source code
-├── 📁 docs/          # Documentation
-├── 📁 tests/         # Test files
-├── 📁 scripts/       # Build scripts
-├── 📄 README.md      # This file
-├── 📄 LICENSE        # License information
-└── 📄 Compile.ps1    # Build script
+├── 📁 config
+├── 📁 functions
+├── 📁 lint
+├── 📁 overrides
+├── 📁 pester
+├── 📁 releases
+├── 📁 scripts
+├── 📁 tools
+├── 📁 xaml
+├── 📄 Compile.ps1
+├── 📄 LICENSE
+├── 📄 README.md
+├── 📄 o99.ps1
+└── 📄 sign.bat
 ```
 
 ## 🤝 Contributing
 
 We welcome contributions from the community! Here's how you can help:
 
-### 🐛 Reporting Bugs
+### 💥 Reporting Bugs
 
 - Use the [GitHub Issues](https://github.com/o9-9/o9/issues) page
 - Include detailed reproduction steps
@@ -154,7 +161,7 @@ We welcome contributions from the community! Here's how you can help:
 - Describe the use case and benefits
 - Consider implementation complexity
 
-### 🔧 Code Contributions
+### 🔷 Code Contributions
 
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
@@ -188,33 +195,31 @@ We welcome contributions from the community! Here's how you can help:
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## ✨
 
 - **Community Contributors** - For their valuable feedback and contributions
 - **PowerShell Team** - For the amazing PowerShell platform
 - **GitHub** - For providing excellent development tools and hosting
 
-## 📞 Support
+## 📞
 
-### 🆘 Need Help?
+- 📖 **Documentation**: [Docs](https://docs.o9ll.com/)
+- 💬 **Discord**: [o9](https://discord.com/users/1146203933811953713)
+- 🐛 **Issues**: [Issues](https://github.com/o9-9/o9/issues)
+- 📧 **Email**: [Contact](mailto:support@o9ll.com)
 
-- 📖 **Documentation**: [docs.o9ll.com](https://docs.o9ll.com/)
-- 💬 **Discord**: [Join our community](https://discord.com/users/1146203933811953713)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/o9-9/o9/issues)
-- 📧 **Email**: [Contact us](mailto:support@o9ll.com)
+### 🔗
 
-### 🔗 Links
-
-- 🌐 **Website**: [o9ll.com](https://o9ll.com)
-- 📖 **Documentation**: [docs.o9ll.com](https://docs.o9ll.com/)
-- 🐙 **GitHub**: [github.com/o9-9/o9](https://github.com/o9-9/o9)
-- 📦 **Releases**: [Latest Release](https://github.com/o9-9/o9/releases/latest)
+- 🌐 **Website**: [o9](https://o9ll.com)
+- 📖 **Documentation**: [Docs](https://docs.o9ll.com/)
+- 🐙 **GitHub**: [o9](https://github.com/o9-9/o9)
+- 📦 **Releases**: [Latest](https://github.com/o9-9/o9/releases/latest)
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by the o9 Community**
+**Made by o9**
 
 [![GitHub stars](https://img.shields.io/github/stars/o9-9/o9?style=social)](https://github.com/o9-9/o9/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/o9-9/o9?style=social)](https://github.com/o9-9/o9/network/members)

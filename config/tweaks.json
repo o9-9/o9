@@ -216,7 +216,7 @@
       {
         "Name": "AssignedAccessManagerSvc",
         "StartupType": "Disabled",
-        "OriginalType": "Manual"
+        "OriginalType": "Disabled"
       },
       {
         "Name": "AudioEndpointBuilder",
@@ -240,8 +240,8 @@
       },
       {
         "Name": "BDESVC",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "BFE",
@@ -250,18 +250,18 @@
       },
       {
         "Name": "BITS",
-        "StartupType": "AutomaticDelayedStart",
-        "OriginalType": "Automatic"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "BTAGService",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "BcastDVRUserService_*",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "BluetoothUserService_*",
@@ -280,8 +280,8 @@
       },
       {
         "Name": "BthAvctpSvc",
-        "StartupType": "Automatic",
-        "OriginalType": "Automatic"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "BthHFSrv",
@@ -310,8 +310,8 @@
       },
       {
         "Name": "CertPropSvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "ClipSVC",
@@ -396,7 +396,7 @@
       {
         "Name": "DiagTrack",
         "StartupType": "Disabled",
-        "OriginalType": "Automatic"
+        "OriginalType": "Disabled"
       },
       {
         "Name": "DialogBlockingService",
@@ -560,13 +560,13 @@
       },
       {
         "Name": "MSiSCSI",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "MapsBroker",
-        "StartupType": "AutomaticDelayedStart",
-        "OriginalType": "Automatic"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "McpManagementService",
@@ -605,8 +605,8 @@
       },
       {
         "Name": "NaturalAuthentication",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "NcaSvc",
@@ -785,8 +785,8 @@
       },
       {
         "Name": "RpcLocator",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "RpcSs",
@@ -795,8 +795,8 @@
       },
       {
         "Name": "SCPolicySvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "SCardSvr",
@@ -810,8 +810,8 @@
       },
       {
         "Name": "SEMgrSvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "SENS",
@@ -840,8 +840,8 @@
       },
       {
         "Name": "ScDeviceEnum",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "Schedule",
@@ -860,28 +860,28 @@
       },
       {
         "Name": "SensorDataService",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "SensorService",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "SensrSvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "SessionEnv",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "SharedAccess",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "SharedRealitySvc",
@@ -900,8 +900,8 @@
       },
       {
         "Name": "Spooler",
-        "StartupType": "Automatic",
-        "OriginalType": "Automatic"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "SstpSvc",
@@ -910,8 +910,8 @@
       },
       {
         "Name": "StiSvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "StorSvc",
@@ -920,8 +920,8 @@
       },
       {
         "Name": "SysMain",
-        "StartupType": "Automatic",
-        "OriginalType": "Automatic"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "SystemEventsBroker",
@@ -940,8 +940,8 @@
       },
       {
         "Name": "TermService",
-        "StartupType": "Automatic",
-        "OriginalType": "Automatic"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "Themes",
@@ -1000,8 +1000,8 @@
       },
       {
         "Name": "UmRdpService",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "UnistoreSvc_*",
@@ -1020,8 +1020,8 @@
       },
       {
         "Name": "UsoSvc",
-        "StartupType": "Manual",
-        "OriginalType": "Automatic"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "VGAuthService",
@@ -1060,8 +1060,8 @@
       },
       {
         "Name": "WFDSConMgrSvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "WMPNetworkSvc",
@@ -1075,8 +1075,8 @@
       },
       {
         "Name": "WPDBusEnum",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "WSService",
@@ -1090,13 +1090,13 @@
       },
       {
         "Name": "WaaSMedicSvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "WalletService",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "WarpJITSvc",
@@ -1105,8 +1105,8 @@
       },
       {
         "Name": "WbioSrvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "Wcmsvc",
@@ -1145,8 +1145,8 @@
       },
       {
         "Name": "WerSvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "WiaRpc",
@@ -1180,8 +1180,8 @@
       },
       {
         "Name": "WpcMonSvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "WpnService",
@@ -1195,23 +1195,23 @@
       },
       {
         "Name": "XblAuthManager",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "XblGameSave",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "XboxGipSvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "XboxNetApiSvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "autotimesvc",
@@ -1260,8 +1260,8 @@
       },
       {
         "Name": "dmwappushservice",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "dot3svc",
@@ -1305,8 +1305,8 @@
       },
       {
         "Name": "icssvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "iphlpsvc",
@@ -1315,8 +1315,8 @@
       },
       {
         "Name": "lfsvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "lltdsvc",
@@ -1485,13 +1485,13 @@
       },
       {
         "Name": "wbengine",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "wcncsvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "webthreatdefsvc",
@@ -1510,8 +1510,8 @@
       },
       {
         "Name": "wisvc",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "wlidsvc",
@@ -1540,13 +1540,33 @@
       },
       {
         "Name": "wuauserv",
-        "StartupType": "Manual",
-        "OriginalType": "Manual"
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       },
       {
         "Name": "wudfsvc",
         "StartupType": "Manual",
         "OriginalType": "Manual"
+      },
+      {
+        "Name": "GoogleChromeElevationService",
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
+      },
+      {
+        "Name": "GoogleUpdaterInternalService*",
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
+      },
+      {
+        "Name": "GoogleUpdaterService*",
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
+      },
+      {
+        "Name": "WwanSvc",
+        "StartupType": "Disabled",
+        "OriginalType": "Disabled"
       }
     ],
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/services"
@@ -3894,6 +3914,14 @@
     "Order": "a039_",
     "Type": "Button",
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/oosubutton"
+  },
+  "WPFAutorunsbutton": {
+    "Content": "Run Autoruns",
+    "category": "z__Advanced Tweaks - CAUTION",
+    "panel": "1",
+    "Order": "a039_",
+    "Type": "Button",
+    "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/autorunsbutton"
   },
   "WPFchangedns": {
     "Content": "DNS",

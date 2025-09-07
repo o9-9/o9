@@ -430,7 +430,7 @@ $o9dir = @{}
 $o9dir["path"] = "$env:LOCALAPPDATA\o9\"
 [System.IO.Directory]::CreateDirectory($o9dir["path"]) | Out-Null
 
-$o9dir["logo.ico"] = $o9dir["path"] + "o9logo.ico"
+$o9dir["logo.ico"] = $o9dir["path"] + "logo.ico"
 
 if (Test-Path $o9dir["logo.ico"]) {
     $sync["logorender"] = $o9dir["logo.ico"]

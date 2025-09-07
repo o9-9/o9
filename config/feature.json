@@ -338,5 +338,21 @@
     "Order": "a084_",
     "Type": "Button",
     "ButtonWidth": "300"
+  },
+  "WPFo9InstallVSCode": {
+    "Content": "Install o9 VS Code",
+    "category": "Powershell Profile",
+    "panel": "2",
+    "Order": "a084_",
+    "Type": "Button",
+    "ButtonWidth": "300"
+  },
+  "WPFo9InstallTheme": {
+    "Content": "Install o9 Theme",
+    "category": "Powershell Profile",
+    "panel": "2",
+    "Order": "a084_",
+    "Type": "Button",
+    "ButtonWidth": "300"
   }
 }

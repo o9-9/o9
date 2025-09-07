@@ -23,13 +23,13 @@
     "link": "https://www.adobe.com/acrobat/pdf-reader.html",
     "winget": "Adobe.Acrobat.Reader.64-bit"
   },
-  "advancedip": {
+  "roboform": {
     "category": "Pro Tools",
-    "choco": "advanced-ip-scanner",
-    "content": "Advanced IP Scanner",
-    "description": "Advanced IP Scanner is a fast and easy-to-use network scanner. It is designed to analyze LAN networks and provides information about connected devices.",
-    "link": "https://www.advanced-ip-scanner.com/",
-    "winget": "Famatech.AdvancedIPScanner"
+    "choco": "roboform",
+    "content": "Robo Form",
+    "description": "RoboForm securely stores all of your passwords and logs you in with a single click or tap.",
+    "link": "https://www.roboform.com/",
+    "winget": "SiberSystems.RoboForm"
   },
   "affine": {
     "category": "Document",
@@ -71,13 +71,13 @@
     "link": "https://angryip.org/",
     "winget": "angryziber.AngryIPScanner"
   },
-  "anki": {
+  "notesnook": {
     "category": "Document",
-    "choco": "anki",
-    "content": "Anki",
-    "description": "Anki is a flashcard application that helps you memorize information with intelligent spaced repetition.",
-    "link": "https://apps.ankiweb.net/",
-    "winget": "Anki.Anki"
+    "choco": "notesnook",
+    "content": "Notesnook",
+    "description": "A fully end-to-end encrypted note taking alternative to Evernote.",
+    "link": "https://notesnook.com/",
+    "winget": "Streetwriters.Notesnook"
   },
   "anydesk": {
     "category": "Utilities",
@@ -1801,11 +1801,11 @@
   },
   "revo": {
     "category": "Utilities",
-    "choco": "revo-uninstaller",
-    "content": "Revo Uninstaller",
-    "description": "Revo Uninstaller is an advanced uninstaller tool that helps you remove unwanted software and clean up your system.",
+    "choco": "revouninstallerpro",
+    "content": "Revo Uninstaller Pro",
+    "description": "Revo Uninstaller Pro helps you to uninstall software and remove unwanted programs easily.",
     "link": "https://www.revouninstaller.com/",
-    "winget": "RevoUninstaller.RevoUninstaller"
+    "winget": "RevoUninstaller.RevoUninstallerPro"
   },
   "WiseProgramUninstaller": {
     "category": "Utilities",
@@ -2655,13 +2655,13 @@
     "link": "https://pixi.sh",
     "winget": "prefix-dev.pixi"
   },
-  "temurin": {
+  "cursor": {
     "category": "Development",
-    "choco": "temurin",
-    "content": "Eclipse Temurin",
-    "description": "Eclipse Temurin is the open source Java SE build based upon OpenJDK.",
-    "link": "https://adoptium.net/temurin/",
-    "winget": "EclipseAdoptium.Temurin.21.JDK"
+    "choco": "cursoride",
+    "content": "Cursor",
+    "description": "The AI Code Editor",
+    "link": "https://cursor.com/",
+    "winget": "Anysphere.Cursor"
   },
   "intelpresentmon": {
     "category": "Utilities",

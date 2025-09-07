@@ -29,6 +29,7 @@ function Invoke-WPFButton {
         "WPFClearInstallSelection" {Invoke-WPFPresets -imported $true -checkboxfilterpattern "WPFInstall*"}
         "WPFtweaksbutton" {Invoke-WPFtweaksbutton}
         "WPFOOSUbutton" {Invoke-WPFOOSU}
+        "WPFAutorunsbutton" {Invoke-WPFAutoruns}
         "WPFAddUltPerf" {Invoke-WPFUltimatePerformance -State "Enable"}
         "WPFRemoveUltPerf" {Invoke-WPFUltimatePerformance -State "Disable"}
         "WPFundoall" {Invoke-WPFundoall}
@@ -45,7 +46,7 @@ function Invoke-WPFButton {
         "WPFPanelSystem" {Invoke-WPFControlPanel -Panel $button}
         "WPFPanelTimedate" {Invoke-WPFControlPanel -Panel $button}
         "WPFPanelUser" {Invoke-WPFControlPanel -Panel $button}
-        "WPFUpdatesdefault" {Invoke-WPFFixesUpdate}
+        "WPFUpdatesdefault" {Invoke-WPFUpdatesdefault}
         "WPFFixesUpdate" {Invoke-WPFFixesUpdate}
         "WPFFixesWinget" {Invoke-WPFFixesWinget}
         "WPFRunAdobeCCCleanerTool" {Invoke-WPFRunAdobeCCCleanerTool}
@@ -62,6 +63,8 @@ function Invoke-WPFButton {
         "WPFo9InstallPSProfile" {Invoke-o9InstallPSProfile}
         "WPFo9UninstallPSProfile" {Invoke-o9UninstallPSProfile}
         "WPFo9SSHServer" {Invoke-WPFSSHServer}
+        "WPFo9InstallVSCode" { Invoke-o9InstallVSCode }
+        "WPFo9InstallTheme" { Invoke-o9InstallTheme }
         "WPFselectedAppsButton" {$sync.selectedAppsPopup.IsOpen = -not $sync.selectedAppsPopup.IsOpen}
         "WPFo99PanelBack" {Toggle-o99Panel 1}
         "o99AutoConfigBtn" {Invoke-AutoConfigDialog}

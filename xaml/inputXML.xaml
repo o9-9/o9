@@ -98,13 +98,46 @@
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Margin" Value="{DynamicResource AppEntryMargin}"/>
+        <Setter Property="Foreground" Value="{DynamicResource MainForegroundColor}"/>
+        <Setter Property="FontSize" Value="{DynamicResource AppEntryFontSize}" />
+        <Setter Property="FontFamily" Value="{DynamicResource FontFamily}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="CheckBox">
-                    <ContentPresenter Content="{TemplateBinding Content}"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Left"
-                                    Margin="{TemplateBinding Padding}"/>
+                    <Grid Background="{TemplateBinding Background}">
+                        <BulletDecorator Background="Transparent">
+                            <BulletDecorator.Bullet>
+                                <Grid Width="{DynamicResource CheckBoxBulletDecoratorSize}" Height="{DynamicResource CheckBoxBulletDecoratorSize}">
+                                    <Border x:Name="Border"
+                                            BorderBrush="{DynamicResource BorderColor}"
+                                            Background="{DynamicResource ButtonBackgroundColor}"
+                                            BorderThickness="1"
+                                            Width="{DynamicResource CheckBoxBulletDecoratorSize *0.85}"
+                                            Height="{DynamicResource CheckBoxBulletDecoratorSize *0.85}"
+                                            Margin="2"
+                                            SnapsToDevicePixels="True"/>
+                                    <Path x:Name="CheckMark"
+                                          Stroke="{DynamicResource ToggleButtonOnColor}"
+                                          StrokeThickness="2"
+                                          Data="M 0 5 L 5 10 L 12 0"
+                                          Visibility="Collapsed"/>
+                                </Grid>
+                            </BulletDecorator.Bullet>
+                            <ContentPresenter Content="{TemplateBinding Content}"
+                                            Margin="4,0,0,0"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Center"
+                                            RecognizesAccessKey="True"/>
+                        </BulletDecorator>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource CheckboxMouseOverColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

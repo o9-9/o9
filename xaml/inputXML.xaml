@@ -970,7 +970,7 @@
                 Background="{DynamicResource ButtonUpdatesBackgroundColor}" Foreground="{DynamicResource ButtonUpdatesForegroundColor}" FontWeight="Bold" Name="WPFTab5BT">
                 <ToggleButton.Content>
                     <TextBlock FontSize="{DynamicResource TabButtonFontSize}" Background="Transparent" Foreground="{DynamicResource ButtonUpdatesForegroundColor}">
-                        <Underline>M</Underline>icroWin
+                        <Underline>o</Underline>99
                     </TextBlock>
                 </ToggleButton.Content>
             </ToggleButton>

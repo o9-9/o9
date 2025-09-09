@@ -12,8 +12,8 @@ function Invoke-o9Assets {
 
   # Create a Canvas to hold the paths
   $canvas = New-Object Windows.Controls.Canvas
-  $canvas.Width = 100
-  $canvas.Height = 100
+  $canvas.Width = 150
+  $canvas.Height = 150
 
   # Define a scale factor for the content inside the Canvas
   $scaleFactor = $Size / 100

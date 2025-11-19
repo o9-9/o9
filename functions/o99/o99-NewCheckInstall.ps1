@@ -1,6 +1,6 @@
 function o99-NewCheckInstall {
 
-    # using here string to embedd firstrun
+    # using here string to embed firstrun
     $checkInstall = @'
     @echo off
     if exist "%HOMEDRIVE%\windows\cpu.txt" (

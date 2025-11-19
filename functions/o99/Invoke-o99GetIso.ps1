@@ -4,7 +4,7 @@ function Invoke-o99GetIso {
     Function to get the path to Iso file for o99, unpack that isom=, read basic information and populate the UI Options
     #>
 
-    Write-Host "Invoking WPFGetIso"
+    Write-Debug "Invoking WPFGetIso"
 
     if($sync.ProcessRunning) {
         $msg = "GetIso process is currently running."
@@ -15,22 +15,32 @@ function Invoke-o99GetIso {
     # Provide immediate feedback to user
     Invoke-o99BusyInfo -action "wip" -message "Initializing o99 process..." -interactive $false
 
-    Write-Host "                         999999999               999999999      "
-    Write-Host "                       99:::::::::99           99:::::::::99    "
-    Write-Host "                     99:::::::::::::99       99:::::::::::::99  "
-    Write-Host "                    9::::::99999::::::9     9::::::99999::::::9 "
-    Write-Host "   ooooooooooo      9:::::9     9:::::9     9:::::9     9:::::9 "
-    Write-Host " oo:::::::::::oo    9:::::9     9:::::9     9:::::9     9:::::9 "
-    Write-Host "o:::::::::::::::o    9:::::99999::::::9     9::::::99999::::::9 "
-    Write-Host "o:::::ooooo:::::o     99::::::::::::::9      99::::::::::::::9  "
-    Write-Host "o::::o     o::::o       99999::::::::9         99999::::::::9   "
-    Write-Host "o::::o     o::::o            9::::::9              9::::::9     "
-    Write-Host "o::::o     o::::o           9::::::9              9::::::9      "
-    Write-Host "o::::o     o::::o          9::::::9              9::::::9       "
-    Write-Host "o:::::ooooo:::::o         9::::::9              9::::::9        "
-    Write-Host "o:::::::::::::::o        9::::::9              9::::::9         "
-    Write-Host " oo:::::::::::oo        9::::::9              9::::::9          "
-    Write-Host "   ooooooooooo         99999999              99999999           "
+    Write-Host "                                              ::="
+    Write-Host "                                         :::::== "
+    Write-Host "                                     :::::::-=== "
+    Write-Host "                                  ::::::::-====  "
+    Write-Host "                               :::::::::-=====   "
+    Write-Host "                             ::::::::::======    "
+    Write-Host "                           ::::::::::=======     "
+    Write-Host "                         ::::::::::========      "
+    Write-Host "                       ::::::::::=========       "
+    Write-Host "                      :::::::::-=========        "
+    Write-Host "                    :::::::::-=========          "
+    Write-Host "            %%%%   :::::::::==========           "
+    Write-Host "           %%%%%%+::::::::==========             "
+    Write-Host "             %%%%%#:::::==========               "
+    Write-Host "               %%%%%#:==========                 "
+    Write-Host "              #**%%%%%#=======                   "
+    Write-Host "            %%%%%%%%%%%%*==                      "
+    Write-Host "          *+++++++**#%%%%%%                      "
+    Write-Host "         %%%%%#*++++* %%%%%%                     "
+    Write-Host "       ++*#%%%%%%%%     %%%%                     "
+    Write-Host "   %%%%#*+++++++*                                "
+    Write-Host " %%%%%%%%%%%%##                                  "
+    Write-Host "%%%%%%%%%%%%%%                                   "
+    Write-Host "%%%%%%%%%%%#                                     "
+    Write-Host "%%%%%%%%%%%                                      "
+    Write-Host "  %%%%%%%%                                       "
 
     if ($sync["ISOmanual"].IsChecked) {
         # Open file dialog to let user choose the ISO file
@@ -84,10 +94,11 @@ function Invoke-o99GetIso {
         }
 
         Invoke-o99BusyInfo -action "wip" -message "Downloading Windows ISO... (This may take a long time)" -interactive $false
-        & $fidopath -Win 'Windows 11' -Rel $sync["ISORelease"].SelectedItem -Arch "x64" -Lang $lang -Ed "Windows 11 Home/Pro/Edu"
+        & $fidopath -Win 'Windows 11' -Rel Latest -Arch "x64" -Lang $lang
         if (-not $?)
         {
             Write-Host "Could not download the ISO file. Look at the output of the console for more information."
+            Write-Host "If you get an error about scripts is disabled on this system please close o9 and run - 'Set-ExecutionPolicy -ExecutionPolicy Unrestricted' and select 'A' and retry using o99 again."
             $msg = "The ISO file could not be downloaded"
             Invoke-o99BusyInfo -action "warning" -message $msg
             Set-o9Taskbaritem -state "Error" -value 1 -overlay "warning"

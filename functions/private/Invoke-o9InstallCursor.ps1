@@ -1,23 +1,23 @@
-function Invoke-o9InstallVSCode {
+function Invoke-o9InstallCursor {
     param(
-        [string]$RepoUrl = "https://raw.githubusercontent.com/o9-9/vscode-setup/main",
+        [string]$RepoUrl = "https://raw.githubusercontent.com/o9-9/cursor-setup/main",
         [string]$FontName = "fonts",
         [string]$FontDisplayName = "JetBrains Mono",
         [string]$FontVersion = "1"
     )
 
-    # Install VS Code
-    winget install --id Microsoft.VisualStudioCode --scope machine --accept-package-agreements --accept-source-agreements
+    # Install Cursor
+    winget install --id Anysphere.Cursor --scope machine --accept-package-agreements --accept-source-agreements
 
-    # Configure VS Code Settings
-    $VSCodeUserPath = "$env:APPDATA\Code\User"
-    if (!(Test-Path $VSCodeUserPath)) {
-        New-Item -ItemType Directory -Path $VSCodeUserPath -Force
+    # Configure Cursor Settings
+    $CursorUserPath = "$env:APPDATA\Cursor\User"
+    if (!(Test-Path $CursorUserPath)) {
+        New-Item -ItemType Directory -Path $CursorUserPath -Force
     }
 
     # Download configuration files
-    Invoke-WebRequest -Uri "$RepoUrl/settings.json" -OutFile "$VSCodeUserPath\settings.json"
-    Invoke-WebRequest -Uri "$RepoUrl/keybindings.json" -OutFile "$VSCodeUserPath\keybindings.json"
+    Invoke-WebRequest -Uri "$RepoUrl/settings.json" -OutFile "$CursorUserPath\settings.json"
+    Invoke-WebRequest -Uri "$RepoUrl/keybindings.json" -OutFile "$CursorUserPath\keybindings.json"
 
     # Refresh environment variables
     $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
@@ -28,7 +28,7 @@ function Invoke-o9InstallVSCode {
         Invoke-WebRequest -Uri "$RepoUrl/extensions.json" -OutFile $extensionsJson -ErrorAction SilentlyContinue
         $extensions = (Get-Content $extensionsJson | ConvertFrom-Json).extensions
         $extensions | ForEach-Object {
-            code --install-extension $_ --force
+            cursor --install-extension $_ --force
         }
     }
     catch {
@@ -38,18 +38,18 @@ function Invoke-o9InstallVSCode {
         Remove-Item $extensionsJson -ErrorAction SilentlyContinue
     }
 
-    # Add VS Code to Context Menu
-    $PATH = "$env:PROGRAMFILES\Microsoft VS Code\Code.exe"
-    REG ADD "HKEY_CLASSES_ROOT\*\shell\VSCode"         /ve       /t REG_EXPAND_SZ /d "Edit with VSCode"   /f
-    REG ADD "HKEY_CLASSES_ROOT\*\shell\VSCode"         /v "Icon" /t REG_EXPAND_SZ /d "$PATH"            /f
-    REG ADD "HKEY_CLASSES_ROOT\*\shell\VSCode\command" /ve       /t REG_EXPAND_SZ /d """$PATH"" ""%1""" /f
-    REG ADD "HKEY_CLASSES_ROOT\Directory\shell\VSCode"         /ve       /t REG_EXPAND_SZ /d "Edit with VSCode"   /f
-    REG ADD "HKEY_CLASSES_ROOT\Directory\shell\VSCode"         /v "Icon" /t REG_EXPAND_SZ /d "$PATH"            /f
-    REG ADD "HKEY_CLASSES_ROOT\Directory\shell\VSCode\command" /ve       /t REG_EXPAND_SZ /d """$PATH"" ""%V""" /f
+    # Add Cursor to Context Menu
+    $PATH = "$env:PROGRAMFILES\cursor\Cursor.exe"
+    REG ADD "HKEY_CLASSES_ROOT\*\shell\Cursor"         /ve       /t REG_EXPAND_SZ /d "Edit with Cursor"   /f
+    REG ADD "HKEY_CLASSES_ROOT\*\shell\Cursor"         /v "Icon" /t REG_EXPAND_SZ /d "$PATH"            /f
+    REG ADD "HKEY_CLASSES_ROOT\*\shell\Cursor\command" /ve       /t REG_EXPAND_SZ /d """$PATH"" ""%1""" /f
+    REG ADD "HKEY_CLASSES_ROOT\Directory\shell\Cursor"         /ve       /t REG_EXPAND_SZ /d "Edit with Cursor"   /f
+    REG ADD "HKEY_CLASSES_ROOT\Directory\shell\Cursor"         /v "Icon" /t REG_EXPAND_SZ /d "$PATH"            /f
+    REG ADD "HKEY_CLASSES_ROOT\Directory\shell\Cursor\command" /ve       /t REG_EXPAND_SZ /d """$PATH"" ""%V""" /f
 
     # Install o9 Theme
     Invoke-WebRequest "$RepoUrl/archive/o9-theme.zip" -OutFile "$env:TEMP\o9-theme.zip" -ErrorAction SilentlyContinue
-    Expand-Archive "$env:TEMP\o9-theme.zip" -DestinationPath "$env:PROGRAMFILES\Microsoft VS Code\resources\app\extensions" -Force
+    Expand-Archive "$env:TEMP\o9-theme.zip" -DestinationPath "$env:PROGRAMFILES\cursor\resources\app\extensions" -Force
     Remove-Item "$env:TEMP\o9-theme.zip" -ErrorAction SilentlyContinue
 
     # Install Fonts
@@ -57,7 +57,7 @@ function Invoke-o9InstallVSCode {
         [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing")
         $fontFamilies = (New-Object System.Drawing.Text.InstalledFontCollection).Families.Name
         if ($fontFamilies -notcontains "${FontDisplayName}") {
-            $fontZipUrl = "https://github.com/o9-9/vscode-setup/releases/download/${FontVersion}/${FontName}.zip"
+            $fontZipUrl = "https://github.com/o9-9/cursor-setup/releases/download/${FontVersion}/${FontName}.zip"
             $zipFilePath = "$env:TEMP\${FontName}.zip"
             $extractPath = "$env:TEMP\${FontName}"
 

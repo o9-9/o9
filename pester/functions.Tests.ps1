@@ -1,6 +1,6 @@
-#===========================================================================
+#===================
 # Tests - Functions
-#===========================================================================
+#==================
 Describe "Comprehensive Checks for PS1 Files in Functions Folder" {
     BeforeAll {
         # Get all .ps1 files in the functions folder

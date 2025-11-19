@@ -1,20 +1,20 @@
 {
     "WPFInstall": {
-        "Content": "Install/Upgrade Applications",
+        "Content": "Install/Upgrade",
         "Category": "____Actions",
         "Type": "Button",
         "Order": "1",
         "Description": "Install or upgrade the selected applications"
     },
     "WPFUninstall": {
-        "Content": "Uninstall Applications",
+        "Content": "Uninstall",
         "Category": "____Actions",
         "Type": "Button",
         "Order": "2",
         "Description": "Uninstall the selected applications"
     },
     "WPFInstallUpgrade": {
-        "Content": "Upgrade all Applications",
+        "Content": "Upgrade all",
         "Category": "____Actions",
         "Type": "Button",
         "Order": "3",
@@ -39,7 +39,7 @@
         "Description": "Use Chocolatey for package management"
     },
     "WPFClearInstallSelection": {
-        "Content": "Clear Selection",
+        "Content": "Clear",
         "Category": "__Selection",
         "Type": "Button",
         "Order": "1",

@@ -12,7 +12,7 @@ function Invoke-WPFInstallUpgrade {
             Write-Host "Upgrade Successful"
         }
         else{
-            Write-Host "Error Occured. Return Code: $chocoUpgradeStatus"
+            Write-Host "Error Occurred. Return Code: $chocoUpgradeStatus"
         }
     }
     else{
@@ -28,10 +28,10 @@ function Invoke-WPFInstallUpgrade {
 
         Update-o9ProgramWinget
 
-        Write-Host "==========================================="
-        Write-Host "--           Updates started            ---"
-        Write-Host "-- You can close this window if desired ---"
-        Write-Host "==========================================="
+        Write-Host "═══════════════════════════════════════════"
+        Write-Host "══           Updates started             ══"
+        Write-Host "══ You can close this window if desired  ══"
+        Write-Host "═══════════════════════════════════════════"
     }
 }
 

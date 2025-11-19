@@ -1,229 +1,76 @@
-# 🚀 o9 - PowerShell Toolkit
+# o9 Utility
 
 [![Version](https://img.shields.io/github/v/release/o9-9/o9?color=%230567ff&label=Latest%20Release&style=for-the-badge)](https://github.com/o9-9/o9/releases/latest)
-![GitHub Downloads](https://img.shields.io/github/downloads/o9-9/o9/o9.ps1?label=Total%20Downloads&style=for-the-badge)
-[![](https://dcbadge.limes.pink/api/server/https://discord.com/users/1146203933811953713?theme=default-inverted&style=for-the-badge)](https://discord.com/users/1146203933811953713)
-[![Documentation](https://img.shields.io/badge/Documentation-_?style=for-the-badge&logo=bookstack&color=grey)](https://docs.o9ll.com/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
-[![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue.svg?style=for-the-badge&logo=powershell)](https://github.com/PowerShell/PowerShell)
+![GitHub Downloads (specific asset, all releases)](https://img.shields.io/github/downloads/o9-9/o9/o9.ps1?label=Total%20Downloads&style=for-the-badge)
+[![Static Badge](https://img.shields.io/badge/Documentation-_?style=for-the-badge&logo=bookstack&color=grey)](https://docs.o9ll.com/)
 
-> **A powerful PowerShell toolkit designed to streamline your development workflow and enhance productivity.**
+This utility is a compilation of Windows tasks I perform on each Windows system I use. It is meant to streamline *installs*, debloat with *tweaks*, troubleshoot with *config*, and fix Windows *updates*. I am extremely picky about any contributions to keep this project clean and efficient.
 
-## 📋 Table of Contents
+![screen-install](https://raw.githubusercontent.com/o9-9/o9-docs/refs/heads/main/assets/images/Title-Screen.png)
 
-- [✨ Features](#-features)
-- [🚀 Quick Start](#-quick-start)
-- [📖 Installation](#-installation)
-- [🔧 Usage](#-usage)
-- [📚 Documentation](#-documentation)
-- [🛠️ Development](#️-development)
-- [🤝 Contributing](#-contributing)
-- [📊 Statistics](#-statistics)
-- [📄 License](#-license)
+## 💡 Usage
 
-## ✨ Features
+o9 Utility must be run in Admin mode because it performs system-wide tweaks. To achieve this, run PowerShell as an administrator. Here are a few ways to do it:
 
-- ⚡ **Lightning Fast**: Optimized for speed and efficiency
-- 🔧 **Easy Installation**: One-line installation command
-- 📦 **Modular Design**: Flexible and extensible architecture
-- 🛡️ **Secure**: Built with security best practices
-- 🔄 **Cross-Platform**: Works across different Windows environments
-- 📖 **Well Documented**: Comprehensive documentation and examples
+1. **Start menu Method:**
+   - Right-click on the start menu.
+   - Choose "Windows PowerShell (Admin)" (for Windows 10) or "Terminal (Admin)" (for Windows 11).
 
-## 🚀 Quick Start
+2. **Search and Launch Method:**
+   - Press the Windows key.
+   - Type "PowerShell" or "Terminal" (for Windows 11).
+   - Press `Ctrl + Shift + Enter` or Right-click and choose "Run as administrator" to launch it with administrator privileges.
 
-Get started with o9 in seconds! Choose your preferred installation method:
+### Launch Command
 
 ### Method 1: Direct Installation (Recommended)
 
-```powershell
+#### Stable Branch (Recommended)
+
+```ps1
 irm "https://o9ll.com/o9" | iex
 ```
+#### Dev Branch
 
-```powershell
+```ps1
 irm "https://o9ll.com/o99" | iex
 ```
 
-### Method 2: Manual Installation
+If you have Issues, refer to [Known Issues](https://docs.o9ll.com/knownissues/)
 
-```powershell
+## 🎓 Documentation
+
+> [!NOTE]
+> To contribute to the documentation, please visit [o9 Docs Repo](https://github.com/o9-9/o9-docs) for more info.
+
+### [o9Documentation](https://docs.o9ll.com/)
+
+## 🛠️ Build & Develop
+
+> [!NOTE]
+> o9 is a relatively large script, so it's split into multiple files which're combined into a single `.ps1` file using a custom compiler. This makes maintaining the project a lot easier.
+
+Get a copy of the source code, this can be done using GitHub UI (`Code -> Download ZIP`), or by cloning (downloading) the repo using git.
+
+If git is installed, run the following commands under a PowerShell window to clone and move into project's directory:
+```ps1
 git clone --depth 1 "https://github.com/o9-9/o9.git"
 cd o9
 ```
 
-```powershell
+To build the project, run the Compile Script under a PowerShell window (admin permissions IS NOT required):
+```ps1
 .\Compile.ps1
 ```
 
-## 📖 Installation
+You'll see a new file named `o9.ps1`, which's created by `Compile.ps1` script, now you can run it as admin and a new window will popup, enjoy your own compiled version of o9 :)
 
-### Prerequisites
+> [!TIP]
+> For more info on using o9 and how to develop for it, please consider reading [the Contribution Guidelines](https://docs.o9ll.com/contributing/), if you don't know where to start.
 
-- **PowerShell 5.1+** or **PowerShell Core 6.0+**
-- **Windows 10/11** or **Windows Server 2016+**
-- **Internet connection** for initial download
+## 💖 Support
+- To morally and mentally support the project, make sure to leave a ⭐️!
 
-### System Requirements
+## 📊 GitHub Stats
 
-| Component  | Minimum | Recommended |
-|------------|---------|-------------|
-| PowerShell | 5.1     | 7.0+        |
-| Windows    | 10      | 11          |
-| RAM        | 2GB     | 4GB+        |
-| Storage    | 100MB   | 500MB+      |
-
-## 🔧
-
-```powershell
-o9 --version
-```
-
-```powershell
-o9 --help
-```
-
-```powershell
-o9 --config custom-config.json
-```
-
-## 📚 Documentation
-
-### 📖 Official Documentation
-
-Visit our comprehensive documentation at [Docs](https://docs.o9ll.com/) for
-
-- 📋 **Getting Started Guide**
-- 🔧 **Configuration Options**
-- 📖 **API Reference**
-- 💡 **Examples & Tutorials**
-- 💥 **Troubleshooting Guide**
-- ❓ **FAQ**
-
-### 📚 Additional Resources
-
-- [Wiki](https://github.com/o9-9/o9/wiki)
-- [Release](https://github.com/o9-9/o9/releases)
-- [Issues](https://github.com/o9-9/o9/issues)
-
-## 🛠️ Development
-
-```powershell
-git clone --depth 1 "https://github.com/o9-9/o9.git"
-cd o9
-```
-
-```powershell
-.\Compile.ps1
-```
-
-### Development Environment Setup
-
-1. **Fork the repository** on GitHub
-2. **Clone your fork** locally
-3. **Create a feature branch**
-4. **Make your changes**
-5. **Test thoroughly**
-6. **Submit a pull request**
-
-### Project Structure
-
-```
-o9
-├── 📁 config
-├── 📁 functions
-├── 📁 lint
-├── 📁 overrides
-├── 📁 pester
-├── 📁 releases
-├── 📁 scripts
-├── 📁 tools
-├── 📁 xaml
-├── 📄 Compile.ps1
-├── 📄 LICENSE
-├── 📄 README.md
-├── 📄 o99.ps1
-└── 📄 sign.bat
-```
-
-## 🤝 Contributing
-
-We welcome contributions from the community! Here's how you can help:
-
-### 💥 Reporting Bugs
-
-- Use the [GitHub Issues](https://github.com/o9-9/o9/issues) page
-- Include detailed reproduction steps
-- Provide system information and error logs
-
-### 💡 Suggesting Features
-
-- Open a [Feature Request](https://github.com/o9-9/o9/issues/new?template=feature_request.md)
-- Describe the use case and benefits
-- Consider implementation complexity
-
-### ♾️ Code Contributions
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### 📋 Contribution Guidelines
-
-- Follow the existing code style
-- Add tests for new functionality
-- Update documentation as needed
-- Ensure all tests pass
-- Be respectful and inclusive
-
-## 📊 Statistics
-
-### 📈 GitHub Statistics
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=o9-9&show_icons=true&theme=radical)
-
-### **🍂 o9**
-
-[![Contributors](https://contrib.rocks/image?repo=o9-9/o9)](https://github.com/o9-9/o9/graphs/contributors)
-
-### 📊 Repository Analytics
-
-![Repository Analytics](https://repobeats.axiom.co/api/embed/aad37eec9114c507f109d34ff8d38a59adc9503f.svg "Repobeats analytics image")
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-## ✨
-
-- **Community Contributors** - For their valuable feedback and contributions
-- **PowerShell Team** - For the amazing PowerShell platform
-- **GitHub** - For providing excellent development tools and hosting
-
-## 📞
-
-- 📖 **Documentation**: [Docs](https://docs.o9ll.com/)
-- 💬 **Discord**: [o9](https://discord.com/users/1146203933811953713)
-- 🐛 **Issues**: [Issues](https://github.com/o9-9/o9/issues)
-- 📧 **Email**: [Contact](mailto:support@o9ll.com)
-
-### 🔗
-
-- 🌐 **Website**: [o9](https://o9ll.com)
-- 📖 **Documentation**: [Docs](https://docs.o9ll.com/)
-- 🐙 **GitHub**: [o9](https://github.com/o9-9/o9)
-- 📦 **Releases**: [Latest](https://github.com/o9-9/o9/releases/latest)
-
----
-
-<div align="center">
-
-**Made by o9**
-
-[![GitHub stars](https://img.shields.io/github/stars/o9-9/o9?style=social)](https://github.com/o9-9/o9/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/o9-9/o9?style=social)](https://github.com/o9-9/o9/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/o9-9/o9)](https://github.com/o9-9/o9/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/o9-9/o9)](https://github.com/o9-9/o9/pulls)
-
-</div>
+![Alt](https://repobeats.axiom.co/api/embed/aad37eec9114c507f109d34ff8d38a59adc9503f.svg "Repobeats analytics image")

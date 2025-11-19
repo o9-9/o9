@@ -125,9 +125,9 @@ function Invoke-WPFUpdatesdefault {
     Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" -Name "DeferFeatureUpdatesPeriodInDays" -ErrorAction SilentlyContinue
     Remove-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" -Name "DeferQualityUpdatesPeriodInDays" -ErrorAction SilentlyContinue
 
-    Write-Host "==================================================="
-    Write-Host "---  Windows Update Settings Reset to Default   ---"
-    Write-Host "==================================================="
+    Write-Host "═══════════════════════════════════════════════════"
+    Write-Host "═══  Windows Update Settings Reset to Default   ═══"
+    Write-Host "═══════════════════════════════════════════════════"
 
     Start-Process -FilePath "secedit" -ArgumentList "/configure /cfg $env:windir\inf\defltbase.inf /db defltbase.sdb /verbose" -Wait
     Start-Process -FilePath "cmd.exe" -ArgumentList "/c RD /S /Q $env:WinDir\System32\GroupPolicyUsers" -Wait
@@ -145,9 +145,9 @@ function Invoke-WPFUpdatesdefault {
     Remove-Item -Path "HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Policies" -Recurse -Force -ErrorAction SilentlyContinue
     Remove-Item -Path "HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\WindowsStore\WindowsUpdate" -Recurse -Force -ErrorAction SilentlyContinue
 
-    Write-Host "==================================================="
-    Write-Host "---  Windows Local Policies Reset to Default   ---"
-    Write-Host "==================================================="
+    Write-Host "═══════════════════════════════════════════════════"
+    Write-Host "═══   Windows Local Policies Reset to Default   ═══"
+    Write-Host "═══════════════════════════════════════════════════"
 
     Write-Host "Note: A system restart may be required for all changes to take full effect." -ForegroundColor Yellow
 }

@@ -51,14 +51,14 @@ function Invoke-WPFUnInstall {
                 Install-o9ProgramChoco -Action Uninstall -Programs $packagesChoco
             }
             Hide-WPFInstallAppBusy
-            Write-Host "==========================================="
-            Write-Host "--       Uninstalls have finished       ---"
-            Write-Host "==========================================="
+            Write-Host "═══════════════════════════════════════════"
+            Write-Host "══       Uninstalls have finished        ══"
+            Write-Host "═══════════════════════════════════════════"
             $sync.form.Dispatcher.Invoke([action]{ Set-o9Taskbaritem -state "None" -overlay "checkmark" })
         } catch {
-            Write-Host "==========================================="
+            Write-Host "═══════════════════════════════════════════"
             Write-Host "Error: $_"
-            Write-Host "==========================================="
+            Write-Host "═══════════════════════════════════════════"
             $sync.form.Dispatcher.Invoke([action]{ Set-o9Taskbaritem -state "Error" -overlay "warning" })
         }
         $sync.ProcessRunning = $False

@@ -1,6 +1,6 @@
 {
   "WPFFeaturesdotnet": {
-    "Content": "All .Net Framework (2,3,4)",
+    "Content": "All .Net Framework",
     "Description": ".NET and .NET Framework is a developer platform made up of tools, programming languages, and libraries for building many different types of applications.",
     "category": "Features",
     "panel": "1",
@@ -13,7 +13,7 @@
     "link": "https://docs.o9ll.com/dev/features/features/dotnet"
   },
   "WPFFeatureshyperv": {
-    "Content": "HyperV Virtualization",
+    "Content": "HyperV",
     "Description": "Hyper-V is a hardware virtualization product developed by Microsoft that allows users to create and manage virtual machines.",
     "category": "Features",
     "panel": "1",
@@ -34,7 +34,7 @@
     "link": "https://docs.o9ll.com/dev/features/features/hyperv"
   },
   "WPFFeatureslegacymedia": {
-    "Content": "Legacy Media (WMP, DirectPlay)",
+    "Content": "Legacy Media",
     "Description": "Enables legacy programs from previous versions of windows",
     "category": "Features",
     "panel": "1",
@@ -49,7 +49,7 @@
     "link": "https://docs.o9ll.com/dev/features/features/legacymedia"
   },
   "WPFFeaturewsl": {
-    "Content": "Windows Subsystem for Linux",
+    "Content": "Linux",
     "Description": "Windows Subsystem for Linux is an optional feature of Windows that allows Linux programs to run natively on Windows without the need for a separate virtual machine or dual booting.",
     "category": "Features",
     "panel": "1",
@@ -62,7 +62,7 @@
     "link": "https://docs.o9ll.com/dev/features/features/wsl"
   },
   "WPFFeaturenfs": {
-    "Content": "NFS - Network File System",
+    "Content": "NFS",
     "Description": "Network File System (NFS) is a mechanism for storing files on a network.",
     "category": "Features",
     "panel": "1",
@@ -82,7 +82,7 @@
     "link": "https://docs.o9ll.com/dev/features/features/nfs"
   },
   "WPFFeatureEnableSearchSuggestions": {
-    "Content": "Enable Search Box Web Suggestions in Registry(explorer restart)",
+    "Content": "Enable Search Box Web Suggestions",
     "Description": "Enables web suggestions when searching using Windows Search.",
     "category": "Features",
     "panel": "1",
@@ -100,7 +100,7 @@
     "link": "https://docs.o9ll.com/dev/features/features/enablesearchsuggestions"
   },
   "WPFFeatureDisableSearchSuggestions": {
-    "Content": "Disable Search Box Web Suggestions in Registry(explorer restart)",
+    "Content": "Disable Search Box Web Suggestions",
     "Description": "Disables web suggestions when searching using Windows Search.",
     "category": "Features",
     "panel": "1",
@@ -136,7 +136,7 @@
     "link": "https://docs.o9ll.com/dev/features/features/regbackup"
   },
   "WPFFeatureEnableLegacyRecovery": {
-    "Content": "Enable Legacy F8 Boot Recovery",
+    "Content": "Enable Legacy F8 Boot",
     "Description": "Enables Advanced Boot Options screen that lets you start Windows in advanced troubleshooting modes.",
     "category": "Features",
     "panel": "1",
@@ -154,7 +154,7 @@
     "link": "https://docs.o9ll.com/dev/features/features/enablelegacyrecovery"
   },
   "WPFFeatureDisableLegacyRecovery": {
-    "Content": "Disable Legacy F8 Boot Recovery",
+    "Content": "Disable Legacy F8 Boot",
     "Description": "Disables Advanced Boot Options screen that lets you start Windows in advanced troubleshooting modes.",
     "category": "Features",
     "panel": "1",
@@ -172,7 +172,7 @@
     "link": "https://docs.o9ll.com/dev/features/features/disablelegacyrecovery"
   },
   "WPFFeaturesSandbox": {
-    "Content": "Windows Sandbox",
+    "Content": "Sandbox",
     "category": "Features",
     "panel": "1",
     "Order": "a021_",
@@ -180,7 +180,7 @@
     "link": "https://docs.o9ll.com/dev/features/features/sandbox"
   },
   "WPFFeatureInstall": {
-    "Content": "Install Features",
+    "Content": "Install",
     "category": "Features",
     "panel": "1",
     "Order": "a060_",
@@ -189,7 +189,7 @@
     "link": "https://docs.o9ll.com/dev/features/features/install"
   },
   "WPFPanelAutologin": {
-    "Content": "Set Up Autologin",
+    "Content": "Autologin",
     "category": "Fixes",
     "Order": "a040_",
     "panel": "1",
@@ -198,7 +198,7 @@
     "link": "https://docs.o9ll.com/dev/features/fixes/autologin"
   },
   "WPFFixesUpdate": {
-    "Content": "Reset Windows Update",
+    "Content": "Reset Update",
     "category": "Fixes",
     "panel": "1",
     "Order": "a041_",
@@ -216,7 +216,7 @@
     "link": "https://docs.o9ll.com/dev/features/fixes/network"
   },
   "WPFPanelDISM": {
-    "Content": "System Corruption Scan",
+    "Content": "System Scan",
     "category": "Fixes",
     "panel": "1",
     "Order": "a043_",
@@ -234,7 +234,7 @@
     "link": "https://docs.o9ll.com/dev/features/fixes/winget"
   },
   "WPFRunAdobeCCCleanerTool": {
-    "Content": "Remove Adobe Creative Cloud",
+    "Content": "Remove Adobe",
     "category": "Fixes",
     "panel": "1",
     "Order": "a045_",
@@ -244,7 +244,7 @@
   },
   "WPFPanelControl": {
     "Content": "Control Panel",
-    "category": "Legacy Windows Panels",
+    "category": "Legacy Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
@@ -252,31 +252,31 @@
   },
   "WPFPanelComputer": {
     "Content": "Computer Management",
-    "category": "Legacy Windows Panels",
+    "category": "Legacy Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
     "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/computer"
   },
   "WPFPanelNetwork": {
-    "Content": "Network Connections",
-    "category": "Legacy Windows Panels",
+    "Content": "Network",
+    "category": "Legacy Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
     "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/network"
   },
   "WPFPanelPower": {
-    "Content": "Power Panel",
-    "category": "Legacy Windows Panels",
+    "Content": "Power",
+    "category": "Legacy Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
     "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/power"
   },
   "WPFPanelPrinter": {
-    "Content": "Printer Panel",
-    "category": "Legacy Windows Panels",
+    "Content": "Printer",
+    "category": "Legacy Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
@@ -284,32 +284,39 @@
   },
   "WPFPanelRegion": {
     "Content": "Region",
-    "category": "Legacy Windows Panels",
+    "category": "Legacy Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
     "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/region"
   },
+  "WPFPanelRestore": {
+    "Content": "Restore",
+    "category": "Legacy Panels",
+    "panel": "2",
+    "Type": "Button",
+    "ButtonWidth": "300",
+    "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/restore"
+  },
   "WPFPanelSound": {
-    "Content": "Sound Settings",
-    "category": "Legacy Windows Panels",
+    "Content": "Sound",
+    "category": "Legacy Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
     "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/user"
   },
-
   "WPFPanelSystem": {
     "Content": "System Properties",
-    "category": "Legacy Windows Panels",
+    "category": "Legacy Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
     "link": "https://docs.o9ll.com/dev/features/legacy-windows-panels/system"
   },
   "WPFPanelTimedate": {
-    "Content": "Time and Date",
-    "category": "Legacy Windows Panels",
+    "Content": "Time",
+    "category": "Legacy Panels",
     "panel": "2",
     "Type": "Button",
     "ButtonWidth": "300",
@@ -332,7 +339,7 @@
     "ButtonWidth": "300"
   },
   "WPFo9SSHServer": {
-    "Content": "Enable OpenSSH Server",
+    "Content": "OpenSSH",
     "category": "Remote Access",
     "panel": "2",
     "Order": "a084_",
@@ -340,18 +347,28 @@
     "ButtonWidth": "300"
   },
   "WPFo9InstallVSCode": {
-    "Content": "Install o9 VS Code",
+    "Content": "Install VS Code",
     "category": "Powershell Profile",
     "panel": "2",
-    "Order": "a084_",
+    "Order": "a085_",
     "Type": "Button",
-    "ButtonWidth": "300"
+    "ButtonWidth": "300",
+    "link": "https://github.com/o9-9/vscode-setup/blob/main/setup.ps1"
+  },
+  "WPFo9InstallCursor": {
+    "Content": "Install Cursor",
+    "category": "Powershell Profile",
+    "panel": "2",
+    "Order": "a085_",
+    "Type": "Button",
+    "ButtonWidth": "300",
+    "link": "https://github.com/o9-9/cursor-setup/blob/main/setup.ps1"
   },
   "WPFo9InstallTheme": {
-    "Content": "Install o9 Theme",
+    "Content": "Install Theme",
     "category": "Powershell Profile",
     "panel": "2",
-    "Order": "a084_",
+    "Order": "a086_",
     "Type": "Button",
     "ButtonWidth": "300"
   }

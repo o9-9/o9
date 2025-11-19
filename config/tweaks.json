@@ -1,8 +1,8 @@
 {
   "WPFTweaksAH": {
-    "Content": "Disable Activity History",
+    "Content": "Disable History",
     "Description": "This erases recent docs, clipboard, and run history.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -33,7 +33,7 @@
   "WPFTweaksHiber": {
     "Content": "Disable Hibernation",
     "Description": "Hibernation is really meant for laptops as it saves what's in memory before turning the pc off. It really should never be used, but some people are lazy and rely on it. Don't be like Bob. Bob likes hibernation.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -61,9 +61,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/hiber"
   },
   "WPFTweaksLaptopHibernation": {
-    "Content": "Set Hibernation as default (good for laptops)",
+    "Content": "Enable Hibernation",
     "Description": "Most modern laptops have connected standby enabled which drains the battery, this sets hibernation as default which will not drain the battery. See issue https://github.com/o9-9/o9/issues/1399",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a014_",
     "registry": [
@@ -99,7 +99,7 @@
       Write-Host \"Turn off Hibernation\"
       Start-Process -FilePath powercfg -ArgumentList \"/hibernate off\" -NoNewWindow -Wait
 
-      # Set standby to detault values
+      # Set standby to default values
       Start-Process -FilePath powercfg -ArgumentList \"/change standby-timeout-ac 15\" -NoNewWindow -Wait
       Start-Process -FilePath powercfg -ArgumentList \"/change standby-timeout-dc 15\" -NoNewWindow -Wait
       Start-Process -FilePath powercfg -ArgumentList \"/change monitor-timeout-ac 15\" -NoNewWindow -Wait
@@ -111,7 +111,7 @@
   "WPFTweaksHome": {
     "Content": "Disable Homegroup",
     "Description": "Disables HomeGroup - HomeGroup is a password-protected home networking service that lets you share your stuff with other PCs that are currently running and connected to your network.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a005_",
     "service": [
@@ -129,9 +129,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/home"
   },
   "WPFTweaksLoc": {
-    "Content": "Disable Location Tracking",
+    "Content": "Disable Location",
     "Description": "Disables Location Tracking...DUH!",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -167,9 +167,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/loc"
   },
   "WPFTweaksServices": {
-    "Content": "Set Services to Manual",
+    "Content": "Manual Services",
     "Description": "Turns a bunch of system services to manual that don't need to be running all the time. This is pretty harmless as if the service is needed, it will simply start on demand.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a014_",
     "service": [
@@ -1574,7 +1574,7 @@
   "WPFTweaksBraveDebloat": {
     "Content": "Debloat Brave",
     "Description": "Disables various annoyances like Brave Rewards,Leo AI,Crypto Wallet and VPN",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a016_",
     "registry": [
@@ -1611,7 +1611,7 @@
   "WPFTweaksEdgeDebloat": {
     "Content": "Debloat Edge",
     "Description": "Disables various telemetry options, popups, and other annoyances in Edge.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a016_",
     "registry": [
@@ -1687,13 +1687,6 @@
       },
       {
         "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Edge",
-        "Name": "PersonalizationReportingEnabled",
-        "Type": "DWord",
-        "Value": "0",
-        "OriginalValue": "<RemoveEntry>"
-      },
-      {
-        "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Edge",
         "Name": "ShowMicrosoftRewards",
         "Type": "DWord",
         "Value": "0",
@@ -1722,13 +1715,6 @@
       },
       {
         "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Edge",
-        "Name": "EdgeCollectionsEnabled",
-        "Type": "DWord",
-        "Value": "0",
-        "OriginalValue": "<RemoveEntry>"
-      },
-      {
-        "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Edge",
         "Name": "CryptoWalletEnabled",
         "Type": "DWord",
         "Value": "0",
@@ -1745,9 +1731,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/edgedebloat"
   },
   "WPFTweaksConsumerFeatures": {
-    "Content": "Disable ConsumerFeatures",
+    "Content": "Disable Consumer",
     "Description": "Windows 10 will not automatically install any games, third-party apps, or application links from the Windows Store for the signed-in user. Some default Apps will be inaccessible (eg. Phone Link)",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a003_",
     "registry": [
@@ -1764,7 +1750,7 @@
   "WPFTweaksTele": {
     "Content": "Disable Telemetry",
     "Description": "Disables Microsoft Telemetry. Note: This will lock many Edge Browser settings. Microsoft spies heavily on you when using the Edge browser.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a003_",
     "ScheduledTask": [
@@ -2126,9 +2112,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/tele"
   },
   "WPFTweaksWifi": {
-    "Content": "Disable Wi-Fi Sense",
+    "Content": "Disable Wi-Fi",
     "Description": "Wi-Fi Sense is a spying service that phones home all nearby scanned Wi-Fi networks and your current geographic location.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -2149,6 +2135,30 @@
     ],
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/wifi"
   },
+  "WPFTweaksDisableEdge": {
+    "Content": "Disable Edge",
+    "Description": "Disables Microsoft Edge via the registry and prevents scheduled tasks from running Edge updates.",
+    "category": "z__Advanced Tweaks - CAUTION",
+    "panel": "1",
+    "Order": "a023_",
+    "registry": [
+      {
+        "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\DisallowRun",
+        "Name": "DisableEdge",
+        "Type": "String",
+        "Value": "msedge.exe",
+        "OriginalValue": "<RemoveEntry>"
+      },
+      {
+        "Path": "HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
+        "Name": "DisallowRun",
+        "Type": "DWord",
+        "Value": "1",
+        "OriginalValue": "<RemoveEntry>"
+      }
+    ],
+    "link": ""
+  },
   "WPFTweaksUTC": {
     "Content": "Set Time to UTC (Dual Boot)",
     "Description": "Essential for computers that are dual booting. Fixes the time sync with Linux Systems.",
@@ -2167,7 +2177,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/utc"
   },
   "WPFTweaksRemoveHome": {
-    "Content": "Remove Home from Explorer",
+    "Content": "Remove Home",
     "Description": "Removes the Home from Explorer and sets This PC as default",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -2187,7 +2197,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/removehomegallery"
   },
   "WPFTweaksRemoveGallery": {
-    "Content": "Remove Gallery from explorer",
+    "Content": "Remove Gallery",
     "Description": "Removes the Gallery from Explorer and sets This PC as default",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -2207,7 +2217,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/removehomegallery"
   },
   "WPFTweaksDisplay": {
-    "Content": "Set Display for Performance",
+    "Content": "Display Performance",
     "Description": "Sets the system preferences to performance. You can do this manually with sysdm.cpl as well.",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -2217,7 +2227,7 @@
         "Path": "HKCU:\\Control Panel\\Desktop",
         "OriginalValue": "1",
         "Name": "DragFullWindows",
-        "Value": "0",
+        "Value": "1",
         "Type": "String"
       },
       {
@@ -2306,7 +2316,7 @@
       }
     ],
     "InvokeScript": [
-      "Set-ItemProperty -Path \"HKCU:\\Control Panel\\Desktop\" -Name \"UserPreferencesMask\" -Type Binary -Value ([byte[]](144,18,3,128,16,0,0,0))"
+      "Set-ItemProperty -Path \"HKCU:\\Control Panel\\Desktop\" -Name \"UserPreferencesMask\" -Type Binary -Value ([byte[]](90,12,3,80,10,0,0,0))"
     ],
     "UndoScript": [
       "Remove-ItemProperty -Path \"HKCU:\\Control Panel\\Desktop\" -Name \"UserPreferencesMask\""
@@ -2314,7 +2324,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/display"
   },
   "WPFTweaksDeBloat": {
-    "Content": "Remove ALL MS Store Apps - NOT RECOMMENDED",
+    "Content": "Remove Store Apps",
     "Description": "USE WITH CAUTION!!!!! This will remove ALL Microsoft store apps other than the essentials to make winget work. Games installed by MS Store ARE INCLUDED!",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -2426,9 +2436,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/debloat"
   },
   "WPFTweaksRestorePoint": {
-    "Content": "Create Restore Point",
+    "Content": "Restore Point",
     "Description": "Creates a restore point at runtime in case a revert is needed from o9 modifications",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Checked": "False",
     "Order": "a001_",
@@ -2477,9 +2487,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/restorepoint"
   },
   "WPFTweaksEndTaskOnTaskbar": {
-    "Content": "Enable End Task With Right Click",
+    "Content": "End Task",
     "Description": "Enables option to end task when right clicking a program in the taskbar",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a006_",
     "InvokeScript": [
@@ -2511,9 +2521,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/endtaskontaskbar"
   },
   "WPFTweaksPowershell7": {
-    "Content": "Change Windows Terminal default: PowerShell 5 -> PowerShell 7",
+    "Content": "Change Terminal: PowerShell 5 -> PowerShell 7",
     "Description": "This will edit the config file of the Windows Terminal replacing PowerShell 5 with PowerShell 7 and installing PS7 if necessary",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a009_",
     "InvokeScript": [
@@ -2525,9 +2535,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/powershell7"
   },
   "WPFTweaksPowershell7Tele": {
-    "Content": "Disable Powershell 7 Telemetry",
+    "Content": "Disable Powershell Telemetry",
     "Description": "This will create an Environment Variable called 'POWERSHELL_TELEMETRY_OPTOUT' with a value of '1' which will tell Powershell 7 to not send Telemetry Data.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a009_",
     "InvokeScript": [
@@ -2539,9 +2549,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/powershell7tele"
   },
   "WPFTweaksStorage": {
-    "Content": "Disable Storage Sense",
+    "Content": "Disable Storage",
     "Description": "Storage Sense deletes temp files automatically.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a005_",
     "InvokeScript": [
@@ -2553,7 +2563,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/storage"
   },
   "WPFTweaksRemoveCopilot": {
-    "Content": "Disable Microsoft Copilot",
+    "Content": "Disable Copilot",
     "Description": "Disables MS Copilot AI built into Windows since 23H2.",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -2636,7 +2646,7 @@
   "WPFTweaksRecallOff": {
     "Content": "Disable Recall",
     "Description": "Turn Recall off",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a011_",
     "registry": [
@@ -2679,7 +2689,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/disablerecall"
   },
   "WPFTweaksDisableLMS1": {
-    "Content": "Disable Intel MM (vPro LMS)",
+    "Content": "Disable Intel",
     "Description": "Intel LMS service is always listening on all ports and could be a huge security risk. There is no need to run LMS on home machines and even in the Enterprise there are better solutions.",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -2737,7 +2747,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/disablelms1"
   },
   "WPFTweaksDisableWpbtExecution": {
-    "Content": "Disable Windows Platform Binary Table (WPBT)",
+    "Content": "Disable WPBT",
     "Description": "If enabled then allows your computer vendor to execute a program each time it boots. It enables computer vendors to force install anti-theft software, software drivers, or a software program conveniently. This could also be a security risk.",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -2860,7 +2870,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/removeonedrive"
   },
   "WPFTweaksRazerBlock": {
-    "Content": "Block Razer Software Installs",
+    "Content": "Block Razer",
     "Description": "Blocks ALL Razer Software installations. The hardware works fine without any software. WARNING: this will also block all Windows third-party driver installations.",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -2902,7 +2912,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/razerblock"
   },
   "WPFTweaksDisableNotifications": {
-    "Content": "Disable Notification Tray/Calendar",
+    "Content": "Disable Notification",
     "Description": "Disables all Notifications INCLUDING Calendar",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -3075,7 +3085,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/debloatadobe"
   },
   "WPFTweaksBlockAdobeNet": {
-    "Content": "Adobe Network Block",
+    "Content": "Adobe Block",
     "Description": "Reduce user interruptions by selectively blocking connections to Adobe's activation and telemetry servers. Credit: Ruddernation-Designs",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -3183,7 +3193,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/blockadobenet"
   },
   "WPFTweaksRightClickMenu": {
-    "Content": "Set Classic Right-Click Menu ",
+    "Content": "Classic Menu",
     "Description": "Great Windows 11 tweak to bring back good context menus when right clicking things in explorer.",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -3206,9 +3216,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/rightclickmenu"
   },
   "WPFTweaksDiskCleanup": {
-    "Content": "Run Disk Cleanup",
+    "Content": "Disk Cleanup",
     "Description": "Runs Disk Cleanup on Drive C: and removes old Windows Updates.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a009_",
     "InvokeScript": [
@@ -3220,9 +3230,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/diskcleanup"
   },
   "WPFTweaksDeleteTempFiles": {
-    "Content": "Delete Temporary Files",
+    "Content": "Delete Temporary",
     "Description": "Erases TEMP Folders",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a002_",
     "InvokeScript": [
@@ -3234,7 +3244,7 @@
   "WPFTweaksDVR": {
     "Content": "Disable GameDVR",
     "Description": "GameDVR is a Windows App that is a dependency for some Store Games. I've never met someone that likes it, but it's there for the XBOX crowd.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -3277,7 +3287,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/essential-tweaks/dvr"
   },
   "WPFTweaksIPv46": {
-    "Content": "Prefer IPv4 over IPv6",
+    "Content": "Prefer IPv4",
     "Description": "To set the IPv4 preference can have latency and security benefits on private networks where IPv6 is not configured.",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -3340,7 +3350,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/disableipsix"
   },
   "WPFTweaksDisableBGapps": {
-    "Content": "Disable Background Apps",
+    "Content": "Disable Background",
     "Description": "Disables all Microsoft Store apps from running in the background, which has to be done individually since Win11",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -3357,7 +3367,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/disablebgapps"
   },
   "WPFTweaksDisableFSO": {
-    "Content": "Disable Fullscreen Optimizations",
+    "Content": "Disable Fullscreen",
     "Description": "Disables FSO in all applications. NOTE: This will disable Color Management in Exclusive Fullscreen",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
@@ -3374,9 +3384,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/disablefso"
   },
   "WPFToggleDarkMode": {
-    "Content": "Dark Theme for Windows",
+    "Content": "Dark Theme",
     "Description": "Enable/Disable Dark Mode.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a100_",
     "Type": "Toggle",
@@ -3417,9 +3427,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/darkmode"
   },
   "WPFToggleBingSearch": {
-    "Content": "Bing Search in Start Menu",
+    "Content": "Bing Search",
     "Description": "If enable then includes web search results from Bing in your Start Menu search.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a101_",
     "Type": "Toggle",
@@ -3427,18 +3437,18 @@
       {
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Search",
         "Name": "BingSearchEnabled",
-        "Value": "1",
+        "Value": "0",
         "OriginalValue": "0",
-        "DefaultState": "true",
+        "DefaultState": "false",
         "Type": "DWord"
       }
     ],
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/bingsearch"
   },
   "WPFToggleNumLock": {
-    "Content": "NumLock on Startup",
+    "Content": "NumLock",
     "Description": "Toggle the Num Lock key state when your computer starts.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a102_",
     "Type": "Toggle",
@@ -3463,9 +3473,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/numlock"
   },
   "WPFToggleVerboseLogon": {
-    "Content": "Verbose Messages During Logon",
+    "Content": "Verbose Messages",
     "Description": "Show detailed messages during the login process for troubleshooting and diagnostics.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a103_",
     "Type": "Toggle",
@@ -3482,9 +3492,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/verboselogon"
   },
   "WPFToggleStartMenuRecommendations": {
-    "Content": "Recommendations in Start Menu",
+    "Content": "Recommendations",
     "Description": "If disabled then you will not see recommendations in the Start Menu. | Enables 'iseducationenvironment' | Relogin Required. | WARNING: This will also disable Windows Spotlight on your Lock Screen as a side effect.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a104_",
     "Type": "Toggle",
@@ -3492,15 +3502,15 @@
       {
         "Path": "HKLM:\\SOFTWARE\\Microsoft\\PolicyManager\\current\\device\\Start",
         "Name": "HideRecommendedSection",
-        "Value": "0",
+        "Value": "1",
         "OriginalValue": "1",
-        "DefaultState": "true",
+        "DefaultState": "false",
         "Type": "DWord"
       },
       {
         "Path": "HKLM:\\SOFTWARE\\Microsoft\\PolicyManager\\current\\device\\Education",
         "Name": "IsEducationEnvironment",
-        "Value": "0",
+        "Value": "1",
         "OriginalValue": "1",
         "DefaultState": "true",
         "Type": "DWord"
@@ -3517,9 +3527,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/wpftogglestartmenurecommendations"
   },
   "WPFToggleHideSettingsHome": {
-    "Content": "Remove Settings Home Page",
+    "Content": "Remove Home Page",
     "Description": "Removes the Home page in the Windows Settings app.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a105_",
     "Type": "Toggle",
@@ -3529,7 +3539,7 @@
         "Name": "SettingsPageVisibility",
         "Type": "String",
         "Value": "hide:home",
-        "OriginalValue": "show:home",
+        "OriginalValue": "hide:home",
         "DefaultState": "false"
       }
     ]
@@ -3537,7 +3547,7 @@
   "WPFToggleSnapWindow": {
     "Content": "Snap Window",
     "Description": "If enabled you can align windows by dragging them. | Relogin Required",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a106_",
     "Type": "Toggle",
@@ -3546,7 +3556,7 @@
         "Path": "HKCU:\\Control Panel\\Desktop",
         "Name": "WindowArrangementActive",
         "Value": "1",
-        "OriginalValue": "0",
+        "OriginalValue": "1",
         "DefaultState": "true",
         "Type": "String"
       }
@@ -3556,7 +3566,7 @@
   "WPFToggleSnapFlyout": {
     "Content": "Snap Assist Flyout",
     "Description": "If enabled then Snap preview is disabled when maximize button is hovered.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a107_",
     "Type": "Toggle",
@@ -3564,9 +3574,9 @@
       {
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
         "Name": "EnableSnapAssistFlyout",
-        "Value": "1",
+        "Value": "0",
         "OriginalValue": "0",
-        "DefaultState": "true",
+        "DefaultState": "false",
         "Type": "DWord"
       }
     ],
@@ -3585,7 +3595,7 @@
   "WPFToggleSnapSuggestion": {
     "Content": "Snap Assist Suggestion",
     "Description": "If enabled then you will get suggestions to snap other applications in the left over spaces.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a108_",
     "Type": "Toggle",
@@ -3594,7 +3604,7 @@
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
         "Name": "SnapAssist",
         "Value": "1",
-        "OriginalValue": "0",
+        "OriginalValue": "1",
         "DefaultState": "true",
         "Type": "DWord"
       }
@@ -3614,7 +3624,7 @@
   "WPFToggleMouseAcceleration": {
     "Content": "Mouse Acceleration",
     "Description": "If Enabled then Cursor movement is affected by the speed of your physical mouse movements.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a109_",
     "Type": "Toggle",
@@ -3622,25 +3632,25 @@
       {
         "Path": "HKCU:\\Control Panel\\Mouse",
         "Name": "MouseSpeed",
-        "Value": "1",
+        "Value": "0",
         "OriginalValue": "0",
-        "DefaultState": "true",
+        "DefaultState": "false",
         "Type": "DWord"
       },
       {
         "Path": "HKCU:\\Control Panel\\Mouse",
         "Name": "MouseThreshold1",
-        "Value": "6",
+        "Value": "0",
         "OriginalValue": "0",
-        "DefaultState": "true",
+        "DefaultState": "false",
         "Type": "DWord"
       },
       {
         "Path": "HKCU:\\Control Panel\\Mouse",
         "Name": "MouseThreshold2",
-        "Value": "10",
+        "Value": "0",
         "OriginalValue": "0",
-        "DefaultState": "true",
+        "DefaultState": "false",
         "Type": "DWord"
       }
     ],
@@ -3649,7 +3659,7 @@
   "WPFToggleStickyKeys": {
     "Content": "Sticky Keys",
     "Description": "If Enabled then Sticky Keys is activated - Sticky keys is an accessibility feature of some graphical user interfaces which assists users who have physical disabilities or help users reduce repetitive strain injury.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a110_",
     "Type": "Toggle",
@@ -3657,18 +3667,18 @@
       {
         "Path": "HKCU:\\Control Panel\\Accessibility\\StickyKeys",
         "Name": "Flags",
-        "Value": "510",
-        "OriginalValue": "58",
-        "DefaultState": "true",
+        "Value": "2",
+        "OriginalValue": "2",
+        "DefaultState": "false",
         "Type": "DWord"
       }
     ],
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/stickykeys"
   },
   "WPFToggleNewOutlook": {
-    "Content": "New Outlook",
+    "Content": "Outlook",
     "Description": "If disabled it removes the toggle for new Outlook, disables the new Outlook migration and makes sure the Outlook Application actually uses the old Outlook.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a112_",
     "Type": "Toggle",
@@ -3712,7 +3722,7 @@
   "WPFToggleMultiplaneOverlay": {
     "Content": "Multiplane Overlay",
     "Description": "Disable the Multiplane Overlay which can sometimes cause issues with Graphics Cards.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a111_",
     "Type": "Toggle",
@@ -3729,9 +3739,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/multplaneoverlay"
   },
   "WPFToggleHiddenFiles": {
-    "Content": "Show Hidden Files",
+    "Content": "Hidden Files",
     "Description": "If Enabled then Hidden Files will be shown.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a200_",
     "Type": "Toggle",
@@ -3739,8 +3749,8 @@
       {
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
         "Name": "Hidden",
-        "Value": "1",
-        "OriginalValue": "0",
+        "Value": "2",
+        "OriginalValue": "2",
         "DefaultState": "false",
         "Type": "DWord"
       }
@@ -3758,9 +3768,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/hiddenfiles"
   },
   "WPFToggleShowExt": {
-    "Content": "Show File Extensions",
+    "Content": "File Extensions",
     "Description": "If enabled then File extensions (e.g., .txt, .jpg) are visible.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a201_",
     "Type": "Toggle",
@@ -3769,7 +3779,7 @@
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
         "Name": "HideFileExt",
         "Value": "0",
-        "OriginalValue": "1",
+        "OriginalValue": "0",
         "DefaultState": "false",
         "Type": "DWord"
       }
@@ -3787,9 +3797,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/showext"
   },
   "WPFToggleTaskbarSearch": {
-    "Content": "Search Button in Taskbar",
+    "Content": "Search Button",
     "Description": "If Enabled Search Button will be on the taskbar.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a202_",
     "Type": "Toggle",
@@ -3797,18 +3807,18 @@
       {
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Search",
         "Name": "SearchboxTaskbarMode",
-        "Value": "1",
+        "Value": "0",
         "OriginalValue": "0",
-        "DefaultState": "true",
+        "DefaultState": "false",
         "Type": "DWord"
       }
     ],
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/taskbarsearch"
   },
   "WPFToggleTaskView": {
-    "Content": "Task View Button in Taskbar",
+    "Content": "Task View",
     "Description": "If Enabled then Task View Button in Taskbar will be shown.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a203_",
     "Type": "Toggle",
@@ -3816,18 +3826,18 @@
       {
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
         "Name": "ShowTaskViewButton",
-        "Value": "1",
+        "Value": "0",
         "OriginalValue": "0",
-        "DefaultState": "true",
+        "DefaultState": "false",
         "Type": "DWord"
       }
     ],
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/taskview"
   },
   "WPFToggleTaskbarWidgets": {
-    "Content": "Widgets Button in Taskbar",
+    "Content": "Widgets",
     "Description": "If Enabled then Widgets Button in Taskbar will be shown.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a204_",
     "Type": "Toggle",
@@ -3835,18 +3845,18 @@
       {
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
         "Name": "TaskbarDa",
-        "Value": "1",
+        "Value": "0",
         "OriginalValue": "0",
-        "DefaultState": "true",
+        "DefaultState": "false",
         "Type": "DWord"
       }
     ],
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/taskbarwidgets"
   },
   "WPFToggleTaskbarAlignment": {
-    "Content": "Center Taskbar Items",
+    "Content": "Center Items",
     "Description": "[Windows 11] If Enabled then the Taskbar Items will be shown on the Center, otherwise the Taskbar Items will be shown on the Left.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a204_",
     "Type": "Toggle",
@@ -3854,18 +3864,18 @@
       {
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
         "Name": "TaskbarAl",
-        "Value": "1",
+        "Value": "0",
         "OriginalValue": "0",
-        "DefaultState": "true",
+        "DefaultState": "false",
         "Type": "DWord"
       }
     ],
     "link": "https://docs.o9ll.com/dev/tweaks/customize-preferences/taskbaralignment"
   },
   "WPFToggleDetailedBSoD": {
-    "Content": "Detailed BSoD",
+    "Content": "BSoD",
     "Description": "If Enabled then you will see a detailed Blue Screen of Death (BSOD) with more information.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a205_",
     "Type": "Toggle",
@@ -3892,7 +3902,7 @@
   "WPFToggleS3Sleep": {
     "Content": "S3 Sleep",
     "Description": "Toggles between Modern Standby and S3 sleep.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a206_",
     "Type": "Toggle",
@@ -3908,7 +3918,7 @@
     ]
   },
   "WPFOOSUbutton": {
-    "Content": "Run OO Shutup 10",
+    "Content": "O&O ShutUp10",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
     "Order": "a039_",
@@ -3916,7 +3926,7 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/oosubutton"
   },
   "WPFAutorunsbutton": {
-    "Content": "Run Autoruns",
+    "Content": "Autoruns",
     "category": "z__Advanced Tweaks - CAUTION",
     "panel": "1",
     "Order": "a039_",
@@ -3933,8 +3943,8 @@
     "link": "https://docs.o9ll.com/dev/tweaks/z--advanced-tweaks---caution/changedns"
   },
   "WPFAddUltPerf": {
-    "Content": "Add and Activate Ultimate Performance Profile",
-    "category": "Performance Plans",
+    "Content": "Activate Power Plan",
+    "category": "Power Plan",
     "panel": "2",
     "Order": "a080_",
     "Type": "Button",
@@ -3942,8 +3952,8 @@
     "link": "https://docs.o9ll.com/dev/tweaks/performance-plans/addultperf"
   },
   "WPFRemoveUltPerf": {
-    "Content": "Remove Ultimate Performance Profile",
-    "category": "Performance Plans",
+    "Content": "Remove Power Plan",
+    "category": "Power Plan",
     "panel": "2",
     "Order": "a081_",
     "Type": "Button",
@@ -3951,9 +3961,9 @@
     "link": "https://docs.o9ll.com/dev/tweaks/performance-plans/removeultperf"
   },
   "WPFTweaksDisableExplorerAutoDiscovery": {
-    "Content": "Disable Explorer Automatic Folder Discovery",
+    "Content": "Disable Explorer Auto",
     "Description": "Windows Explorer automatically tries to guess the type of the folder based on its contents, slowing down the browsing experience.",
-    "category": "Essential Tweaks",
+    "category": "Tweaks l",
     "panel": "1",
     "Order": "a005_",
     "InvokeScript": [
@@ -4006,9 +4016,9 @@
     ]
   },
   "WPFTweaksDisableCrossDeviceResume": {
-    "Content": "Cross-Device Resume",
+    "Content": "Cross Device Resume",
     "Description": "This tweak controls the Resume function in Windows 11 24H2 and later, which allows you to resume an activity from a mobile device and vice-versa.",
-    "category": "Customize Preferences",
+    "category": "Preferences",
     "panel": "2",
     "Order": "a207_",
     "Type": "Toggle",
@@ -4018,7 +4028,7 @@
         "Name": "IsResumeAllowed",
         "Value": "1",
         "OriginalValue": "0",
-        "DefaultState": "true",
+        "DefaultState": "false",
         "Type": "DWord"
       }
     ]

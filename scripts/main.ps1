@@ -135,9 +135,9 @@ Invoke-WPFUIElements -configVariable $sync.configs.feature -targetGridName "feat
 # Future implementation: Add Windows Version to updates panel
 #Invoke-WPFUIElements -configVariable $sync.configs.updates -targetGridName "updatespanel" -columncount 1
 
-#===========================================================================
+#=================================
 # Store Form Objects In PowerShell
-#===========================================================================
+#=================================
 
 $xaml.SelectNodes("//*[@Name]") | ForEach-Object {$sync["$("$($psitem.Name)")"] = $sync["Form"].FindName($psitem.Name)}
 
@@ -180,9 +180,9 @@ $sync.keys | ForEach-Object {
     }
 }
 
-#===========================================================================
+#========================
 # Setup background config
-#===========================================================================
+#========================
 
 # Load computer information in the background
 Invoke-WPFRunspace -ScriptBlock {
@@ -198,9 +198,9 @@ Invoke-WPFRunspace -ScriptBlock {
 
 } | Out-Null
 
-#===========================================================================
+#========================
 # Setup and Show the Form
-#===========================================================================
+#========================
 
 # Print the logo
 Show-o9Logo
@@ -310,7 +310,36 @@ $sync["Form"].Add_ContentRendered({
         Write-Debug "Unable to retrieve information about the primary monitor."
     }
 
-    Invoke-WPFTab "WPFTab1BT"
+    # Check internet connectivity and disable install tab if offline
+    #$isOnline = Test-o9InternetConnection
+    $isOnline = $true # Temporarily force online mode until we can resolve false negatives
+
+    if (-not $isOnline) {
+        # Disable the install tab
+        $sync.WPFTab1BT.IsEnabled = $false
+        $sync.WPFTab1BT.Opacity = 0.5
+        $sync.WPFTab1BT.ToolTip = "Internet connection required for installing applications"
+
+        # Disable install-related buttons
+        $sync.WPFInstall.IsEnabled = $false
+        $sync.WPFUninstall.IsEnabled = $false
+        $sync.WPFInstallUpgrade.IsEnabled = $false
+        $sync.WPFGetInstalled.IsEnabled = $false
+
+        # Show offline indicator
+        Write-Host "Offline mode detected - Install tab disabled" -ForegroundColor Yellow
+
+        # Optionally switch to a different tab if install tab was going to be default
+        Invoke-WPFTab "WPFTab2BT"  # Switch to Tweaks tab instead
+    }
+    else {
+        # Online - ensure install tab is enabled
+        $sync.WPFTab1BT.IsEnabled = $true
+        $sync.WPFTab1BT.Opacity = 1.0
+        $sync.WPFTab1BT.ToolTip = $null
+        Invoke-WPFTab "WPFTab1BT"  # Default to install tab
+    }
+
     $sync["Form"].Focus()
 
     # maybe this is not the best place to load and execute config file?
@@ -359,17 +388,12 @@ $sync["Form"].Add_ContentRendered({
 
 # Add event handlers for the RadioButtons
 $sync["ISOdownloader"].add_Checked({
-    $sync["ISORelease"].Visibility = [System.Windows.Visibility]::Visible
     $sync["ISOLanguage"].Visibility = [System.Windows.Visibility]::Visible
 })
 
 $sync["ISOmanual"].add_Checked({
-    $sync["ISORelease"].Visibility = [System.Windows.Visibility]::Collapsed
     $sync["ISOLanguage"].Visibility = [System.Windows.Visibility]::Collapsed
 })
-
-$sync["ISORelease"].Items.Add("24H2") | Out-Null
-$sync["ISORelease"].SelectedItem = "24H2"
 
 $sync["ISOLanguage"].Items.Add("System Language ($(o99-GetLangFromCulture -langName $((Get-Culture).Name)))") | Out-Null
 if ($currentCulture -ne "English International") {

@@ -33,7 +33,7 @@ function Test-o9PackageManager {
                 $wingetVersionFull = ($wingetInfo | Select-String -Pattern 'Package Manager v\d+\.\d+\.\d+').Matches.Value.Split(' ')[-1]
             }
         } catch [System.Management.Automation.CommandNotFoundException], [System.Management.Automation.ApplicationFailedException] {
-            Write-Warning "Winget was not found due to un-availablity reasons"
+            Write-Warning "Winget was not found due to un-availability reasons"
             $wingetExists = $false
         } catch {
             Write-Warning "Winget was not found due to un-known reasons, The Stack Trace is:`n$($psitem.Exception.StackTrace)"
@@ -41,7 +41,7 @@ function Test-o9PackageManager {
         }
 
         # If Winget is available, Parse it's Version and give proper information to Terminal Output.
-    # If it isn't available, the return of this funtion will be "not-installed", indicating that
+    # If it isn't available, the return of this function will be "not-installed", indicating that
         # Winget isn't installed/available on The System.
     if ($wingetExists) {
             # Check if Preview Version
@@ -55,15 +55,15 @@ function Test-o9PackageManager {
 
             # Check if Winget's Version is too old.
             $wingetCurrentVersion = [System.Version]::Parse($wingetVersion.Trim('v'))
-            # Grabs the latest release of Winget from the Github API for version check process.
+            # Grabs the latest release of Winget from the GitHub API for version check process.
             $response = winget search -e Microsoft.AppInstaller --accept-source-agreements
             $wingetLatestVersion = ($response | Select-String -Pattern '\d+\.\d+\.\d+\.\d+').Matches.Value
             Write-Host "Latest Search Version: $wingetLatestVersion" -ForegroundColor White
             Write-Host "Current Installed Version: $wingetCurrentVersion" -ForegroundColor White
             $wingetOutdated = $wingetCurrentVersion -lt [System.Version]::Parse($wingetLatestVersion)
-            Write-Host "===========================================" -ForegroundColor Green
-            Write-Host "---        Winget is installed          ---" -ForegroundColor Green
-            Write-Host "===========================================" -ForegroundColor Green
+            Write-Host "═══════════════════════════════════════════" -ForegroundColor Green
+            Write-Host "═══        Winget is installed          ═══" -ForegroundColor Green
+            Write-Host "═══════════════════════════════════════════" -ForegroundColor Green
 
             if (!$wingetPreview) {
                 Write-Host "    - Winget is a release version." -ForegroundColor Green
@@ -79,24 +79,24 @@ function Test-o9PackageManager {
                 $status = "outdated"
             }
         } else {
-            Write-Host "===========================================" -ForegroundColor Red
-            Write-Host "---      Winget is not installed        ---" -ForegroundColor Red
-            Write-Host "===========================================" -ForegroundColor Red
+            Write-Host "═══════════════════════════════════════════" -ForegroundColor Red
+            Write-Host "═══      Winget is not installed        ═══" -ForegroundColor Red
+            Write-Host "═══════════════════════════════════════════" -ForegroundColor Red
             $status = "not-installed"
         }
     }
 
     if ($choco) {
         if ((Get-Command -Name choco -ErrorAction Ignore) -and ($chocoVersion = (Get-Item "$env:ChocolateyInstall\choco.exe" -ErrorAction Ignore).VersionInfo.ProductVersion)) {
-            Write-Host "===========================================" -ForegroundColor Green
-            Write-Host "---      Chocolatey is installed        ---" -ForegroundColor Green
-            Write-Host "===========================================" -ForegroundColor Green
+            Write-Host "═══════════════════════════════════════════" -ForegroundColor Green
+            Write-Host "═══      Chocolatey is installed        ═══" -ForegroundColor Green
+            Write-Host "═══════════════════════════════════════════" -ForegroundColor Green
             Write-Host "Version: v$chocoVersion" -ForegroundColor White
             $status = "installed"
         } else {
-            Write-Host "===========================================" -ForegroundColor Red
-            Write-Host "---    Chocolatey is not installed      ---" -ForegroundColor Red
-            Write-Host "===========================================" -ForegroundColor Red
+            Write-Host "═══════════════════════════════════════════" -ForegroundColor Red
+            Write-Host "═══    Chocolatey is not installed      ═══" -ForegroundColor Red
+            Write-Host "═══════════════════════════════════════════" -ForegroundColor Red
             $status = "not-installed"
         }
     }

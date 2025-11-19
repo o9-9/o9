@@ -60,6 +60,7 @@ public class PowerManagement {
 
     $WPBT = $sync.o99WPBT.IsChecked
     $unsupported = $sync.o99Unsupported.IsChecked
+    $skipFla = $sync.o99NoFLA.IsChecked
 
     $importVirtIO = $sync.o99CopyVirtIO.IsChecked
 
@@ -179,6 +180,15 @@ public class PowerManagement {
             reg load HKLM\zSYSTEM "$($scratchDir)\Windows\System32\config\SYSTEM"
             reg add "HKLM\zSYSTEM\ControlSet001\Control\Session Manager" /v DisableWpbtExecution /t REG_DWORD /d 1 /f
             reg unload HKLM\zSYSTEM
+        }
+
+        if ($skipFla) {
+            Write-Host "Skipping first logon animation..."
+            reg load HKLM\zSOFTWARE "$($scratchDir)\Windows\System32\config\SOFTWARE"
+            reg add "HKLM\zSOFTWARE\Microsoft\Active Setup\Installed Components\CMP_NoFla" /f
+            reg add "HKLM\zSOFTWARE\Microsoft\Active Setup\Installed Components\CMP_NoFla" /ve /t REG_SZ /d "Stop First Logon Animation Process" /f
+            reg add "HKLM\zSOFTWARE\Microsoft\Active Setup\Installed Components\CMP_NoFla" /v StubPath /t REG_EXPAND_SZ /d '""%WINDIR%\System32\cmd.exe"" /C ""taskkill /f /im firstlogonanim.exe""' /f
+            reg unload HKLM\zSOFTWARE
         }
 
         if ($unsupported) {
@@ -507,13 +517,32 @@ public class PowerManagement {
             if ($?) { Write-Host "Done Copying target ISO to USB drive!" } else { Write-Host "ISO copy failed." }
         }
 
-        Write-Host "888888888b.                                       "
-        Write-Host "888    'Y88b                                      "
-        Write-Host "888      888   .d888b.    888888b.     .d888b.    "
-        Write-Host "888      888  d88' '88b   8888 '88b   d8b   d8b   "
-        Write-Host "888      888  888   888   888   888   888888888   "
-        Write-Host "888    .d88P  888. .888   888   888   Y8b.        "
-        Write-Host "888888888P'   'Y8bod8P'   888   888    'Y88888    "
+        Write-Host "                                              ::="
+        Write-Host "                                         :::::== "
+        Write-Host "                                     :::::::-=== "
+        Write-Host "                                  ::::::::-====  "
+        Write-Host "                               :::::::::-=====   "
+        Write-Host "                             ::::::::::======    "
+        Write-Host "                           ::::::::::=======     "
+        Write-Host "                         ::::::::::========      "
+        Write-Host "                       ::::::::::=========       "
+        Write-Host "                      :::::::::-=========        "
+        Write-Host "                    :::::::::-=========          "
+        Write-Host "            %%%%   :::::::::==========           "
+        Write-Host "           %%%%%%+::::::::==========             "
+        Write-Host "             %%%%%#:::::==========               "
+        Write-Host "               %%%%%#:==========                 "
+        Write-Host "              #**%%%%%#=======                   "
+        Write-Host "            %%%%%%%%%%%%*==                      "
+        Write-Host "          *+++++++**#%%%%%%                      "
+        Write-Host "         %%%%%#*++++* %%%%%%                     "
+        Write-Host "       ++*#%%%%%%%%     %%%%                     "
+        Write-Host "   %%%%#*+++++++*                                "
+        Write-Host " %%%%%%%%%%%%##                                  "
+        Write-Host "%%%%%%%%%%%%%%                                   "
+        Write-Host "%%%%%%%%%%%#                                     "
+        Write-Host "%%%%%%%%%%%                                      "
+        Write-Host "  %%%%%%%%                                       "
 
         # Check if the ISO was successfully created - o9 edit
         if ($LASTEXITCODE -eq 0) {

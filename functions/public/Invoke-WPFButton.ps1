@@ -42,6 +42,7 @@ function Invoke-WPFButton {
         "WPFPanelPower" {Invoke-WPFControlPanel -Panel $button}
         "WPFPanelPrinter" {Invoke-WPFControlPanel -Panel $button}
         "WPFPanelRegion" {Invoke-WPFControlPanel -Panel $button}
+        "WPFPanelRestore" {Invoke-WPFControlPanel -Panel $button}
         "WPFPanelSound" {Invoke-WPFControlPanel -Panel $button}
         "WPFPanelSystem" {Invoke-WPFControlPanel -Panel $button}
         "WPFPanelTimedate" {Invoke-WPFControlPanel -Panel $button}
@@ -63,8 +64,9 @@ function Invoke-WPFButton {
         "WPFo9InstallPSProfile" {Invoke-o9InstallPSProfile}
         "WPFo9UninstallPSProfile" {Invoke-o9UninstallPSProfile}
         "WPFo9SSHServer" {Invoke-WPFSSHServer}
-        "WPFo9InstallVSCode" { Invoke-o9InstallVSCode }
-        "WPFo9InstallTheme" { Invoke-o9InstallTheme }
+        "WPFo9InstallVSCode" {Invoke-o9InstallVSCode}
+        "WPFo9InstallCursor" {Invoke-o9InstallCursor}
+        "WPFo9InstallTheme" {Invoke-o9InstallTheme}
         "WPFselectedAppsButton" {$sync.selectedAppsPopup.IsOpen = -not $sync.selectedAppsPopup.IsOpen}
         "WPFo99PanelBack" {Toggle-o99Panel 1}
         "o99AutoConfigBtn" {Invoke-AutoConfigDialog}

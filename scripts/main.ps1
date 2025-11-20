@@ -141,7 +141,7 @@ Invoke-WPFUIElements -configVariable $sync.configs.feature -targetGridName "feat
 
 $xaml.SelectNodes("//*[@Name]") | ForEach-Object {$sync["$("$($psitem.Name)")"] = $sync["Form"].FindName($psitem.Name)}
 
-#Persist Package Manager preference across o9 restarts
+#Persist Package preference across o9 restarts
 $sync.ChocoRadioButton.Add_Checked({Set-PackageManagerPreference Choco})
 $sync.WingetRadioButton.Add_Checked({Set-PackageManagerPreference Winget})
 Set-PackageManagerPreference

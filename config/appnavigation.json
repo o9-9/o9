@@ -22,7 +22,7 @@
     },
     "WingetRadioButton": {
         "Content": "Winget",
-        "Category": "__Package Manager",
+        "Category": "__Package",
         "Type": "RadioButton",
         "GroupName": "PackageManagerGroup",
         "Checked": true,
@@ -31,7 +31,7 @@
     },
     "ChocoRadioButton": {
         "Content": "Chocolatey",
-        "Category": "__Package Manager",
+        "Category": "__Package",
         "Type": "RadioButton",
         "GroupName": "PackageManagerGroup",
         "Checked": false,

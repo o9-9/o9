@@ -2138,7 +2138,7 @@
   "WPFTweaksDisableEdge": {
     "Content": "Disable Edge",
     "Description": "Disables Microsoft Edge via the registry and prevents scheduled tasks from running Edge updates.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a023_",
     "registry": [
@@ -2162,7 +2162,7 @@
   "WPFTweaksUTC": {
     "Content": "Set Time to UTC (Dual Boot)",
     "Description": "Essential for computers that are dual booting. Fixes the time sync with Linux Systems.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a027_",
     "registry": [
@@ -2179,7 +2179,7 @@
   "WPFTweaksRemoveHome": {
     "Content": "Remove Home",
     "Description": "Removes the Home from Explorer and sets This PC as default",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a029_",
     "InvokeScript": [
@@ -2199,7 +2199,7 @@
   "WPFTweaksRemoveGallery": {
     "Content": "Remove Gallery",
     "Description": "Removes the Gallery from Explorer and sets This PC as default",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a030_",
     "InvokeScript": [
@@ -2219,7 +2219,7 @@
   "WPFTweaksDisplay": {
     "Content": "Display Performance",
     "Description": "Sets the system preferences to performance. You can do this manually with sysdm.cpl as well.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a027_",
     "registry": [
@@ -2326,7 +2326,7 @@
   "WPFTweaksDeBloat": {
     "Content": "Remove Store Apps",
     "Description": "USE WITH CAUTION!!!!! This will remove ALL Microsoft store apps other than the essentials to make winget work. Games installed by MS Store ARE INCLUDED!",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a028_",
     "appx": [
@@ -2565,7 +2565,7 @@
   "WPFTweaksRemoveCopilot": {
     "Content": "Disable Copilot",
     "Description": "Disables MS Copilot AI built into Windows since 23H2.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a025_",
     "registry": [
@@ -2691,7 +2691,7 @@
   "WPFTweaksDisableLMS1": {
     "Content": "Disable Intel",
     "Description": "Intel LMS service is always listening on all ports and could be a huge security risk. There is no need to run LMS on home machines and even in the Enterprise there are better solutions.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a026_",
     "InvokeScript": [
@@ -2749,7 +2749,7 @@
   "WPFTweaksDisableWpbtExecution": {
     "Content": "Disable WPBT",
     "Description": "If enabled then allows your computer vendor to execute a program each time it boots. It enables computer vendors to force install anti-theft software, software drivers, or a software program conveniently. This could also be a security risk.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a027_",
     "registry": [
@@ -2765,7 +2765,7 @@
   "WPFTweaksRemoveOnedrive": {
     "Content": "Remove OneDrive",
     "Description": "Moves OneDrive files to Default Home Folders and Uninstalls it.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a031_",
     "InvokeScript": [
@@ -2872,7 +2872,7 @@
   "WPFTweaksRazerBlock": {
     "Content": "Block Razer",
     "Description": "Blocks ALL Razer Software installations. The hardware works fine without any software. WARNING: this will also block all Windows third-party driver installations.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a032_",
     "registry": [
@@ -2914,7 +2914,7 @@
   "WPFTweaksDisableNotifications": {
     "Content": "Disable Notification",
     "Description": "Disables all Notifications INCLUDING Calendar",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a026_",
     "registry": [
@@ -2938,7 +2938,7 @@
   "WPFTweaksDebloatAdobe": {
     "Content": "Adobe Debloat",
     "Description": "Manages Adobe Services, Adobe Desktop Service, and Acrobat Updates",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a021_",
     "InvokeScript": [
@@ -3087,7 +3087,7 @@
   "WPFTweaksBlockAdobeNet": {
     "Content": "Adobe Block",
     "Description": "Reduce user interruptions by selectively blocking connections to Adobe's activation and telemetry servers. Credit: Ruddernation-Designs",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a021_",
     "InvokeScript": [
@@ -3195,7 +3195,7 @@
   "WPFTweaksRightClickMenu": {
     "Content": "Classic Menu",
     "Description": "Great Windows 11 tweak to bring back good context menus when right clicking things in explorer.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a027_",
     "InvokeScript": [
@@ -3289,7 +3289,7 @@
   "WPFTweaksIPv46": {
     "Content": "Prefer IPv4",
     "Description": "To set the IPv4 preference can have latency and security benefits on private networks where IPv6 is not configured.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a023_",
     "registry": [
@@ -3306,7 +3306,7 @@
   "WPFTweaksTeredo": {
     "Content": "Disable Teredo",
     "Description": "Teredo network tunneling is a ipv6 feature that can cause additional latency, but may cause problems with some games",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a023_",
     "registry": [
@@ -3329,7 +3329,7 @@
   "WPFTweaksDisableipsix": {
     "Content": "Disable IPv6",
     "Description": "Disables IPv6.",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a023_",
     "registry": [
@@ -3352,7 +3352,7 @@
   "WPFTweaksDisableBGapps": {
     "Content": "Disable Background",
     "Description": "Disables all Microsoft Store apps from running in the background, which has to be done individually since Win11",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a024_",
     "registry": [
@@ -3369,7 +3369,7 @@
   "WPFTweaksDisableFSO": {
     "Content": "Disable Fullscreen",
     "Description": "Disables FSO in all applications. NOTE: This will disable Color Management in Exclusive Fullscreen",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a024_",
     "registry": [
@@ -3919,7 +3919,7 @@
   },
   "WPFOOSUbutton": {
     "Content": "O&O ShutUp10",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a039_",
     "Type": "Button",
@@ -3927,7 +3927,7 @@
   },
   "WPFAutorunsbutton": {
     "Content": "Autoruns",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a039_",
     "Type": "Button",
@@ -3935,7 +3935,7 @@
   },
   "WPFchangedns": {
     "Content": "DNS",
-    "category": "z__Advanced Tweaks - CAUTION",
+    "category": "z__Tweaks ll",
     "panel": "1",
     "Order": "a040_",
     "Type": "Combobox",

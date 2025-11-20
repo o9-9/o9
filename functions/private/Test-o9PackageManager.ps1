@@ -30,7 +30,7 @@ function Test-o9PackageManager {
                 $wingetVersionFull = $wingetVersionFull.Split(' ')[-1].TrimStart('v')
             } else {
                 # Fallback in case the pattern isn't found
-                $wingetVersionFull = ($wingetInfo | Select-String -Pattern 'Package Manager v\d+\.\d+\.\d+').Matches.Value.Split(' ')[-1]
+                $wingetVersionFull = ($wingetInfo | Select-String -Pattern 'Package v\d+\.\d+\.\d+').Matches.Value.Split(' ')[-1]
             }
         } catch [System.Management.Automation.CommandNotFoundException], [System.Management.Automation.ApplicationFailedException] {
             Write-Warning "Winget was not found due to un-availability reasons"

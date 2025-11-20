@@ -1,6 +1,6 @@
 {
   "7zip": {
-    "category": "9",
+    "category": "0",
     "choco": "7zip",
     "content": "7-Zip",
     "description": "7-Zip is a free and open-source file archiver utility. It supports several compression formats and provides a high compression ratio, making it a popular choice for file compression.",
@@ -8,7 +8,7 @@
     "winget": "7zip.7zip"
   },
   "sharex": {
-    "category": "9",
+    "category": "0",
     "choco": "sharex",
     "content": "ShareX",
     "description": "ShareX is a free and open-source screen capture and file sharing tool. It supports various capture methods and offers advanced features for editing and sharing screenshots.",
@@ -16,7 +16,7 @@
     "winget": "ShareX.ShareX"
   },
   "fileconverter": {
-    "category": "9",
+    "category": "0",
     "choco": "file-converter",
     "content": "File Converter",
     "description": "File Converter is a very simple tool which allows you to convert and compress one or several file(s) using the context menu in windows explorer.",
@@ -24,7 +24,7 @@
     "winget": "AdrienAllard.FileConverter"
   },
   "nilesoftShell": {
-    "category": "9",
+    "category": "0",
     "choco": "nilesoft-shell",
     "content": "Nilesoft",
     "description": "Shell is an expanded context menu tool that adds extra functionality and customization options to the Windows context menu.",
@@ -32,7 +32,7 @@
     "winget": "Nilesoft.Shell"
   },
   "wingetui": {
-    "category": "9",
+    "category": "0",
     "choco": "wingetui",
     "content": "UniGetUI",
     "description": "UniGetUI is a GUI for Winget, Chocolatey, and other Windows CLI package managers.",
@@ -40,7 +40,7 @@
     "winget": "MartiCliment.UniGetUI"
   },
   "powertoys": {
-    "category": "9",
+    "category": "0",
     "choco": "powertoys",
     "content": "PowerToys",
     "description": "PowerToys is a set of utilities for power users to enhance productivity, featuring tools like FancyZones, PowerRename, and more.",
@@ -48,7 +48,7 @@
     "winget": "Microsoft.PowerToys"
   },
   "lockhunter": {
-    "category": "9",
+    "category": "0",
     "choco": "lockhunter",
     "content": "Lock Hunter",
     "description": "LockHunter is a free tool to delete files blocked by something you do not know.",
@@ -56,7 +56,7 @@
     "winget": "CrystalRich.LockHunter"
   },
   "bulkrenameutility": {
-    "category": "9",
+    "category": "0",
     "choco": "bulkrenameutility",
     "content": "Rename Utility",
     "description": "Bulk Rename Utility allows you to easily rename files and folders.",
@@ -64,7 +64,7 @@
     "winget": "TGRMNSoftware.BulkRenameUtility"
   },
   "AdvancedRenamer": {
-    "category": "9",
+    "category": "0",
     "choco": "advanced-renamer",
     "content": "Advanced Renamer",
     "description": "Advanced Renamer is a program for renaming multiple files and folders at once. By configuring renaming methods the names can be manipulated in various ways.",
@@ -72,7 +72,7 @@
     "winget": "HulubuluSoftware.AdvancedRenamer"
   },
   "esearch": {
-    "category": "9",
+    "category": "0",
     "choco": "everything",
     "content": "Everything",
     "description": "Everything Search is a fast and efficient file search utility for Windows.",
@@ -80,7 +80,7 @@
     "winget": "voidtools.Everything"
   },
   "treesize": {
-    "category": "9",
+    "category": "0",
     "choco": "treesizefree",
     "content": "TreeSize",
     "description": "TreeSize Free is a disk space manager that helps you analyze and visualize the space usage on your drives.",
@@ -88,7 +88,7 @@
     "winget": "JAMSoftware.TreeSize.Free"
   },
   "ripgrep": {
-    "category": "9",
+    "category": "0",
     "choco": "ripgrep",
     "content": "Ripgrep",
     "description": "Fast and powerful commandline search tool",
@@ -96,7 +96,7 @@
     "winget": "BurntSushi.ripgrep.MSVC"
   },
   "ttaskbar": {
-    "category": "9",
+    "category": "0",
     "choco": "translucenttb",
     "content": "TranslucentTB",
     "description": "TranslucentTB is a tool that allows you to customize the transparency of the Windows taskbar.",
@@ -104,7 +104,7 @@
     "winget": "9PF4KZ2VN4W9"
   },
   "Windhawk": {
-    "category": "9",
+    "category": "0",
     "choco": "windhawk",
     "content": "Windhawk",
     "description": "The customization marketplace for Windows programs",
@@ -112,7 +112,7 @@
     "winget": "RamenSoftware.Windhawk"
   },
   "OFGB": {
-    "category": "9",
+    "category": "0",
     "choco": "ofgb",
     "content": "OFGB",
     "description": "GUI Tool to remove ads from various places around Windows 11",
@@ -120,7 +120,7 @@
     "winget": "xM4ddy.OFGB"
   },
   "obs": {
-    "category": "9",
+    "category": "0",
     "choco": "obs-studio",
     "content": "OBS",
     "description": "OBS Studio is a free and open-source software for video recording and live streaming. It supports real-time video/audio capturing and mixing, making it popular among content creators.",
@@ -128,7 +128,7 @@
     "winget": "OBSProject.OBSStudio"
   },
   "autoruns": {
-    "category": "9",
+    "category": "0",
     "choco": "autoruns",
     "content": "Autoruns",
     "description": "This utility shows you what programs are configured to run during system bootup or login",
@@ -136,7 +136,7 @@
     "winget": "Microsoft.Sysinternals.Autoruns"
   },
   "zoomit": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "ZoomIt",
     "description": "A screen zoom, annotation, and recording tool for technical presentations and demos",
@@ -144,7 +144,7 @@
     "winget": "Microsoft.Sysinternals.ZoomIt"
   },
   "spotify": {
-    "category": "9",
+    "category": "0",
     "choco": "spotify",
     "content": "Spotify",
     "description": "Spotify is a digital music service that gives you access to millions of songs, podcasts, and videos from artists all over the world.",
@@ -152,7 +152,7 @@
     "winget": "Spotify.Spotify"
   },
   "itunes": {
-    "category": "9",
+    "category": "0",
     "choco": "itunes",
     "content": "iTunes",
     "description": "iTunes is a media player, media library, and online radio broadcaster application developed by Apple Inc.",
@@ -160,7 +160,7 @@
     "winget": "Apple.iTunes"
   },
   "tidal": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "Tidal",
     "description": "Tidal is a music streaming service known for its high-fidelity audio quality and exclusive content. It offers a vast library of songs and curated playlists.",
@@ -168,7 +168,7 @@
     "winget": "9NNCB5BS59PH"
   },
   "harmonoid": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "Harmonoid",
     "description": "Plays and manages your music library. Looks beautiful and juicy. Playlists, visuals, synced lyrics, pitch shift, volume boost and more.",
@@ -176,7 +176,7 @@
     "winget": "Harmonoid.Harmonoid"
   },
   "stremio": {
-    "category": "9",
+    "category": "0",
     "choco": "stremio",
     "content": "Stremio",
     "description": "Stremio is a media center application that allows users to organize and stream their favorite movies, TV shows, and video content.",
@@ -184,7 +184,7 @@
     "winget": "Stremio.Stremio"
   },
   "kodi": {
-    "category": "9",
+    "category": "0",
     "choco": "kodi",
     "content": "Kodi",
     "description": "Kodi is an open-source media center application that allows you to play and view most videos, music, podcasts, and other digital media files.",
@@ -192,7 +192,7 @@
     "winget": "XBMCFoundation.Kodi"
   },
   "plexdesktop": {
-    "category": "9",
+    "category": "0",
     "choco": "plex",
     "content": "Plex",
     "description": "Plex Desktop for Windows is the front end for Plex Media Server.",
@@ -200,7 +200,7 @@
     "winget": "Plex.Plex"
   },
   "plex": {
-    "category": "9",
+    "category": "0",
     "choco": "plexmediaserver",
     "content": "Plex Server",
     "description": "Plex Media Server is a media server software that allows you to organize and stream your media library. It supports various media formats and offers a wide range of features.",
@@ -208,7 +208,7 @@
     "winget": "Plex.PlexMediaServer"
   },
   "qbittorrent": {
-    "category": "9",
+    "category": "0",
     "choco": "qbittorrent",
     "content": "qBittorrent",
     "description": "qBittorrent is a free and open-source BitTorrent client that aims to provide a feature-rich and lightweight alternative to other torrent clients.",
@@ -216,7 +216,7 @@
     "winget": "qBittorrent.qBittorrent"
   },
   "revo": {
-    "category": "9",
+    "category": "0",
     "choco": "revouninstallerpro",
     "content": "Revo Uninstaller",
     "description": "Revo Uninstaller Pro helps you to uninstall software and remove unwanted programs easily.",
@@ -224,7 +224,7 @@
     "winget": "RevoUninstaller.RevoUninstallerPro"
   },
   "bleachbit": {
-    "category": "9",
+    "category": "0",
     "choco": "bleachbit",
     "content": "BleachBit",
     "description": "Clean Your System and Free Disk Space",
@@ -232,7 +232,7 @@
     "winget": "BleachBit.BleachBit"
   },
   "bulkcrapuninstaller": {
-    "category": "9",
+    "category": "0",
     "choco": "bulk-crap-uninstaller",
     "content": "Crap Uninstaller",
     "description": "Bulk Crap Uninstaller is a free and open-source uninstaller utility for Windows. It helps users remove unwanted programs and clean up their system by uninstalling multiple applications at once.",
@@ -240,7 +240,7 @@
     "winget": "Klocman.BulkCrapUninstaller"
   },
   "glaryutilities": {
-    "category": "9",
+    "category": "0",
     "choco": "glaryutilities-free",
     "content": "Glary Utilities",
     "description": "Glary Utilities is a comprehensive system optimization and maintenance tool for Windows.",
@@ -248,7 +248,7 @@
     "winget": "Glarysoft.GlaryUtilities"
   },
   "geek": {
-    "category": "9",
+    "category": "0",
     "choco": "geekuninstaller",
     "content": "Geek Uninstaller",
     "description": "The best free uninstaller.",
@@ -256,7 +256,7 @@
     "winget": "GeekUninstaller.GeekUninstaller"
   },
   "WiseProgramUninstaller": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "Wise Cleaner",
     "description": "Wise Program Uninstaller is the perfect solution for uninstalling Windows programs, allowing you to uninstall applications quickly and completely using its simple and user-friendly interface.",
@@ -264,7 +264,7 @@
     "winget": "WiseCleaner.WiseProgramUninstaller"
   },
   "wisetoys": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "WiseToys",
     "description": "WiseToys is a set of utilities and tools designed to enhance and optimize your Windows experience.",
@@ -272,7 +272,7 @@
     "winget": "WiseCleaner.WiseToys"
   },
   "nvclean": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "NVCleanstall",
     "description": "NVCleanstall is a tool designed to customize NVIDIA driver installations, allowing advanced users to control more aspects of the installation process.",
@@ -280,7 +280,7 @@
     "winget": "TechPowerUp.NVCleanstall"
   },
   "ddu": {
-    "category": "9",
+    "category": "0",
     "choco": "ddu",
     "content": "DDU",
     "description": "Display Driver Uninstaller (DDU) is a tool for completely uninstalling graphics drivers from NVIDIA, AMD, and Intel. It is useful for troubleshooting graphics driver-related issues.",
@@ -288,7 +288,7 @@
     "winget": "Wagnardsoft.DisplayDriverUninstaller"
   },
   "vc2015_64": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "Visual C++ 2015-20x64",
     "description": "Visual C++ 2015-2064-bit redistributable package installs runtime components of Visual C++ libraries required to run 64-bit applications.",
@@ -296,7 +296,7 @@
     "winget": "Microsoft.VCRedist.2015+.x64"
   },
   "sdio": {
-    "category": "9",
+    "category": "0",
     "choco": "sdio",
     "content": "Snappy",
     "description": "Snappy Driver Installer Origin is a free and open-source driver updater with a vast driver database for Windows.",
@@ -304,7 +304,7 @@
     "winget": "GlennDelahoy.SnappyDriverInstallerOrigin"
   },
   "msiafterburner": {
-    "category": "9",
+    "category": "0",
     "choco": "msiafterburner",
     "content": "MSI Afterburner",
     "description": "MSI Afterburner is a graphics card overclocking utility with advanced features.",
@@ -312,7 +312,7 @@
     "winget": "Guru3D.Afterburner"
   },
   "cpuz": {
-    "category": "9",
+    "category": "0",
     "choco": "cpu-z",
     "content": "CPU-Z",
     "description": "CPU-Z is a system monitoring and diagnostic tool for Windows. It provides detailed information about the computer's hardware components, including the CPU, memory, and motherboard.",
@@ -320,7 +320,7 @@
     "winget": "CPUID.CPU-Z"
   },
   "gpuz": {
-    "category": "9",
+    "category": "0",
     "choco": "gpu-z",
     "content": "GPU-Z",
     "description": "GPU-Z provides detailed information about your graphics card and GPU.",
@@ -328,7 +328,7 @@
     "winget": "TechPowerUp.GPU-Z"
   },
   "hwinfo": {
-    "category": "9",
+    "category": "0",
     "choco": "hwinfo",
     "content": "HWiNFO",
     "description": "HWiNFO provides comprehensive hardware information and diagnostics for Windows.",
@@ -336,7 +336,7 @@
     "winget": "REALiX.HWiNFO"
   },
   "hwmonitor": {
-    "category": "9",
+    "category": "0",
     "choco": "hwmonitor",
     "content": "HW Monitor",
     "description": "HWMonitor is a hardware monitoring program that reads PC systems main health sensors.",
@@ -344,7 +344,7 @@
     "winget": "CPUID.HWMonitor"
   },
   "capframex": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "Cap Frame X",
     "description": "Frametimes capture and analysis tool based on Intel's PresentMon. Overlay provided by Rivatuner Statistics Server.",
@@ -352,7 +352,7 @@
     "winget": "CXWorld.CapFrameX"
   },
   "intelpresentmon": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "Intel PresentMon",
     "description": "A new gaming performance overlay and telemetry application to monitor and measure your gaming experience.",
@@ -360,7 +360,7 @@
     "winget": "Intel.PresentMon.Beta"
   },
   "processlasso": {
-    "category": "9",
+    "category": "0",
     "choco": "plasso",
     "content": "Process Lasso",
     "description": "Process Lasso is a system optimization and automation tool that improves system responsiveness and stability by adjusting process priorities and CPU affinities.",
@@ -368,7 +368,7 @@
     "winget": "BitSum.ProcessLasso"
   },
   "processmonitor": {
-    "category": "9",
+    "category": "0",
     "choco": "procexp",
     "content": "SysInternals Process Monitor",
     "description": "SysInternals Process Monitor is an advanced monitoring tool that shows real-time file system, registry, and process/thread activity.",
@@ -376,7 +376,7 @@
     "winget": "Microsoft.Sysinternals.ProcessMonitor"
   },
   "monitorian": {
-    "category": "9",
+    "category": "0",
     "choco": "monitorian",
     "content": "Monitorian",
     "description": "Monitorian is a utility for adjusting monitor brightness and contrast on Windows.",
@@ -384,7 +384,7 @@
     "winget": "emoacht.Monitorian"
   },
   "flux": {
-    "category": "9",
+    "category": "0",
     "choco": "flux",
     "content": "F.lux",
     "description": "f.lux adjusts the color temperature of your screen to reduce eye strain during nighttime use.",
@@ -392,7 +392,7 @@
     "winget": "flux.flux"
   },
   "twinkletray": {
-    "category": "9",
+    "category": "0",
     "choco": "twinkle-tray",
     "content": "Twinkle Tray",
     "description": "Twinkle Tray lets you easily manage the brightness levels of multiple monitors.",
@@ -400,7 +400,7 @@
     "winget": "xanderfrangos.twinkletray"
   },
   "eartrumpet": {
-    "category": "9",
+    "category": "0",
     "choco": "eartrumpet",
     "content": "EarTrumpet",
     "description": "EarTrumpet is an audio control app for Windows, providing a simple and intuitive interface for managing sound settings.",
@@ -408,7 +408,7 @@
     "winget": "File-New-Project.EarTrumpet"
   },
   "ModernFlyouts": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "Modern Flyouts",
     "description": "An open source, modern, Fluent Design-based set of flyouts for Windows.",
@@ -416,7 +416,7 @@
     "winget": "ModernFlyouts.ModernFlyouts"
   },
   "fancontrol": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "FanControl",
     "description": "Fan Control is a free and open-source software that allows the user to control his CPU, GPU and case fans using temperatures.",
@@ -424,7 +424,7 @@
     "winget": "Rem0o.FanControl"
   },
   "openrgb": {
-    "category": "9",
+    "category": "0",
     "choco": "openrgb",
     "content": "Open RGB",
     "description": "OpenRGB is an open-source RGB lighting control software designed to manage and control RGB lighting for various components and peripherals.",
@@ -432,7 +432,7 @@
     "winget": "OpenRGB.OpenRGB"
   },
   "signalrgb": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "Signal RGB",
     "description": "SignalRGB lets you control and sync your favorite RGB devices with one free application.",
@@ -440,7 +440,7 @@
     "winget": "WhirlwindFX.SignalRgb"
   },
   "ventoy": {
-    "category": "9",
+    "category": "0",
     "choco": "ventoy",
     "content": "Ventoy",
     "description": "Ventoy is an open-source tool for creating bootable USB drives. It supports multiple ISO files on a single USB drive, making it a versatile solution for installing operating systems.",
@@ -448,7 +448,7 @@
     "winget": "Ventoy.Ventoy"
   },
   "rufus": {
-    "category": "9",
+    "category": "0",
     "choco": "rufus",
     "content": "Rufus",
     "description": "Rufus is a utility that helps format and create bootable USB drives, such as USB keys or pen drives.",
@@ -456,7 +456,7 @@
     "winget": "Rufus.Rufus"
   },
   "dismtools": {
-    "category": "9",
+    "category": "0",
     "choco": "na",
     "content": "DISM Tools",
     "description": "DISMTools is a fast, customizable GUI for the DISM utility, supporting Windows images from Windows 7 onward. It handles installations on any drive, offers project support, and lets users tweak settings like color modes, language, and DISM versions; powered by both native DISM and a managed DISM API.",
@@ -464,7 +464,7 @@
     "winget": "CodingWondersSoftware.DISMTools.Stable"
   },
   "ntlite": {
-    "category": "9",
+    "category": "0",
     "choco": "ntlite-free",
     "content": "NTLite",
     "description": "Integrate updates, drivers, automate Windows and application setup, speedup Windows deployment process and have it all set for the next time.",
@@ -472,7 +472,7 @@
     "winget": "Nlitesoft.NTLite"
   },
   "imgburn": {
-    "category": "9",
+    "category": "0",
     "choco": "imgburn",
     "content": "ImgBurn",
     "description": "ImgBurn is a lightweight CD, DVD, HD-DVD, and Blu-ray burning application with advanced features for creating and burning disc images.",
@@ -480,7 +480,7 @@
     "winget": "LIGHTNINGUK.ImgBurn"
   },
   "OVirtualBox": {
-    "category": "9",
+    "category": "0",
     "choco": "virtualbox",
     "content": "Oracle VirtualBox",
     "description": "Oracle VirtualBox is a powerful and free open-source virtualization tool for x86 and AMD64/Intelarchitectures.",
@@ -488,7 +488,7 @@
     "winget": "Oracle.VirtualBox"
   },
   "sandboxie": {
-    "category": "9",
+    "category": "0",
     "choco": "sandboxie",
     "content": "Sandboxie",
     "description": "Sandboxie Plus is a sandbox-based isolation program that provides enhanced security by running applications in an isolated environment.",

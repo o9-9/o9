@@ -5,7 +5,7 @@ function Get-o9SelectedPackages
         Sorts given packages based on installer preference and availability.
 
     .OUTPUTS
-        Hashtable. Key = Package Manager, Value = ArrayList of packages to install
+        Hashtable. Key = Package, Value = ArrayList of packages to install
     #>
     param (
         [Parameter(Mandatory=$true)]

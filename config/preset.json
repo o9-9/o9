@@ -1,11 +1,10 @@
 {
   "Standard": [
-    "WPFTweaksAH",
+    "WPFTweaksActivity",
     "WPFTweaksHiber",
     "WPFTweaksConsumerFeatures",
     "WPFTweaksDisableExplorerAutoDiscovery",
     "WPFTweaksDVR",
-    "WPFTweaksHome",
     "WPFTweaksLoc",
     "WPFTweaksServices",
     "WPFTweaksStorage",
@@ -38,7 +37,6 @@
     "WPFTweaksConsumerFeatures",
     "WPFTweaksDisableExplorerAutoDiscovery",
     "WPFTweaksDVR",
-    "WPFTweaksHome",
     "WPFTweaksLoc",
     "WPFTweaksServices",
     "WPFTweaksStorage",

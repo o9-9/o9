@@ -143,14 +143,6 @@
     "link": "https://learn.microsoft.com/en-us/sysinternals/downloads/zoomit",
     "winget": "Microsoft.Sysinternals.ZoomIt"
   },
-  "spotify": {
-    "category": "0",
-    "choco": "spotify",
-    "content": "Spotify",
-    "description": "Spotify is a digital music service that gives you access to millions of songs, podcasts, and videos from artists all over the world.",
-    "link": "https://www.spotify.com/",
-    "winget": "Spotify.Spotify"
-  },
   "itunes": {
     "category": "0",
     "choco": "itunes",
@@ -1063,6 +1055,22 @@
     "link": "https://github.com/BartoszCichecki/LenovoLegionToolkit",
     "winget": "BartoszCichecki.LenovoLegionToolkit"
   },
+  "enteauth": {
+    "category": "Utilities",
+    "choco": "ente-auth",
+    "content": "Ente Auth",
+    "description": "Ente Auth is a free, cross-platform, end-to-end encrypted authenticator app.",
+    "link": "https://ente.io/auth/",
+    "winget": "ente-io.auth-desktop"
+  },
+  "protonauth": {
+    "category": "Utilities",
+    "choco": "protonauth",
+    "content": "Proton Authenticator",
+    "description": "2FA app from Proton to securely sync and backup 2FA codes.",
+    "link": "https://proton.me/authenticator",
+    "winget": "Proton.ProtonAuthenticator"
+  },
   "git": {
     "category": "Developers",
     "choco": "git",
@@ -1862,6 +1870,14 @@
     "description": "Signal is a privacy-focused messaging app that offers end-to-end encryption for secure and private communication.",
     "link": "https://signal.org/",
     "winget": "OpenWhisperSystems.Signal"
+  },
+  "beeper": {
+    "category": "Comunication",
+    "choco": "na",
+    "content": "Beeper",
+    "description": "All your chats in one app",
+    "link": "https://www.beeper.com/",
+    "winget": "Beeper.Beeper"
   },
   "ZenBrowser": {
     "category": "Browsers",

@@ -1,9 +1,9 @@
 <#
 .NOTES
-    Author         : o9 @o9-9
-    Runspace Author: @o9-9
+    Author           : o9
+    Runspace Author : @o9-9
     GitHub         : https://github.com/o9-9
-    Version        : #{replaceme}
+    Version       : #{replaceme}
 #>
 
 param (

@@ -135,9 +135,9 @@ Invoke-WPFUIElements -configVariable $sync.configs.feature -targetGridName "feat
 # Future implementation: Add Windows Version to updates panel
 #Invoke-WPFUIElements -configVariable $sync.configs.updates -targetGridName "updatespanel" -columncount 1
 
-#=================================
-# Store Form Objects In PowerShell
-#=================================
+#  ──────────────────────────────────────
+# │   Store Form Objects In PowerShell  │
+# ──────────────────────────────────────
 
 $xaml.SelectNodes("//*[@Name]") | ForEach-Object {$sync["$("$($psitem.Name)")"] = $sync["Form"].FindName($psitem.Name)}
 
@@ -180,9 +180,9 @@ $sync.keys | ForEach-Object {
     }
 }
 
-#========================
-# Setup background config
-#========================
+#  ──────────────────────────────────────
+# │        Setup background config      │
+# ──────────────────────────────────────
 
 # Load computer information in the background
 Invoke-WPFRunspace -ScriptBlock {
@@ -198,9 +198,9 @@ Invoke-WPFRunspace -ScriptBlock {
 
 } | Out-Null
 
-#========================
-# Setup and Show the Form
-#========================
+#  ──────────────────────────────────────
+# │        Setup and Show the Form      │
+# ──────────────────────────────────────
 
 # Print the logo
 Show-o9Logo

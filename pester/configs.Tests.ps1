@@ -5,9 +5,9 @@ Get-ChildItem .\config | Where-Object {$_.Extension -eq ".json"} | ForEach-Objec
 }
 
 
-#==============================
-# Tests - Application Installs
-#==============================
+#  ───────────────────────────────────────────
+# │       Tests - Application Installs       │
+# ───────────────────────────────────────────
 
 Describe "Config Files" -ForEach @(
     @{

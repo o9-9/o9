@@ -227,9 +227,9 @@ function Install-o9ProgramChoco {
         throw "Parameter 'Programs' must have at least one item."
     }
 
-    Write-Host "==========================================="
-    Write-Host "--    Configuring Chocolatey packages    --"
-    Write-Host "==========================================="
+    Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
+    Write-Host "│       Configuring Chocolatey packages      │" -ForegroundColor Cyan
+    Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
 
     for ($currentIndex = 0; $currentIndex -lt $totalPrograms; $currentIndex++) {
         $Program = $Programs[$currentIndex]

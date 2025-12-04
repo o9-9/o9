@@ -282,8 +282,8 @@
   "vc2015_64": {
     "category": "0",
     "choco": "na",
-    "content": "Visual C++ 2015-20x64",
-    "description": "Visual C++ 2015-2064-bit redistributable package installs runtime components of Visual C++ libraries required to run 64-bit applications.",
+    "content": "Visual C++ 2015-2022 x64",
+    "description": "Visual C++ 2015-2022 x64-bit redistributable package installs runtime components of Visual C++ libraries required to run 64-bit applications.",
     "link": "https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads",
     "winget": "Microsoft.VCRedist.2015+.x64"
   },

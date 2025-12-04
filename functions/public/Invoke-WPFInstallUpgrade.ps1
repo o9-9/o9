@@ -28,10 +28,10 @@ function Invoke-WPFInstallUpgrade {
 
         Update-o9ProgramWinget
 
-        Write-Host "==========================================="
-        Write-Host "--           Updates started             --"
-        Write-Host "-- You can close this window if desired  --"
-        Write-Host "==========================================="
+        Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
+        Write-Host "│              Updates started               │" -ForegroundColor Cyan
+        Write-Host "│    You can close this window if desired    │" -ForegroundColor Cyan
+        Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
     }
 }
 

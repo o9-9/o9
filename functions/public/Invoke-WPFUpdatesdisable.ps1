@@ -128,8 +128,8 @@ function Invoke-WPFUpdatesdisable {
         }
     }
 
-    Write-Host "=================================" -ForegroundColor Green
-    Write-Host "---   Updates ARE DISABLED    ---" -ForegroundColor Green
-    Write-Host "===================================" -ForegroundColor Green
+    Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
+    Write-Host "│           Updates ARE DISABLED             │" -ForegroundColor Cyan
+    Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
     Write-Host "Note: Some operations may require a system restart to take full effect." -ForegroundColor Yellow
 }

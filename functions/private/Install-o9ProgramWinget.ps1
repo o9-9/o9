@@ -143,9 +143,9 @@ Function Install-o9ProgramWinget {
     $count = $Programs.Count
     $failedPackages = @()
 
-    Write-Host "==========================================="
-    Write-Host "--    Configuring winget packages       ---"
-    Write-Host "==========================================="
+    Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
+    Write-Host "│         Configuring winget packages        │" -ForegroundColor Cyan
+    Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
 
     for ($i = 0; $i -lt $count; $i++) {
         $Program = $Programs[$i]

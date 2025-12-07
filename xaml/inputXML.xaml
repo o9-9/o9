@@ -8,8 +8,10 @@
         WindowStartupLocation="CenterScreen"
         UseLayoutRounding="True"
         WindowStyle="None"
-        Width="Auto"
-        Height="Auto"
+        Width="1400"
+        Height="900"
+        MinWidth="1200"
+        MinHeight="700"
         MaxWidth="2560"
         MaxHeight="1440"
         Title="o9">
@@ -83,11 +85,12 @@
         </Style.Triggers>
     </Style>
     <Style x:Key="AppEntryBorderStyle" TargetType="Border">
-        <Setter Property="BorderBrush" Value="Gray"/>
-        <Setter Property="BorderThickness" Value="{DynamicResource AppEntryBorderThickness}"/>
-        <Setter Property="CornerRadius" Value="5"/>
-        <Setter Property="Padding" Value="{DynamicResource AppEntryMargin}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderColor}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="6"/>
+        <Setter Property="Padding" Value="6,4,6,4"/>
         <Setter Property="Width" Value="{DynamicResource AppEntryWidth}"/>
+        <Setter Property="Height" Value="32"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Margin" Value="{DynamicResource AppEntryMargin}"/>
         <Setter Property="Cursor" Value="Hand"/>
@@ -95,9 +98,10 @@
     </Style>
     <Style x:Key="AppEntryCheckboxStyle" TargetType="CheckBox">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="{DynamicResource AppEntryMargin}"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Padding" Value="0"/>
         <Setter Property="Foreground" Value="{DynamicResource MainForegroundColor}"/>
         <Setter Property="FontSize" Value="{DynamicResource AppEntryFontSize}" />
         <Setter Property="FontFamily" Value="{DynamicResource FontFamily}"/>
@@ -114,18 +118,19 @@
                                             BorderThickness="1"
                                             Width="{DynamicResource CheckBoxBulletDecoratorSize *0.85}"
                                             Height="{DynamicResource CheckBoxBulletDecoratorSize *0.85}"
-                                            Margin="2"
+                                            CornerRadius="3"
+                                            Margin="1"
                                             SnapsToDevicePixels="True"/>
                                     <Path x:Name="CheckMark"
                                           Stroke="{DynamicResource ToggleButtonOnColor}"
-                                          StrokeThickness="2"
-                                          Data="M 0 5 L 5 10 L 12 0"
+                                          StrokeThickness="1.8"
+                                          Data="M 0 5 L 4 9 L 11 0"
                                           Visibility="Collapsed"/>
                                 </Grid>
                             </BulletDecorator.Bullet>
                             <ContentPresenter Content="{TemplateBinding Content}"
-                                            Margin="4,0,0,0"
-                                            HorizontalAlignment="Left"
+                                            Margin="3,0,0,0"
+                                            HorizontalAlignment="Stretch"
                                             VerticalAlignment="Center"
                                             RecognizesAccessKey="True"/>
                         </BulletDecorator>
@@ -149,6 +154,8 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Margin" Value="{DynamicResource AppEntryMargin}"/>
         <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
     </Style>
     <Style x:Key="AppEntryButtonStyle" TargetType="Button">
         <Setter Property="Width" Value="{DynamicResource IconButtonSize}"/>
@@ -1041,7 +1048,7 @@
                     VerticalAlignment="Center" HorizontalAlignment="Left"
                     Name="SearchBarClearButton"
                     Style="{StaticResource SearchBarClearButtonStyle}"
-                    Margin="213,0,0,0" Visibility="Collapsed">
+                    Margin="233,0,0,0" Visibility="Collapsed">
                 </Button>
 
                 <!-- Buttons Container -->
@@ -1203,18 +1210,29 @@
             <TabItem Header="Install" Visibility="Collapsed" Name="WPFTab1">
                 <Grid Background="Transparent" >
 
-                    <Grid Grid.Row="0" Grid.Column="0" Margin="{DynamicResource TabContentMargin}">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45px"/>
+                        <RowDefinition Height="0.95*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Background="{DynamicResource MainBackgroundColor}" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.ColumnSpan="3" Margin="{DynamicResource TabContentMargin}">
+                        <Button Name="WPFInstall" Content=" Install/Upgrade Selected" Margin="2" />
+                        <Button Name="WPFInstallUpgrade" Content=" Upgrade All" Margin="2"/>
+                        <Button Name="WPFUninstall" Content=" Uninstall Selected" Margin="2"/>
+                        <Button Name="WPFGetInstalled" Content=" Get Installed" Margin="2"/>
+                        <Button Name="WPFClearInstallSelection" Content=" Clear Selection" Margin="2"/>
+                        <CheckBox Name="WPFpreferChocolatey" VerticalAlignment="Center" VerticalContentAlignment="Center">
+                            <TextBlock Text="Prefer Chocolatey" ToolTip="Prefers Chocolatey as Download Engine instead of Winget" VerticalAlignment="Center" />
+                        </CheckBox>
+                    </StackPanel>
 
-                        <Grid Name="appscategory" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ScrollViewer x:Name="scrollViewer" Grid.Row="1" Grid.Column="0" Margin="{DynamicResource TabContentMargin}" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                                BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Grid Name="appspanel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         </Grid>
+                    </ScrollViewer>
 
-                        <Grid Name="appspanel" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        </Grid>
-                    </Grid>
+                    <Rectangle Grid.Row="1" Grid.Column="0" Width="22" Height="22" Fill="{DynamicResource MainBackgroundColor}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource ScrollVisibilityRectangle}"/>
+
                 </Grid>
             </TabItem>
             <TabItem Header="Tweaks" Visibility="Collapsed" Name="WPFTab2">

@@ -47,7 +47,7 @@ function Invoke-WPFUpdatessecurity {
         $MessageIcon = [System.Windows.MessageBoxImage]::Information
 
         [System.Windows.MessageBox]::Show($Messageboxbody, $MessageboxTitle, $ButtonType, $MessageIcon)
-        Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
-        Write-Host "│        Updates Set to Recommended          │" -ForegroundColor Cyan
-        Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
+        Write-Host "===========================================" -ForegroundColor Cyan
+        Write-Host "--      Updates Set to Recommended      ---" -ForegroundColor Cyan
+        Write-Host "===========================================" -ForegroundColor Cyan
 }

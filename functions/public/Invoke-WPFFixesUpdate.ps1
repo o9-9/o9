@@ -207,9 +207,9 @@ function Invoke-WPFFixesUpdate {
     $MessageIcon = [System.Windows.MessageBoxImage]::Information
 
     [System.Windows.MessageBox]::Show($Messageboxbody, $MessageboxTitle, $ButtonType, $MessageIcon)
-    Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
+    Write-Host "===========================================" -ForegroundColor Cyan
     Write-Host "│ Reset All Windows Update Settings to Stock │" -ForegroundColor Cyan
-    Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
+    Write-Host "===========================================" -ForegroundColor Cyan
 
     # Remove the progress bars
     Write-Progress -Id 0 -Activity "Repairing Windows Update" -Completed

@@ -28,9 +28,9 @@ function Invoke-WPFFeatureInstall {
         $sync.ProcessRunning = $false
         $sync.form.Dispatcher.Invoke([action]{ Set-o9Taskbaritem -state "None" -overlay "checkmark" })
 
-        Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
-        Write-Host "│          Features are Installed            │" -ForegroundColor Cyan
-        Write-Host "│         A Reboot may be required           │" -ForegroundColor Cyan
-        Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
+        Write-Host "===========================================" -ForegroundColor Cyan
+        Write-Host "---        Features are Installed       ---" -ForegroundColor Cyan
+        Write-Host "---       A Reboot may be required      ---" -ForegroundColor Cyan
+        Write-Host "===========================================" -ForegroundColor Cyan
     }
 }

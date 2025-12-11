@@ -40,9 +40,9 @@ function Invoke-WPFundoall {
         Set-o9ProgressBar -Label "Undo Tweaks Finished" -Percent 100
         $sync.ProcessRunning = $false
         $sync.form.Dispatcher.Invoke([action]{ Set-o9Taskbaritem -state "None" -overlay "checkmark" })
-        Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
-        Write-Host "│         Undo Tweaks are Finished           │" -ForegroundColor Cyan
-        Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
+        Write-Host "===========================================" -ForegroundColor Cyan
+        Write-Host "---      Undo Tweaks are Finished       ---" -ForegroundColor Cyan
+        Write-Host "===========================================" -ForegroundColor Cyan
 
     }
 }

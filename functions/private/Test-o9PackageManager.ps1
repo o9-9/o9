@@ -61,9 +61,9 @@ function Test-o9PackageManager {
             Write-Host "Latest Search Version: $wingetLatestVersion" -ForegroundColor White
             Write-Host "Current Installed Version: $wingetCurrentVersion" -ForegroundColor White
             $wingetOutdated = $wingetCurrentVersion -lt [System.Version]::Parse($wingetLatestVersion)
-            Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
-            Write-Host "│            Winget is installed             │" -ForegroundColor Cyan
-            Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
+            Write-Host "===========================================" -ForegroundColor Cyan
+            Write-Host "---         Winget is installed         ---" -ForegroundColor Cyan
+            Write-Host "===========================================" -ForegroundColor Cyan
 
             if (!$wingetPreview) {
                 Write-Host "    - Winget is a release version." -ForegroundColor Green
@@ -79,24 +79,24 @@ function Test-o9PackageManager {
                 $status = "outdated"
             }
         } else {
-            Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
-            Write-Host "│          Winget is not installed           │" -ForegroundColor Cyan
-            Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
+            Write-Host "===========================================" -ForegroundColor Cyan
+            Write-Host "---       Winget is not installed       ---" -ForegroundColor Cyan
+            Write-Host "===========================================" -ForegroundColor Cyan
             $status = "not-installed"
         }
     }
 
     if ($choco) {
         if ((Get-Command -Name choco -ErrorAction Ignore) -and ($chocoVersion = (Get-Item "$env:ChocolateyInstall\choco.exe" -ErrorAction Ignore).VersionInfo.ProductVersion)) {
-            Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
-            Write-Host "│          Chocolatey is installed           │" -ForegroundColor Cyan
-            Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
+            Write-Host "===========================================" -ForegroundColor Cyan
+            Write-Host "---       Chocolatey is installed       ---" -ForegroundColor Cyan
+            Write-Host "===========================================" -ForegroundColor Cyan
             Write-Host "Version: v$chocoVersion" -ForegroundColor White
             $status = "installed"
         } else {
-            Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
-            Write-Host "│        Chocolatey is not installed         │" -ForegroundColor Cyan
-            Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
+            Write-Host "===========================================" -ForegroundColor Cyan
+            Write-Host "---     Chocolatey is not installed     ---" -ForegroundColor Cyan
+            Write-Host "===========================================" -ForegroundColor Cyan
             $status = "not-installed"
         }
     }

@@ -49,9 +49,9 @@ function Invoke-WPFtweaksbutton {
     Set-o9ProgressBar -Label "Tweaks finished" -Percent 100
     $sync.ProcessRunning = $false
     $sync.form.Dispatcher.Invoke([action]{ Set-o9Taskbaritem -state "None" -overlay "checkmark" })
-    Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
-    Write-Host "│            Tweaks are Finished             │" -ForegroundColor Cyan
-    Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
+    Write-Host "===========================================" -ForegroundColor Cyan
+    Write-Host "---         Tweaks are Finished         ---" -ForegroundColor Cyan
+    Write-Host "===========================================" -ForegroundColor Cyan
 
     # $ButtonType = [System.Windows.MessageBoxButton]::OK
     # $MessageboxTitle = "Tweaks are Finished "

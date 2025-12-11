@@ -20,9 +20,9 @@ function Install-o9Choco {
         Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
     } catch {
-        Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
-        Write-Host "│         Chocolatey failed to install       │" -ForegroundColor Cyan
-        Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
+        Write-Host "===========================================" -ForegroundColor Cyan
+        Write-Host "---    Chocolatey failed to install     ---" -ForegroundColor Cyan
+        Write-Host "===========================================" -ForegroundColor Cyan
     }
 
 }

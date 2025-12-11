@@ -10,9 +10,9 @@ function Invoke-WPFSSHServer {
 
         Invoke-o9SSHServer
 
-        Write-Host "┌────────────────────────────────────────────┐" -ForegroundColor Cyan
-        Write-Host "│         OpenSSH Server installed!          │" -ForegroundColor Cyan
-        Write-Host "└────────────────────────────────────────────┘" -ForegroundColor Cyan
+        Write-Host "===========================================" -ForegroundColor Cyan
+        Write-Host "---       OpenSSH Server installed!     ---"-ForegroundColor Cyan
+        Write-Host "===========================================" -ForegroundColor Cyan
     }
 }
 
